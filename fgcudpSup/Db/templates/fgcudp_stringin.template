@@ -1,0 +1,10 @@
+record(stringin, "$(HOST)$(DEV)$(RECORD)") {
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynOctetRead")
+    field(DESC, "$(DESC)")
+    field(TSE,  "-2")
+    field(INP,  "@asyn($(PORT), 0) $(FGC):$(PARAM)")
+}
+
+
+

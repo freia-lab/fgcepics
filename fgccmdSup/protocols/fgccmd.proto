@@ -1,0 +1,72 @@
+################################################################################
+# © Copyright CERN 2019. All rights not expressly granted are reserved.        #
+# @file   fgc.proto                                                            #
+# @brief  streamDevice protocols for command/response communication with FGCs. #
+# @author Joao Afonso                                                          #
+################################################################################
+
+OutTerminator = LF;
+InTerminator = "\n;";
+#LockTimeout = 5000;
+#ReplyTimeout = 1000;
+#ReadTimeout = 100;
+#WriteTimeout = 100;
+ExtraInput = Ignore;
+
+###################################################
+# Errors
+###################################################
+
+get_error_nr {
+    in "$%*?s !\n%s %*#s";
+}
+
+get_error_str {
+    in "$%*?s !\n%*s %#s";
+}
+
+
+
+###################################################
+# Get properties
+###################################################
+
+get_string {
+    out "! G \$1:\$2";
+    in "$ .\n%#s";
+}
+
+get_real {
+    out "! G \$1:\$2";
+    in "$ .\n%f";
+}
+
+get_long {
+    out "! G \$1:\$2";
+    in "$ .\n%d";
+}
+
+
+
+###################################################
+# Set properties
+###################################################
+
+set_string {
+    out "! S \$1:\$2 %#s";
+    in "$ .\n";
+}
+
+set_real {
+    out "! S \$1:\$2 %f";
+    in "$ .\n";
+}
+
+set_long {
+    out "! S \$1:\$2 %d";
+    in "$ .\n";
+}
+
+
+
+# EOF

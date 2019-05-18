@@ -1,0 +1,28 @@
+record(waveform, "$(HOST)$(DEV)$(RECORD):READ")
+{
+    field(DESC, "$(DESC)")
+    field(DTYP, "stream")
+    field(FTVL, "CHAR")
+    field(NELM, "$(NELM_CHAR)")
+    field(SCAN, "Passive")
+    field(INP,  "@fgccmd.proto get_string($(FGC),$(PROP)) $(PORT)")
+    field(FLNK, "$(HOST)$(DEV)$(RECORD):PARSE PP")
+}
+
+record(aSub, "$(HOST)$(DEV)$(RECORD):PARSE")
+{
+    field(SNAM, "time_val_read")
+    field(SCAN, "Passive")
+    field(FTA,  "CHAR")
+    field(FTVA, "DOUBLE")
+    field(FTVB, "DOUBLE")
+    field(NOA,  "$(NELM_CHAR)")
+    field(NOVA, "$(NELM_DOUBLE)")
+    field(NOVB, "$(NELM_DOUBLE)")
+    field(INPA, "$(HOST)$(DEV)$(RECORD):READ")
+    field(OUTA, "$(HOST)$(DEV)$(TIME_ARRAY) PP")
+    field(OUTB, "$(HOST)$(DEV)$(REF_ARRAY) PP")
+}
+
+alias("$(HOST)$(DEV)$(RECORD):READ", "$(HOST)$(DEV)$(RECORD)")
+

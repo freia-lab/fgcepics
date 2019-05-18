@@ -1,0 +1,9 @@
+record(longout, "$(HOST)$(DEV)$(RECORD)")
+{
+    field(DESC, "$(DESC)")
+    field(EGU,  "$(EGU)") 
+    field(DTYP, "stream")
+    field(SCAN, "Passive")
+    field(OUT,  "@fgccmd.proto set_long($(FGC),$(PROP)) $(PORT)")
+}
+
