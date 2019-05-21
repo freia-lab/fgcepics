@@ -1,8 +1,8 @@
-#include "asyn.dbd"
-#include "stream.dbd"
-include "devAsynOctet.dbd"
-include "devAsynInt32.dbd"
-include "devAsynFloat64.dbd"
+include "asyn.dbd"
+#include "streamdevice.dbd"
+#include "devAsynOctet.dbd"
+#include "devAsynInt32.dbd"
+#include "devAsynFloat64.dbd"
 
 function(time_val_write)
 function(time_val_read)

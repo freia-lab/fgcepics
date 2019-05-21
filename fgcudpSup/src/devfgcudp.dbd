@@ -1,7 +1,7 @@
-#include "asyn.dbd"
-include "devAsynOctet.dbd"
-include "devAsynInt32.dbd"
-include "devAsynFloat64.dbd"
+include "asyn.dbd"
+#include "devAsynOctet.dbd"
+#include "devAsynInt32.dbd"
+#include "devAsynFloat64.dbd"
 
 registrar("devFgcUdpRegister")
 #registrar("devFgcUdpConfig")
