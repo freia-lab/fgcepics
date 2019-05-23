@@ -1,0 +1,17 @@
+Starting the ehternet gateway:
+==============================
+sudo /opt/fgc/bin/fgcethd --pm -e eth1 -n /opt/fgc/etc/fgcd/name -c /opt/fgc/firmware/fgcgate -u /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0 2>&1 | tee ~/fgcethd_logs/fgceth_$(date +"%Y-%m-%d_%T").log'
+
+
+[fgcprod@cbox1-0 ~]$ cat /opt/fgc/etc/fgcd/name
+cbox1-0:0:4:CBOX1-0:0x0000
+cbox1-0:2:63:FGC.2:0x0600
+
+[fgcprod@cbox1-0 ~]$ cat /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0
+192.168.10.120:2906:50:00ff
+
+The entries in /opt/fgc/etc/fgcd/name and /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0 and the arguments to the functions: 
+devFgcUpdConfig()          - port number in /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0
+devFgcUpdRegisterHost()	   - host publication id (tag) in /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0
+devFgcUpdRegisterDev()	   - dongle id, FGC class, FGC name as in /opt/fgc/etc/fgcd/name
+dbLoadRecords()		   - FGC macro - same as in /opt/fgc/etc/fgcd/name (e.i. FGC.2)
