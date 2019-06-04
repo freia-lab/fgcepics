@@ -678,7 +678,7 @@ $(pv_desc)</tooltip>
       <T>MODE</T>
     </macros>
     <x>30</x>
-    <y>440</y>
+    <y>430</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -714,7 +714,7 @@ $(pv_desc)</tooltip>
       <T>DCCT</T>
     </macros>
     <x>30</x>
-    <y>460</y>
+    <y>450</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -750,7 +750,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>30</x>
-    <y>480</y>
+    <y>470</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -779,7 +779,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>30</x>
-    <y>500</y>
+    <y>490</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -808,7 +808,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>30</x>
-    <y>520</y>
+    <y>510</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -837,7 +837,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>30</x>
-    <y>540</y>
+    <y>530</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -966,7 +966,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>440</y>
+    <y>430</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1004,7 +1004,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>460</y>
+    <y>450</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1042,7 +1042,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>500</y>
+    <y>490</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1080,7 +1080,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>520</y>
+    <y>510</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1118,7 +1118,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>540</y>
+    <y>530</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1156,7 +1156,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>560</y>
+    <y>550</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1209,7 +1209,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>30</x>
-    <y>560</y>
+    <y>550</y>
     <width>340</width>
     <height>20</height>
     <style>3</style>
@@ -1238,7 +1238,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>600</y>
+    <y>590</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1276,7 +1276,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>580</y>
+    <y>570</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1314,7 +1314,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>440</y>
+    <y>430</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1352,7 +1352,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>460</y>
+    <y>450</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1390,7 +1390,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>480</y>
+    <y>470</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1428,7 +1428,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>500</y>
+    <y>490</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1466,7 +1466,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>520</y>
+    <y>510</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1504,7 +1504,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>540</y>
+    <y>530</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1542,7 +1542,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>560</y>
+    <y>550</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1580,7 +1580,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>580</y>
+    <y>570</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1618,7 +1618,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>600</y>
+    <y>590</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1656,7 +1656,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>620</y>
+    <y>610</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1694,7 +1694,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>640</y>
+    <y>630</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1732,7 +1732,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>660</y>
+    <y>650</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1770,7 +1770,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>720</x>
-    <y>680</y>
+    <y>670</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1808,7 +1808,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>620</y>
+    <y>610</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1846,7 +1846,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>660</y>
+    <y>650</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1884,7 +1884,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>640</y>
+    <y>630</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1922,7 +1922,7 @@ $(pv_desc)</tooltip>
       <T>REF</T>
     </macros>
     <x>400</x>
-    <y>480</y>
+    <y>470</y>
     <width>310</width>
     <height>20</height>
     <style>3</style>
@@ -1982,7 +1982,7 @@ $(pv_desc)</tooltip>
     <name>Label_63</name>
     <text>Tables</text>
     <x>20</x>
-    <y>660</y>
+    <y>650</y>
     <height>30</height>
     <font>
       <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
@@ -2002,7 +2002,7 @@ $(pv_desc)</tooltip>
       <S>G</S>
     </macros>
     <x>30</x>
-    <y>690</y>
+    <y>680</y>
     <width>560</width>
     <height>20</height>
     <style>3</style>
@@ -2053,7 +2053,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>730</y>
-    <width>560</width>
+    <width>1000</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2065,9 +2065,15 @@ $(pv_desc)</tooltip>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_64</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
-      <x>150</x>
+      <x>570</x>
       <width>410</width>
       <interactive>true</interactive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_33</name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <x>150</x>
+      <width>410</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -2078,7 +2084,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>750</y>
-    <width>560</width>
+    <width>1000</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2090,9 +2096,15 @@ $(pv_desc)</tooltip>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_65</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
-      <x>150</x>
+      <x>570</x>
       <width>410</width>
       <interactive>true</interactive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_34</name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <x>150</x>
+      <width>410</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -2123,7 +2135,7 @@ $(pv_desc)</tooltip>
     <name>Label_69</name>
     <text>Broadcasted data</text>
     <x>10</x>
-    <y>10</y>
+    <y>20</y>
     <width>190</width>
     <height>30</height>
     <font>

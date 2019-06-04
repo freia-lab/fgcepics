@@ -2,6 +2,7 @@ record(stringin, "$(HOST)$(DEV)$(RECORD)")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
+    field(PINI, "YES")
     field(SCAN, "Passive")
     field(INP,  "@fgccmd.proto get_string($(FGC),$(PROP)) $(PORT)")
 }
