@@ -12,10 +12,8 @@
 #SNCSEQ=_SNCSEQ_
 
 # Asyn
-#ASYN := ${ASYN}
-#STREAM := ${STREAM}
-ASYN = /opt/epics/modules/asyn/4.33.0-konrad/3.15.4
-STREAM = /opt/epics/modules/streamdevice/2.7.11-ESS1/3.15.4
+ASYN := ${ASYN}
+STREAM := ${STREAM}
 FGCUDP := ${FGCUDP}
 
 # EPICS_BASE usually appears last so other apps can preempt definitions

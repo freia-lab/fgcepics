@@ -15,8 +15,8 @@ DBD += testfgcepics.dbd
 # testfgcepics.dbd will be made up from these files:
 testfgcepics_DBD += base.dbd
 testfgcepics_DBD += asyn.dbd
-testfgcepics_DBD += streamdevice.dbd
-#testfgcepics_DBD += drvAsynIPPort.dbd
+testfgcepics_DBD += stream.dbd
+testfgcepics_DBD += drvAsynIPPort.dbd
 testfgcepics_DBD += devfgcudp.dbd
 testfgcepics_DBD += devfgccmd.dbd
 
@@ -38,7 +38,7 @@ testfgcepics_SRCS_vxWorks += -nil-
 
 # Finally link to the EPICS Base libraries
 testfgcepics_LIBS += devfgcudp devfgccmd
-testfgcepics_LIBS += asyn streamadevice
+testfgcepics_LIBS += asyn stream
 testfgcepics_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================

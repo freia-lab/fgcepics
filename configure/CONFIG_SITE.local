@@ -1,7 +1,0 @@
-STATIC_BUILD=NO
-SHARED_LIBRARIES=YES
-USR_CXXFLAGS += -std=c++11
-USR_CFLAGS += -std=c99
-#USR_LIBS += streamdevice
-#DBD += streamdevice
-
