@@ -1982,7 +1982,7 @@ $(pv_desc)</tooltip>
     <name>Label_63</name>
     <text>Tables</text>
     <x>20</x>
-    <y>650</y>
+    <y>680</y>
     <height>30</height>
     <font>
       <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
@@ -1996,31 +1996,6 @@ $(pv_desc)</tooltip>
     <wrap_words>false</wrap_words>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <macros>
-      <L>FUNCTION:$(S)</L>
-      <S>G</S>
-    </macros>
-    <x>30</x>
-    <y>680</y>
-    <width>560</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_64</name>
-      <text>$(L)</text>
-      <width>140</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_62</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
-      <x>150</x>
-      <width>410</width>
-      <interactive>true</interactive>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
     <name>Group_60</name>
     <macros>
       <L>FUNCTION:$(S)</L>
@@ -2028,7 +2003,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>710</y>
-    <width>560</width>
+    <width>880</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2041,7 +2016,8 @@ $(pv_desc)</tooltip>
       <name>Text Update_63</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
       <x>150</x>
-      <width>410</width>
+      <width>730</width>
+      <format>6</format>
       <interactive>true</interactive>
     </widget>
   </widget>
@@ -2053,7 +2029,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>730</y>
-    <width>1000</width>
+    <width>880</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2062,18 +2038,11 @@ $(pv_desc)</tooltip>
       <text>$(L)</text>
       <width>140</width>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_64</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
-      <x>570</x>
-      <width>410</width>
-      <interactive>true</interactive>
-    </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_33</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
       <x>150</x>
-      <width>410</width>
+      <width>730</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -2084,7 +2053,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>750</y>
-    <width>1000</width>
+    <width>880</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2093,18 +2062,11 @@ $(pv_desc)</tooltip>
       <text>$(L)</text>
       <width>140</width>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_65</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
-      <x>570</x>
-      <width>410</width>
-      <interactive>true</interactive>
-    </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_34</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
       <x>150</x>
-      <width>410</width>
+      <width>730</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -2115,7 +2077,7 @@ $(pv_desc)</tooltip>
     </macros>
     <x>30</x>
     <y>770</y>
-    <width>560</width>
+    <width>880</width>
     <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -2123,7 +2085,8 @@ $(pv_desc)</tooltip>
       <name>Text Entry_32</name>
       <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
       <x>150</x>
-      <width>410</width>
+      <width>730</width>
+      <format>6</format>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_68</name>
@@ -2148,5 +2111,92 @@ $(pv_desc)</tooltip>
     </foreground_color>
     <vertical_alignment>2</vertical_alignment>
     <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name).PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:G</pv_name>
+    <text>Get Table</text>
+    <x>930</x>
+    <y>720</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name).PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:S</pv_name>
+    <text>Load Table</text>
+    <x>930</x>
+    <y>760</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>X/Y Plot</name>
+    <x>800</x>
+    <y>40</y>
+    <x_axis>
+      <title>X</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Source Sans Pro" style="REGULAR" size="16.0">
+        </font>
+      </scale_font>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Y</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Source Sans Pro" style="REGULAR" size="16.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>$(P)-$(DEV):REF:TABLE:FUNCTION:TIME</x_pv>
+        <y_pv>$(P)-$(DEV):REF:TABLE:FUNCTION:REF</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+      </trace>
+    </traces>
   </widget>
 </display>
