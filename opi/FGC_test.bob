@@ -43,9 +43,17 @@
         </macros>
         <group_name></group_name>
       </tab>
+      <tab>
+        <name>FGC3 (test)</name>
+        <file>helper_opi_files/test_published.bob</file>
+        <macros>
+          <DEV>FGC3</DEV>
+        </macros>
+        <group_name></group_name>
+      </tab>
     </tabs>
-    <y>180</y>
-    <width>1200</width>
-    <height>810</height>
+    <y>80</y>
+    <width>1350</width>
+    <height>900</height>
   </widget>
 </display>
