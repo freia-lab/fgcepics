@@ -19,13 +19,13 @@
 #include "param_utils.h"
 
 #include <map>
+#include <set>
 #include <string>
 #include <errno.h>
 
 
-
-#define MAX_HOSTS         64                           // Max number of hosts suported by a single driver.
-#define NUM_CHANNELS      (FGCD_MAX_DEVS * MAX_HOSTS)  // Max number of channels, one for each FGC in every host.
+//#define MAX_HOSTS         64                           // Max number of hosts suported by a single driver.
+//#define NUM_CHANNELS      (FGCD_MAX_DEVS * MAX_HOSTS)  // Max number of channels, one for each FGC in every host.
 
 #define REGISTER_HOST_KEY "regHost"
 #define REGISTER_DEV_KEY  "regDev"
@@ -72,8 +72,7 @@ public:
     FgcUdpDriver(const char * portName, int udpPortNr);
     ~FgcUdpDriver();
 
-    asynStatus drvUserCreate(asynUser *pasynUser, const char *drvInfo, const char **pptypeName, size_t *psize);
-    asynStatus getAddress(asynUser *pasynUser, int *address);  
+    asynStatus drvUserCreate(asynUser *pasynUser, const char *drvInfo, const char **pptypeName, size_t *psize) override;
     void readUdpThread();
 
     asynStatus registerHost(const char * hostName, uint32_t hostId, int timeout);
@@ -91,11 +90,12 @@ protected:
     std::map<std::string, uint32_t> hostNameToId; // Maps host names to their (unique) IDs.
     std::map<uint32_t, HostHandler*> hostIdToPtr; // Maps host IDs to their HostHandler pointers.
 
-    std::map<std::string, int> devNameToAddr;     // Maps device (FGC) name to their (unique) asyn driver address.
-    std::map<int, ClassHandler*> devAddrToPtr;       // Maps asyn driver address to respective FGC handler object.
+    std::map<std::string, int> devNameToTag;     // Maps device (FGC) name to their (unique) asyn driver tag.
+    std::map<int, ClassHandler*> devTagToPtr;       // Maps asyn driver tag to respective FGC handler object.
 
     static std::map<std::string, FgcUdpDriver*> hostToDriverMap; // Maps EPICS port name to the respective FgcUdpDriver.
     static std::map<std::string, FgcUdpDriver*> portToDriverMap; // Maps host name (FGC gateway) to FgcUdpDriver that should handle its data.
+    static std::set<int> usedUdpPorts;
 
 private:
 
@@ -112,7 +112,7 @@ private:
 
 std::map<std::string, FgcUdpDriver*> FgcUdpDriver::hostToDriverMap;
 std::map<std::string, FgcUdpDriver*> FgcUdpDriver::portToDriverMap;
-
+std::set<int> FgcUdpDriver::usedUdpPorts;
 
 
 /** C wrapper for readUdpThread initialization. */
@@ -128,13 +128,25 @@ static void readUdpThreadC(void * pPvt)
   * \param[in] portName The name of the fgc udp port driver to be created
   * \param[in] udpPortNr UDP/IP port number used to listen for incoming data */
 FgcUdpDriver::FgcUdpDriver(const char *portName, int udpPortNr)
-    : asynPortDriver(portName, NUM_CHANNELS,
-      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask, 
-      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask, 
-      ASYN_MULTIDEVICE | ASYN_CANBLOCK, 1,
+    : asynPortDriver(portName, 1,
+      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask,
+      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask,
+      ASYN_CANBLOCK, 1,
       0, 0)
 {
     asynStatus status;
+
+    // Check if port is already used
+    if(usedUdpPorts.find(udpPortNr) != usedUdpPorts.end())
+    {
+        printf("UDP port %d already used!\n", udpPortNr);
+        return;
+    }
+    else
+    {
+        usedUdpPorts.insert(udpPortNr);
+    }
+
 
     // Configure UDP Server
     char udpServerName[128];
@@ -257,27 +269,6 @@ FgcUdpDriver * FgcUdpDriver::getDrvFromHost(std::string hostName)
 
 
 /** Overridden method - check base class documentation. */
-asynStatus FgcUdpDriver::getAddress(asynUser *pasynUser, int *address)
-{
-    static const char *functionName = "getAddress";
-
-    if(!pasynUser->drvUser)
-    {
-        asynPrint(pasynUser, ASYN_TRACE_ERROR,
-                  "%s:%s: pasynUser address unspecified\n",
-                  driverName, functionName);
-        return(asynError);
-    }
-
-    ClassHandler * fgcPtr = static_cast<ClassHandler*>(pasynUser->drvUser);
-    *address = fgcPtr->get_addr();
-
-    return(asynSuccess);
-}
-
-
-
-/** Overridden method - check base class documentation. */
 asynStatus FgcUdpDriver::drvUserCreate(asynUser *pasynUser, const char *drvInfo, const char **pptypeName, size_t *psize)
 {
     static const char *functionName = "drvUserCreate";
@@ -308,8 +299,8 @@ asynStatus FgcUdpDriver::drvUserCreate(asynUser *pasynUser, const char *drvInfo,
         return(asynError);
     }
 
-    auto iter = devNameToAddr.find(fgcName);
-    if(iter == devNameToAddr.end())
+    auto iter = devNameToTag.find(fgcName);
+    if(iter == devNameToTag.end())
     {
         asynPrint(pasynUser, ASYN_TRACE_ERROR,
                   "%s:%s: cannot find FGC with name %s, name not registered\n",
@@ -317,24 +308,28 @@ asynStatus FgcUdpDriver::drvUserCreate(asynUser *pasynUser, const char *drvInfo,
         return(asynError);
     }
 
-    int devAddr = iter->second;
+    int devTag = iter->second;
     int index;
 
-    status = findParam(devAddr, param_name, &index);
+    // Check parameter index
+    char param_name_buf[128];
+    snprintf(param_name_buf, 128, "%d_%s", devTag, param_name);
+    status = findParam(param_name_buf, &index);
+
     if (status) {
         asynPrint(pasynUser, ASYN_TRACE_ERROR,
-                  "%s:%s: addr=%d, cannot find parameter %s\n",
-                  driverName, functionName, devAddr, param_name);
+                  "%s:%s: cannot find parameter %s\n",
+                  driverName, functionName, param_name_buf);
         return(status);
     }
 
     // Configure pasynUser with parameter location
-    pasynUser->drvUser = static_cast<void*>(devAddrToPtr[devAddr]);
+    pasynUser->drvUser = static_cast<void*>(devTagToPtr[devTag]);
     pasynUser->reason  = index;
 
     asynPrint(pasynUser, ASYN_TRACE_FLOW,
-              "%s:%s: drvInfo=%s, addr=%d, index=%d\n",
-              driverName, functionName, drvInfo, devAddr, index);
+              "%s:%s: drvInfo=%s, param=%s, index=%d\n",
+              driverName, functionName, drvInfo, param_name_buf, index);
 
     return(asynSuccess);
 }
@@ -385,7 +380,7 @@ asynStatus FgcUdpDriver::registerDevice(const char * hostName, uint8_t devId, ui
 {
     static const char *functionName = "registerDevice";
 
-    if(devNameToAddr.find(devName) != devNameToAddr.end())
+    if(devNameToTag.find(devName) != devNameToTag.end())
     {
         // Device names must be unique!
         asynPrint(pasynUser, ASYN_TRACE_ERROR,
@@ -414,27 +409,19 @@ asynStatus FgcUdpDriver::registerDevice(const char * hostName, uint8_t devId, ui
         return(asynError);
     }
 
-    int devAddr = channel_count;
+    int devTag = channel_count;
     channel_count++;
 
-    if(devAddr >= NUM_CHANNELS)
-    {
-        asynPrint(pasynUser, ASYN_TRACE_ERROR,
-                  "%s:%s: driver cannot handle more that %d devices (buffer is full)\n",
-                  driverName, functionName, NUM_CHANNELS);
-        return(asynError);
-    }
-
-    ClassHandler * newFgc = createFGChandler(devAddr, devId, classId);
+    ClassHandler * newFgc = createFGChandler(devTag, devId, classId);
     if(newFgc == NULL)
     {
         epicsSnprintf(pasynUser->errorMessage, pasynUser->errorMessageSize,
                       "%s: unable to create handler for device #%d of class %d", driverName, devId, classId);
-        return asynError;      
+        return asynError;
     }
 
-    devNameToAddr[devName] = devAddr;
-    devAddrToPtr[devAddr]  = newFgc;
+    devNameToTag[devName] = devTag;
+    devTagToPtr[devTag]  = newFgc;
 
     hostPtr->fgcHandler[devId] = newFgc;
     hostPtr->fgcHandler[devId]->create_class_params(this);
@@ -495,7 +482,7 @@ void FgcUdpDriver::readUdpThread()
         lock();
 
         if(evt_status != epicsEventWaitTimeout)
-        {        
+        {
             pasynOctet->read(pasynInterface->drvPvt, pasynUser, (char *) &pubParser, sizeof(pubParser), &nRead, &eomReason);
 
             pubDataPtr = &pubParser.pubData;
@@ -544,26 +531,12 @@ void FgcUdpDriver::readUdpThread()
 
                 // Reset timeout
                 hostPtr->timeoutCount = hostPtr->timeout;
-
-                // Trigger callbacks
-                for(int i = 0; i < FGCD_MAX_DEVS; ++i)
-                {
-                    if(hostPtr->fgcHandler[i] != NULL)
-                    {
-                        status = (asynStatus) callParamCallbacks(hostPtr->fgcHandler[i]->get_addr());
-                        if (status)
-                        {
-                            printf("Callback Error\n");
-                        }
-                    }
-                }
             }
         }
         else
         {
             // Update current timestamp
-            updateTimeStamp();
-            getTimeStamp(&pubTimeEpics);
+            updateTimeStamp(&pubTimeEpics);
             epicsTimeToTimeval(&pubTime, &pubTimeEpics);
             elapsedTime = timeval_elapsed(lastPubTime, pubTime);
             lastPubTime = pubTime;
@@ -587,20 +560,20 @@ void FgcUdpDriver::readUdpThread()
                     {
                         if(hostPtr->fgcHandler[i] != NULL)
                         {
-                            int fgcAddr = hostPtr->fgcHandler[i]->get_addr();
                             hostPtr->fgcHandler[i]->invalidate_class_params(this);
-
-                            status = (asynStatus) callParamCallbacks(fgcAddr);
-                            if (status)
-                            {
-                                printf("Callback Error\n");
-                            }
                         }
                     }
                 }
 
                 hostPtr->timeoutCount -= elapsedTime;
             }
+        }
+
+        // Trigger all callbacks, for modified parameters
+        status = (asynStatus) callParamCallbacks(0);
+        if (status)
+        {
+            printf("Callback Error\n");
         }
 
         unlock();
