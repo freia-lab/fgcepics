@@ -134,9 +134,9 @@ devFgcUdpRegisterHost("fgc_udp", "cbox1-0", "0x00ff", 5.0)
 #devFgcUdpRegisterDev("host_name_1" , 2, 63, "dev.name.2")
 #devFgcUdpRegisterDev("host_name_1" , 3, 63, "dev.name.3")
 
-devFgcUdpRegisterDev("cbox1-0", 2, 63, "FGC.2")
-devFgcUdpRegisterDev("cbox1-0", 13, 63, "FGC.13")
-devFgcUdpRegisterDev("cbox1-0", 14, 63, "FGC.14")
+devFgcUdpRegisterDev("cbox1-0", 2, 63, "RFBGN.FREIA.SPARE.2")
+devFgcUdpRegisterDev("cbox1-0", 13, 63, "RPABR.FREIA.RCH1.2KA")
+devFgcUdpRegisterDev("cbox1-0", 14, 63, "RPABR.FREIA.RCH2.2KA")
 #devFgcUdpRegisterDev("pcte23185", 4, 0,  "FGC_4")
 
 
@@ -150,17 +150,17 @@ devFgcUdpRegisterDev("cbox1-0", 14, 63, "FGC.14")
 
 ######## Load record instances - FGC udp ########
 
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC3:,FGC=FGC.2")
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC1:,FGC=FGC.13")
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC2:,FGC=FGC.14")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC3:,FGC=RFBGN.FREIA.SPARE.2")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC1:,FGC=RPABR.FREIA.RCH1.2KA")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC2:,FGC=RPABR.FREIA.RCH2.2KA")
 #dbLoadRecords("fgcudp_class_base.db","PORT=fgc_udp,HOST=,DEV=FGC_4:,FGC=FGC_4")
 
 
 ######## Load record instances - FGc cmd ########
 
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_1,HOST=MAG-,DEV=FGC1:,FGC=FGC.13")
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=MAG-,DEV=FGC2:,FGC=FGC.14")
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=MAG-,DEV=FGC3:,FGC=FGC.2")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_1,HOST=MAG-,DEV=FGC1:,FGC=RPABR.FREIA.RCH1.2KA")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=MAG-,DEV=FGC2:,FGC=RPABR.FREIA.RCH2.2KA")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=MAG-,DEV=FGC3:,FGC=RFBGN.FREIA.SPARE.2")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=,DEV=FGC_2:,FGC=2")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=,DEV=FGC_3:,FGC=3")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_4,HOST=,DEV=FGC_4:,FGC=4")
