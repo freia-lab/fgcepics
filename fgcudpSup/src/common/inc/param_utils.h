@@ -20,10 +20,6 @@ std::string conv_fgc_enum(uint32_t enum_val, struct sym_name const * mapping);
 
 float ntohf(float);
 
-std::string mod(std::string const & input);
-float mod(float input);
-int mod(int input);
-
 double timeval_elapsed(struct timeval t_init, struct timeval t_end);
 
 

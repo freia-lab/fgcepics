@@ -20,15 +20,15 @@ class ClassHandler
 protected:
     int param_id[ASYN_PARAMS_BASE];
     int dev_id;
-    int dev_addr;
+    int dev_tag;
 
 public:
-    ClassHandler(int id, int addr) : dev_id(id), dev_addr(addr) {};
+    ClassHandler(int id, int tag) : dev_id(id), dev_tag(tag) {};
     virtual void create_class_params(asynPortDriver * drv);
     virtual void update_class_params(asynPortDriver * drv, Pub_data & pub_data);
     virtual void invalidate_class_params(asynPortDriver * drv);
-    int get_id()   { return dev_id;   };
-    int get_addr() { return dev_addr; };
+    int get_id()  { return dev_id;  };
+    int get_tag() { return dev_tag; };
 };
 
 

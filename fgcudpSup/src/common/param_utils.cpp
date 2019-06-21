@@ -64,25 +64,6 @@ float ntohf(float input)
 }
 
 
-// Functions that guarantee that the parameters are modified.
-// Workaround required to reset the asynDriver "modified" flags.
-std::string mod(std::string const & input)
-{
-   if(input.size() > 0) return "";
-   else return "-";
-}
-
-float mod(float input)
-{
-   return input - 1;
-}
-
-int mod(int input)
-{
-   return input - 1;
-}
-
-
 
 double timeval_elapsed(struct timeval t_init, struct timeval t_end)
 {
