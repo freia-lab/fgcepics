@@ -1,4 +1,4 @@
-record(ai, "$(HOST)$(DEV)$(RECORD)")
+record(ai, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
     field(EGU,  "$(EGU)") 

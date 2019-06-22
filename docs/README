@@ -15,3 +15,10 @@ devFgcUpdConfig()          - port number in /opt/fgc/etc/fgcd/udp_subscriptions/
 devFgcUpdRegisterHost()	   - host publication id (tag) in /opt/fgc/etc/fgcd/udp_subscriptions/cbox1-0
 devFgcUpdRegisterDev()	   - dongle id, FGC class, FGC name as in /opt/fgc/etc/fgcd/name
 dbLoadRecords()		   - FGC macro - same as in /opt/fgc/etc/fgcd/name (e.i. FGC.2)
+
+Change the names of the records to be able to define FLNK field in *:S record. i
+Required to add :S in set templates and :G in get templates.
+
+sed -i 's/:[SG]"/"/' fgccmdSup/Db/fgccmd_class_63.substitutions
+sed -i 's/RECORD)/RECORD):G/g' fgccmdSup/Db/templates/*_get.template
+sed -i 's/RECORD)/RECORD):S/g' fgccmdSup/Db/templates/*_set.template

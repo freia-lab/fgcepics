@@ -1,4 +1,4 @@
-record(longin, "$(HOST)$(DEV)$(RECORD)")
+record(longin, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
     field(EGU,  "$(EGU)") 

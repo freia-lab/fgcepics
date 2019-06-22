@@ -1,4 +1,4 @@
-record(waveform, "$(HOST)$(DEV)$(RECORD):WRITE")
+record(waveform, "$(HOST)$(DEV)$(RECORD):S:WRITE")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
@@ -8,7 +8,7 @@ record(waveform, "$(HOST)$(DEV)$(RECORD):WRITE")
     field(INP,  "@fgccmd.proto set_string($(FGC),$(PROP)) $(PORT)")
 }
 
-record(aSub, "$(HOST)$(DEV)$(RECORD):UNPARSE")
+record(aSub, "$(HOST)$(DEV)$(RECORD):S:UNPARSE")
 {
     field(SNAM, "time_val_write")
     field(SCAN, "Passive")
@@ -20,8 +20,8 @@ record(aSub, "$(HOST)$(DEV)$(RECORD):UNPARSE")
     field(NOVA, "$(NELM_CHAR)")
     field(INPA, "$(HOST)$(DEV)$(TIME_ARRAY)")
     field(INPB, "$(HOST)$(DEV)$(REF_ARRAY)")
-    field(OUTA, "$(HOST)$(DEV)$(RECORD):WRITE PP")
+    field(OUTA, "$(HOST)$(DEV)$(RECORD):S:WRITE PP")
 }
 
-alias("$(HOST)$(DEV)$(RECORD):UNPARSE", "$(HOST)$(DEV)$(RECORD)")
+alias("$(HOST)$(DEV)$(RECORD):S:UNPARSE", "$(HOST)$(DEV)$(RECORD):S")
 

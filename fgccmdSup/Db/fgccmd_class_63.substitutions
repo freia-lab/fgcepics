@@ -30,24 +30,24 @@ file "fgccmd_string_get.template"
 {
 pattern
 { RECORD                          , PROP                            , DESC                          }
-{ "DCCT:SELECT:G"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
-{ "MODE:PC_SIMPLIFIED:G"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
-{ "REF:FUNC:REG_MODE:G"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
-{ "REF:FUNC:TYPE:G"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
-{ "REF:TEST:EXP_DECAY:G"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
-{ "REF:TEST:WINDOW:G"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
+{ "DCCT:SELECT"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
+{ "MODE:PC_SIMPLIFIED"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
+{ "REF:FUNC:REG_MODE"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
+{ "REF:FUNC:TYPE"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
+{ "REF:TEST:EXP_DECAY"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
+{ "REF:TEST:WINDOW"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
 }
 
 file "fgccmd_string_set.template"
 {
 pattern
 { RECORD                          , PROP                            , DESC                          }
-{ "DCCT:SELECT:S"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
-{ "MODE:PC_SIMPLIFIED:S"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
-{ "REF:FUNC:REG_MODE:S"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
-{ "REF:FUNC:TYPE:S"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
-{ "REF:TEST:EXP_DECAY:S"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
-{ "REF:TEST:WINDOW:S"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
+{ "DCCT:SELECT"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
+{ "MODE:PC_SIMPLIFIED"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
+{ "REF:FUNC:REG_MODE"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
+{ "REF:FUNC:TYPE"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
+{ "REF:TEST:EXP_DECAY"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
+{ "REF:TEST:WINDOW"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
 }
 
 ######## Real type properties ########
@@ -56,72 +56,72 @@ file "fgccmd_real_get.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
-{ "LIMITS:OP:I:NEG:G"             , "LIMITS.OP.I.NEG"               , ""      , "3" , "Operational maximum negative"}
-{ "LIMITS:OP:I:POS:G"             , "LIMITS.OP.I.POS"               , ""      , "3" , "Operational maximum positive"}
-{ "LIMITS:OP:V:NEG:G"             , "LIMITS.OP.V.NEG"               , ""      , "3" , "Readback of maximum negative"}
-{ "LIMITS:OP:V:POS:G"             , "LIMITS.OP.V.POS"               , ""      , "3" , "Readback of maximum positive"}
-{ "REF:BCV:VALUE:G"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
-{ "REF:CCV:VALUE:G"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
-{ "REF:PLEP:ACCELERATION:G"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
-{ "REF:PLEP:EXP_FINAL:G"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
-{ "REF:PLEP:EXP_TC:G"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
-{ "REF:PLEP:FINAL:G"              , "REF.PLEP.FINAL"                , ""      , "3" , "Final PLEP reference"        }
-{ "REF:PLEP:INITIAL:G"            , "REF.PLEP.INITIAL"              , ""      , "3" , "Initial PLEP reference"      }
-{ "REF:PLEP:LINEAR_RATE:G"        , "REF.PLEP.LINEAR_RATE"          , ""      , "3" , "PLEP max linear rate of chan"}
-{ "REF:PPPL:ACCELERATION1:G"      , "REF.PPPL.ACCELERATION1"        , ""      , "3" , "Acceleration during first (p"}
-{ "REF:PPPL:ACCELERATION2:G"      , "REF.PPPL.ACCELERATION2"        , ""      , "3" , "Acceleration during second ("}
-{ "REF:PPPL:ACCELERATION3:G"      , "REF.PPPL.ACCELERATION3"        , ""      , "3" , "Acceleration during third (p"}
-{ "REF:PPPL:DURATION4:G"          , "REF.PPPL.DURATION4"            , ""      , "3" , "Duration of fourth (linear) "}
-{ "REF:PPPL:INITIAL:G"            , "REF.PPPL.INITIAL"              , ""      , "3" , "Initial PPPL reference"      }
-{ "REF:PPPL:RATE2:G"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
-{ "REF:PPPL:RATE4:G"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
-{ "REF:PPPL:REF4:G"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
-{ "REF:RAMP:ACCELERATION:G"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
-{ "REF:RAMP:DECELERATION:G"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
-{ "REF:RAMP:FINAL:G"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
-{ "REF:RAMP:INITIAL:G"            , "REF.RAMP.INITIAL"              , ""      , "3" , "Initial RAMP reference"      }
-{ "REF:RAMP:LINEAR_RATE:G"        , "REF.RAMP.LINEAR_RATE"          , ""      , "3" , "RAMP max linear rate of chan"}
-{ "REF:TEST:AMPLITUDE:G"          , "REF.TEST.AMPLITUDE"            , ""      , "3" , "Test function peak-peak ampl"}
-{ "REF:TEST:INITIAL:G"            , "REF.TEST.INITIAL"              , ""      , "3" , "Initial TEST reference"      }
-{ "REF:TEST:PERIOD:G"             , "REF.TEST.PERIOD"               , ""      , "3" , "Test function period"        }
-{ "REF:TRIM:DURATION:G"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
-{ "REF:TRIM:FINAL:G"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
-{ "REF:TRIM:INITIAL:G"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
-{ "REF:VCV:VALUE:G"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
+{ "LIMITS:OP:I:NEG"             , "LIMITS.OP.I.NEG"               , ""      , "3" , "Operational maximum negative"}
+{ "LIMITS:OP:I:POS"             , "LIMITS.OP.I.POS"               , ""      , "3" , "Operational maximum positive"}
+{ "LIMITS:OP:V:NEG"             , "LIMITS.OP.V.NEG"               , ""      , "3" , "Readback of maximum negative"}
+{ "LIMITS:OP:V:POS"             , "LIMITS.OP.V.POS"               , ""      , "3" , "Readback of maximum positive"}
+{ "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
+{ "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
+{ "REF:PLEP:ACCELERATION"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
+{ "REF:PLEP:EXP_FINAL"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
+{ "REF:PLEP:EXP_TC"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
+{ "REF:PLEP:FINAL"              , "REF.PLEP.FINAL"                , ""      , "3" , "Final PLEP reference"        }
+{ "REF:PLEP:INITIAL"            , "REF.PLEP.INITIAL"              , ""      , "3" , "Initial PLEP reference"      }
+{ "REF:PLEP:LINEAR_RATE"        , "REF.PLEP.LINEAR_RATE"          , ""      , "3" , "PLEP max linear rate of chan"}
+{ "REF:PPPL:ACCELERATION1"      , "REF.PPPL.ACCELERATION1"        , ""      , "3" , "Acceleration during first (p"}
+{ "REF:PPPL:ACCELERATION2"      , "REF.PPPL.ACCELERATION2"        , ""      , "3" , "Acceleration during second ("}
+{ "REF:PPPL:ACCELERATION3"      , "REF.PPPL.ACCELERATION3"        , ""      , "3" , "Acceleration during third (p"}
+{ "REF:PPPL:DURATION4"          , "REF.PPPL.DURATION4"            , ""      , "3" , "Duration of fourth (linear) "}
+{ "REF:PPPL:INITIAL"            , "REF.PPPL.INITIAL"              , ""      , "3" , "Initial PPPL reference"      }
+{ "REF:PPPL:RATE2"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
+{ "REF:PPPL:RATE4"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
+{ "REF:PPPL:REF4"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
+{ "REF:RAMP:ACCELERATION"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
+{ "REF:RAMP:DECELERATION"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
+{ "REF:RAMP:FINAL"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
+{ "REF:RAMP:INITIAL"            , "REF.RAMP.INITIAL"              , ""      , "3" , "Initial RAMP reference"      }
+{ "REF:RAMP:LINEAR_RATE"        , "REF.RAMP.LINEAR_RATE"          , ""      , "3" , "RAMP max linear rate of chan"}
+{ "REF:TEST:AMPLITUDE"          , "REF.TEST.AMPLITUDE"            , ""      , "3" , "Test function peak-peak ampl"}
+{ "REF:TEST:INITIAL"            , "REF.TEST.INITIAL"              , ""      , "3" , "Initial TEST reference"      }
+{ "REF:TEST:PERIOD"             , "REF.TEST.PERIOD"               , ""      , "3" , "Test function period"        }
+{ "REF:TRIM:DURATION"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
+{ "REF:TRIM:FINAL"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
+{ "REF:TRIM:INITIAL"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
+{ "REF:VCV:VALUE"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
 }
 
 file "fgccmd_real_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
-{ "REF:BCV:VALUE:S"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
-{ "REF:CCV:VALUE:S"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
-{ "REF:PLEP:ACCELERATION:S"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
-{ "REF:PLEP:EXP_FINAL:S"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
-{ "REF:PLEP:EXP_TC:S"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
-{ "REF:PLEP:FINAL:S"              , "REF.PLEP.FINAL"                , ""      , "3" , "Final PLEP reference"        }
-{ "REF:PLEP:INITIAL:S"            , "REF.PLEP.INITIAL"              , ""      , "3" , "Initial PLEP reference"      }
-{ "REF:PLEP:LINEAR_RATE:S"        , "REF.PLEP.LINEAR_RATE"          , ""      , "3" , "PLEP max linear rate of chan"}
-{ "REF:PPPL:ACCELERATION1:S"      , "REF.PPPL.ACCELERATION1"        , ""      , "3" , "Acceleration during first (p"}
-{ "REF:PPPL:ACCELERATION2:S"      , "REF.PPPL.ACCELERATION2"        , ""      , "3" , "Acceleration during second ("}
-{ "REF:PPPL:ACCELERATION3:S"      , "REF.PPPL.ACCELERATION3"        , ""      , "3" , "Acceleration during third (p"}
-{ "REF:PPPL:DURATION4:S"          , "REF.PPPL.DURATION4"            , ""      , "3" , "Duration of fourth (linear) "}
-{ "REF:PPPL:INITIAL:S"            , "REF.PPPL.INITIAL"              , ""      , "3" , "Initial PPPL reference"      }
-{ "REF:PPPL:RATE2:S"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
-{ "REF:PPPL:RATE4:S"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
-{ "REF:PPPL:REF4:S"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
-{ "REF:RAMP:ACCELERATION:S"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
-{ "REF:RAMP:DECELERATION:S"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
-{ "REF:RAMP:FINAL:S"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
-{ "REF:RAMP:INITIAL:S"            , "REF.RAMP.INITIAL"              , ""      , "3" , "Initial RAMP reference"      }
-{ "REF:RAMP:LINEAR_RATE:S"        , "REF.RAMP.LINEAR_RATE"          , ""      , "3" , "RAMP max linear rate of chan"}
-{ "REF:TEST:AMPLITUDE:S"          , "REF.TEST.AMPLITUDE"            , ""      , "3" , "Test function peak-peak ampl"}
-{ "REF:TEST:INITIAL:S"            , "REF.TEST.INITIAL"              , ""      , "3" , "Initial TEST reference"      }
-{ "REF:TEST:PERIOD:S"             , "REF.TEST.PERIOD"               , ""      , "3" , "Test function period"        }
-{ "REF:TRIM:DURATION:S"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
-{ "REF:TRIM:FINAL:S"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
-{ "REF:TRIM:INITIAL:S"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
-{ "REF:VCV:VALUE:S"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
+{ "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
+{ "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
+{ "REF:PLEP:ACCELERATION"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
+{ "REF:PLEP:EXP_FINAL"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
+{ "REF:PLEP:EXP_TC"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
+{ "REF:PLEP:FINAL"              , "REF.PLEP.FINAL"                , ""      , "3" , "Final PLEP reference"        }
+{ "REF:PLEP:INITIAL"            , "REF.PLEP.INITIAL"              , ""      , "3" , "Initial PLEP reference"      }
+{ "REF:PLEP:LINEAR_RATE"        , "REF.PLEP.LINEAR_RATE"          , ""      , "3" , "PLEP max linear rate of chan"}
+{ "REF:PPPL:ACCELERATION1"      , "REF.PPPL.ACCELERATION1"        , ""      , "3" , "Acceleration during first (p"}
+{ "REF:PPPL:ACCELERATION2"      , "REF.PPPL.ACCELERATION2"        , ""      , "3" , "Acceleration during second ("}
+{ "REF:PPPL:ACCELERATION3"      , "REF.PPPL.ACCELERATION3"        , ""      , "3" , "Acceleration during third (p"}
+{ "REF:PPPL:DURATION4"          , "REF.PPPL.DURATION4"            , ""      , "3" , "Duration of fourth (linear) "}
+{ "REF:PPPL:INITIAL"            , "REF.PPPL.INITIAL"              , ""      , "3" , "Initial PPPL reference"      }
+{ "REF:PPPL:RATE2"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
+{ "REF:PPPL:RATE4"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
+{ "REF:PPPL:REF4"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
+{ "REF:RAMP:ACCELERATION"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
+{ "REF:RAMP:DECELERATION"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
+{ "REF:RAMP:FINAL"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
+{ "REF:RAMP:INITIAL"            , "REF.RAMP.INITIAL"              , ""      , "3" , "Initial RAMP reference"      }
+{ "REF:RAMP:LINEAR_RATE"        , "REF.RAMP.LINEAR_RATE"          , ""      , "3" , "RAMP max linear rate of chan"}
+{ "REF:TEST:AMPLITUDE"          , "REF.TEST.AMPLITUDE"            , ""      , "3" , "Test function peak-peak ampl"}
+{ "REF:TEST:INITIAL"            , "REF.TEST.INITIAL"              , ""      , "3" , "Initial TEST reference"      }
+{ "REF:TEST:PERIOD"             , "REF.TEST.PERIOD"               , ""      , "3" , "Test function period"        }
+{ "REF:TRIM:DURATION"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
+{ "REF:TRIM:FINAL"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
+{ "REF:TRIM:INITIAL"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
+{ "REF:VCV:VALUE"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
 }
 
 ######## Long type properties ########
@@ -130,15 +130,15 @@ file "fgccmd_long_get.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , DESC                          }
-{ "CODE:VERSION:MAINPROG:G"       , "CODE.VERSION.MAINPROG"         , ""      , "Main program version"        }
-{ "REF:TEST:NUM_PERIODS:G"        , "REF.TEST.NUM_PERIODS"          , ""      , "Number of periods for the te"}
+{ "CODE:VERSION:MAINPROG"       , "CODE.VERSION.MAINPROG"         , ""      , "Main program version"        }
+{ "REF:TEST:NUM_PERIODS"        , "REF.TEST.NUM_PERIODS"          , ""      , "Number of periods for the te"}
 }
 
 file "fgccmd_long_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , DESC                          }
-{ "REF:TEST:NUM_PERIODS:S"        , "REF.TEST.NUM_PERIODS"          , ""      , "Number of periods for the te"}
+{ "REF:TEST:NUM_PERIODS"        , "REF.TEST.NUM_PERIODS"          , ""      , "Number of periods for the te"}
 }
 
 ######## Reference table properties (TIME,REF) ########
@@ -155,14 +155,14 @@ file "fgccmd_table_get.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                          }
-{ "REF:TABLE:FUNCTION:G"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
+{ "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
 }
 
 file "fgccmd_table_set.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                          }
-{ "REF:TABLE:FUNCTION:S"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
+{ "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
 }
 
 # End of file: ../../sw/kt/fgcepics/fgccmdSup/Db/fgccmd_class_63.substitutions

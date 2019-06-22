@@ -1,4 +1,4 @@
-record(waveform, "$(HOST)$(DEV)$(RECORD)")
+record(waveform, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
