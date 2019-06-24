@@ -409,14 +409,6 @@
       <name>Label_24</name>
       <text>$(L)</text>
       <width>150</width>
-      <rules>
-        <rule name="Tooltip" prop_id="tooltip" out_exp="true">
-          <exp bool_exp="true">
-            <expression>pvStr0</expression>
-          </exp>
-          <pv_name>MAG-FGC1:PUB:CLASS_ID</pv_name>
-        </rule>
-      </rules>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_24</name>
@@ -1196,7 +1188,7 @@ $(pv_desc)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_41</name>
-    <text>Program Vesrion:</text>
+    <text>Program Version:</text>
     <x>560</x>
     <y>20</y>
     <width>140</width>

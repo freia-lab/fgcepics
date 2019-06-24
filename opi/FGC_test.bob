@@ -28,26 +28,26 @@
     <name>Navigation Tabs</name>
     <tabs>
       <tab>
-        <name>FGC1</name>
+        <name>RCH1</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
-          <DEV>FGC1</DEV>
+          <DEV>RCH1</DEV>
         </macros>
         <group_name></group_name>
       </tab>
       <tab>
-        <name>FGC2</name>
+        <name>RCH2</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
-          <DEV>FGC2</DEV>
+          <DEV>RCH2</DEV>
         </macros>
         <group_name></group_name>
       </tab>
       <tab>
-        <name>FGC3 (test)</name>
+        <name>SPARE (test)</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
-          <DEV>FGC3</DEV>
+          <DEV>SPARE</DEV>
         </macros>
         <group_name></group_name>
       </tab>

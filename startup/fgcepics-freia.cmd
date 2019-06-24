@@ -7,7 +7,7 @@
 
 #epicsEnvSet("STREAM_PROTOCOL_PATH", "$(TOP)/db")
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "1000000")
-epicsEnvSet("PV_PREFIX", "MAG-FGC")
+epicsEnvSet("PV_PREFIX", "MAG-RCH")
 
 
 
@@ -150,17 +150,17 @@ devFgcUdpRegisterDev("cbox1-0", 14, 63, "RPABR.FREIA.RCH2.2KA")
 
 ######## Load record instances - FGC udp ########
 
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC3:,FGC=RFBGN.FREIA.SPARE.2")
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC1:,FGC=RPABR.FREIA.RCH1.2KA")
-dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=FGC2:,FGC=RPABR.FREIA.RCH2.2KA")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=SPARE:,FGC=RFBGN.FREIA.SPARE.2")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=RCH1:,FGC=RPABR.FREIA.RCH1.2KA")
+dbLoadRecords("fgcudp_class_63.db",  "PORT=fgc_udp,HOST=MAG-,DEV=RCH2:,FGC=RPABR.FREIA.RCH2.2KA")
 #dbLoadRecords("fgcudp_class_base.db","PORT=fgc_udp,HOST=,DEV=FGC_4:,FGC=FGC_4")
 
 
 ######## Load record instances - FGc cmd ########
 
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_1,HOST=MAG-,DEV=FGC1:,FGC=RPABR.FREIA.RCH1.2KA")
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=MAG-,DEV=FGC2:,FGC=RPABR.FREIA.RCH2.2KA")
-dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=MAG-,DEV=FGC3:,FGC=RFBGN.FREIA.SPARE.2")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_1,HOST=MAG-,DEV=RCH1:,FGC=RPABR.FREIA.RCH1.2KA")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=MAG-,DEV=RCH2:,FGC=RPABR.FREIA.RCH2.2KA")
+dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=MAG-,DEV=SPARE:,FGC=RFBGN.FREIA.SPARE.2")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_2,HOST=,DEV=FGC_2:,FGC=2")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=,DEV=FGC_3:,FGC=3")
 #dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_4,HOST=,DEV=FGC_4:,FGC=4")
@@ -168,9 +168,9 @@ dbLoadRecords("fgccmd_class_63.db",  "PORT=fgc_port_3,HOST=MAG-,DEV=FGC3:,FGC=RF
 
 ######## Load record instances - FGc help records ########
 
-dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=FGC1:")
-dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=FGC2:")
-dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=FGC3:")
+dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=RCH1:")
+dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=RCH2:")
+dbLoadRecords("fgcepics-freia-gen.db",  "HOST=MAG-,DEV=SPARE:")
 
 
 ######## Start IOC ########
@@ -188,11 +188,11 @@ dbpf $(PV_PREFIX)2:REF:TABLE:FUNCTION:G.PROC 1
 #dbpf $(PV_PREFIX)2:REF:TABLE:FUNCTION:REF.TIME 1
 #dbpf $(PV_PREFIX)2::S.FLNK $(PV_PREFIX)2::G.PROC
 
-dbpf $(PV_PREFIX)3:REF:TABLE:FUNCTION:G.PROC 1
-#dbpf $(PV_PREFIX)3:REF:TABLE:FUNCTION:G:READ.PROC 1
-#dbpf $(PV_PREFIX)3:REF:TABLE:FUNCTION:REF.PROC 1
-#dbpf $(PV_PREFIX)3:REF:TABLE:FUNCTION:REF.TIME 1
-#dbpf $(PV_PREFIX)3::S.FLNK $(PV_PREFIX)3::G.PROC
+dbpf MAG-SPARE:REF:TABLE:FUNCTION:G.PROC 1
+#dbpf MAG-SPARE:REF:TABLE:FUNCTION:G:READ.PROC 1
+#dbpf MAG-SPARE:REF:TABLE:FUNCTION:REF.PROC 1
+#dbpf MAG-SPARE:REF:TABLE:FUNCTION:REF.TIME 1
+#dbpf MAG-SPARE::S.FLNK $(PV_PREFIX)3::G.PROC
 
 
 # EOF
