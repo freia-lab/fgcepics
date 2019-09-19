@@ -1,7 +1,8 @@
-record(waveform, "$(HOST)$(DEV)$(RECORD)")
+record(waveform, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
+    field(PINI, "YES")
     field(FTVL, "CHAR")
     field(NELM, "$(NELM)")
     field(SCAN, "Passive")

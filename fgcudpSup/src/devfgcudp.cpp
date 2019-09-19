@@ -75,7 +75,7 @@ public:
     asynStatus drvUserCreate(asynUser *pasynUser, const char *drvInfo, const char **pptypeName, size_t *psize) override;
     void readUdpThread();
 
-    asynStatus registerHost(const char * hostName, uint32_t hostId, int timeout);
+    asynStatus registerHost(const char * hostName, uint32_t hostId, double timeout);
     asynStatus registerDevice(const char * hostName, uint8_t devId, uint8_t classId, const char * devName);
 
     static FgcUdpDriver * getDrvFromPort(std::string portName);
@@ -129,8 +129,8 @@ static void readUdpThreadC(void * pPvt)
   * \param[in] udpPortNr UDP/IP port number used to listen for incoming data */
 FgcUdpDriver::FgcUdpDriver(const char *portName, int udpPortNr)
     : asynPortDriver(portName, 1,
-      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask,
-      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynDrvUserMask,
+      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynUInt32DigitalMask | asynDrvUserMask,
+      asynFloat64Mask | asynInt32Mask | asynOctetMask | asynUInt32DigitalMask | asynDrvUserMask,
       ASYN_CANBLOCK, 1,
       0, 0)
 {
@@ -340,7 +340,7 @@ asynStatus FgcUdpDriver::drvUserCreate(asynUser *pasynUser, const char *drvInfo,
   * \param[in] hostName The name of the host (FGC gateway)
   * \param[in] hostId Unique ID identifying this host UDP/IP packets
   * \param[in] timeout Timeout for incoming UDP/IP packets from this host */
-asynStatus FgcUdpDriver::registerHost(const char * hostName, uint32_t hostId, int timeout)
+asynStatus FgcUdpDriver::registerHost(const char * hostName, uint32_t hostId, double timeout)
 {
     static const char *functionName = "registerHost";
 

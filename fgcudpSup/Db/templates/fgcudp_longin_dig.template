@@ -1,0 +1,11 @@
+record(longin, "$(HOST)$(DEV)$(RECORD)") {
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(DESC, "$(DESC)")
+    field(EGU,  "$(EGU)")
+    field(TSE,  "-2")
+    field(INP,  "@asynMask($(PORT), 0, $(MASK)) $(FGC):$(PARAM)")
+}
+
+
+

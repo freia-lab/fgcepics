@@ -1,9 +1,10 @@
-record(ai, "$(HOST)$(DEV)$(RECORD)")
+record(ai, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
-    field(EGU,  "$(EGU)") 
+    field(EGU,  "$(EGU)")
     field(PREC, "$(PREC)")
     field(DTYP, "stream")
+    field(PINI, "YES")
     field(SCAN, "Passive")
     field(INP,  "@fgccmd.proto get_real($(FGC),$(PROP)) $(PORT)")
 }

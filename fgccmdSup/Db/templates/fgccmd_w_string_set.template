@@ -1,10 +1,11 @@
-record(waveform, "$(HOST)$(DEV)$(RECORD)")
+record(waveform, "$(HOST)$(DEV)$(RECORD):S")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
     field(FTVL, "CHAR")
     field(NELM, "$(NELM)")
     field(SCAN, "Passive")
+    field(FLNK, "$(HOST)$(DEV)$(RECORD):G.PROC")
     field(INP,  "@fgccmd.proto set_string($(FGC),$(PROP)) $(PORT)")
 }
 

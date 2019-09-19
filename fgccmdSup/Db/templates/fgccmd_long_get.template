@@ -1,8 +1,9 @@
-record(longin, "$(HOST)$(DEV)$(RECORD)")
+record(longin, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
-    field(EGU,  "$(EGU)") 
+    field(EGU,  "$(EGU)")
     field(DTYP, "stream")
+    field(PINI, "YES")
     field(SCAN, "Passive")
     field(INP,  "@fgccmd.proto get_long($(FGC),$(PROP)) $(PORT)")
 }

@@ -11,7 +11,7 @@
 #include <asynPortDriver.h>
 #include "pub_data.h"
 
-#define ASYN_PARAMS_BASE 3
+#define ASYN_PARAMS_BASE 4
 
 
 
