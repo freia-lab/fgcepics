@@ -5,6 +5,7 @@ record(waveform, "$(HOST)$(DEV)$(RECORD):S:WRITE")
     field(FTVL, "CHAR")
     field(NELM, "$(NELM_CHAR)")
     field(SCAN, "Passive")
+#    field(FLNK, "$(HOST)$(DEV)$(RECORD):G:READ.PROC")
     field(INP,  "@fgccmd.proto set_string($(FGC),$(PROP)) $(PORT)")
 }
 

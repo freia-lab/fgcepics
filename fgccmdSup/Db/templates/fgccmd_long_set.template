@@ -1,7 +1,7 @@
 record(longout, "$(HOST)$(DEV)$(RECORD):S")
 {
     field(DESC, "$(DESC)")
-    field(EGU,  "$(EGU)") 
+    field(EGU,  "$(EGU)")
     field(DTYP, "stream")
     field(SCAN, "Passive")
     field(FLNK, "$(HOST)$(DEV)$(RECORD):G.PROC")

@@ -1,7 +1,7 @@
 record(ao, "$(HOST)$(DEV)$(RECORD):S")
 {
     field(DESC, "$(DESC)")
-    field(EGU,  "$(EGU)") 
+    field(EGU,  "$(EGU)")
     field(PREC, "$(PREC)")
     field(DTYP, "stream")
     field(FLNK, "$(HOST)$(DEV)$(RECORD):G.PROC")

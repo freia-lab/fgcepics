@@ -2,6 +2,7 @@ record(waveform, "$(HOST)$(DEV)$(RECORD):G:READ")
 {
     field(DESC, "$(DESC)")
     field(DTYP, "stream")
+    field(PINI, "YES")
     field(FTVL, "CHAR")
     field(NELM, "$(NELM_CHAR)")
     field(SCAN, "Passive")

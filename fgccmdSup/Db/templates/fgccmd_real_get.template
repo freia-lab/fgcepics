@@ -1,7 +1,7 @@
 record(ai, "$(HOST)$(DEV)$(RECORD):G")
 {
     field(DESC, "$(DESC)")
-    field(EGU,  "$(EGU)") 
+    field(EGU,  "$(EGU)")
     field(PREC, "$(PREC)")
     field(DTYP, "stream")
     field(PINI, "YES")
