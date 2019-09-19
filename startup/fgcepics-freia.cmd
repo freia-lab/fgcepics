@@ -41,10 +41,10 @@ epicsEnvSet("PV_PREFIX", "MAG-RCH")
 #drvAsynIPPortConfigure("cmd_port_1_2" ,"host_1_addr:1906", 0, 0, 0)
 #drvAsynIPPortConfigure("cmd_port_1_3" ,"host_1_addr:1906", 0, 0, 0)
 
-drvAsynIPPortConfigure ("fgc_port_1" ,"localhost:1906", 0, 0, 0)
-drvAsynIPPortConfigure ("fgc_port_2" ,"localhost:1906", 0, 0, 0)
-drvAsynIPPortConfigure ("fgc_port_3" ,"localhost:1906", 0, 0, 0)
-#drvAsynIPPortConfigure ("fgc_port_4" ,"localhost:1906", 0, 0, 0)
+drvAsynIPPortConfigure ("fgc_port_1" ,"cbox1-0:1906", 0, 0, 0)
+drvAsynIPPortConfigure ("fgc_port_2" ,"cbox1-0:1906", 0, 0, 0)
+drvAsynIPPortConfigure ("fgc_port_3" ,"cbox1-0:1906", 0, 0, 0)
+#drvAsynIPPortConfigure ("fgc_port_4" ,"cbox1-0:1906", 0, 0, 0)
 
 
 
