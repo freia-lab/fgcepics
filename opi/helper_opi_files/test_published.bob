@@ -40,7 +40,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -66,7 +66,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -92,7 +92,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_12</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -118,7 +118,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_13</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -144,7 +144,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_14</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -170,7 +170,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_15</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -196,7 +196,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_16</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -222,7 +222,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_17</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -248,7 +248,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_18</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -274,7 +274,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_19</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -300,7 +300,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_20</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -326,7 +326,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_21</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -352,7 +352,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_22</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -378,7 +378,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_23</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
@@ -412,7 +412,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_24</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
       <tooltip>$(pv_name)
@@ -440,7 +440,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_25</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -465,7 +465,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_26</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -490,7 +490,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_27</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -515,7 +515,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_28</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -540,7 +540,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_29</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -565,7 +565,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_30</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -590,7 +590,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_31</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -615,7 +615,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_32</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -640,7 +640,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_33</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S)</pv_name>
       <x>160</x>
       <width>80</width>
     </widget>
@@ -1964,7 +1964,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_61</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):$(S):_STR</pv_name>
       <x>160</x>
       <width>350</width>
       <format>6</format>
