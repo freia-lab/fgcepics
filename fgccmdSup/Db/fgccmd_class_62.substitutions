@@ -10,6 +10,10 @@
 
 
 
+# Note (!):
+# SET records: ':S' will be appended to record name
+# GET records: ':G' will be appended to record name
+
 ######## Long string properties (decoded bitmask) ########
 
 file "fgccmd_w_string_get.template"
@@ -30,16 +34,17 @@ file "fgccmd_string_get.template"
 {
 pattern
 { RECORD                          , PROP                            , DESC                          }
-{ "DCCT:SELECT:G"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
-{ "MODE:PC_SIMPLIFIED:G"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
+{ "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
+{ "STATE:PC_SIMPLIFIED"           , "STATE.PC_SIMPLIFIED"           , ""                            }
 }
 
 file "fgccmd_string_set.template"
 {
 pattern
 { RECORD                          , PROP                            , DESC                          }
-{ "DCCT:SELECT:S"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
-{ "MODE:PC_SIMPLIFIED:S"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
+{ "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
 }
 
 ######## Real type properties ########
@@ -48,12 +53,21 @@ file "fgccmd_real_get.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
+{ "LIMITS:PULSE:POS"              , "LIMITS.PULSE.POS"              , ""      , "6" , ""                            }
+{ "LIMITS:PULSE:MIN"              , "LIMITS.PULSE.MIN"              , ""      , "6" , ""                            }
+{ "LIMITS:PULSE:NEG"              , "LIMITS.PULSE.NEG"              , ""      , "6" , ""                            }
+{ "MEAS:PULSE:VALUE"              , "MEAS.PULSE.VALUE"              , ""      , "6" , ""                            }
+{ "REF:PULSE:REF:VALUE"           , "REF.PULSE.REF.VALUE"           , ""      , "6" , ""                            }
 }
 
 file "fgccmd_real_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
+{ "LIMITS:PULSE:POS"              , "LIMITS.PULSE.POS"              , ""      , "6" , ""                            }
+{ "LIMITS:PULSE:MIN"              , "LIMITS.PULSE.MIN"              , ""      , "6" , ""                            }
+{ "LIMITS:PULSE:NEG"              , "LIMITS.PULSE.NEG"              , ""      , "6" , ""                            }
+{ "REF:PULSE:REF:VALUE"           , "REF.PULSE.REF.VALUE"           , ""      , "6" , ""                            }
 }
 
 ######## Long type properties ########
@@ -62,7 +76,7 @@ file "fgccmd_long_get.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , DESC                          }
-{ "CODE:VERSION:MAINPROG:G"       , "CODE.VERSION.MAINPROG"         , ""      , "Main program version"        }
+{ "CODE:VERSION:MAINPROG"         , "CODE.VERSION.MAINPROG"         , ""      , ""                            }
 }
 
 file "fgccmd_long_set.template"

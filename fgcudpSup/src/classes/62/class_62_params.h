@@ -7,7 +7,7 @@
 #include "pub_data.h"
 #include "class_base_params.h"
 
-#define ASYN_PARAMS_62   19
+#define ASYN_PARAMS_62   32
 #define ASYN_CLASS_ID_62 62
 
 

@@ -7,6 +7,7 @@ include $(TOP)/configure/CONFIG
 #### Install '.db' files.
 #### NOTE: Path to MSI may have to be defined in environment variable or configure/RELEASE, depending on EPICS version.
 SRC_DIRS += ../templates
+DB += fgccmd_test.db
 DB += fgccmd_class_62.db
 DB += fgccmd_class_63.db
 
