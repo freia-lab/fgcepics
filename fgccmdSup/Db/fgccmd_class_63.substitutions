@@ -10,6 +10,10 @@
 
 
 
+# Note (!):
+# SET records: ':S' will be appended to record name
+# GET records: ':G' will be appended to record name
+
 ######## Long string properties (decoded bitmask) ########
 
 file "fgccmd_w_string_get.template"
@@ -36,6 +40,7 @@ pattern
 { "REF:FUNC:TYPE"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
 { "REF:TEST:EXP_DECAY"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
 { "REF:TEST:WINDOW"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
+{ "STATE:PC_SIMPLIFIED"           , "STATE.PC_SIMPLIFIED"           , ""                            }
 }
 
 file "fgccmd_string_set.template"
@@ -62,6 +67,15 @@ pattern
 { "LIMITS:OP:V:POS"             , "LIMITS.OP.V.POS"               , ""      , "3" , "Readback of maximum positive"}
 { "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
 { "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
+{ "MEAS:PULSE:VALUE"              , "MEAS.PULSE.VALUE"              , ""      , "6" , ""                            }
+{ "MEAS:CUBEXP:VALUE"             , "MEAS.CUBEXP.VALUE"             , ""      , "6" , ""                            }
+{ "MEAS:CUBEXP2:VALUE"            , "MEAS.CUBEXP2.VALUE"            , ""      , "6" , ""                            }
+{ "MEAS:TABLE:FUNC:VALUE"         , "MEAS.TABLE.FUNC.VALUE"         , ""      , "6" , ""                            }
+{ "MEAS:TABLE:FUNC2:VALUE"        , "MEAS.TABLE.FUNC2.VALUE"        , ""      , "6" , ""                            }
+{ "MEAS:TABLE:FUNCLIST:VALUE"     , "MEAS.TABLE.FUNCLIST.VALUE"     , ""      , "6" , ""                            }
+{ "REF:DIRECT:B:VALUE"            , "REF.DIRECT.B.VALUE"            , ""      , "6" , ""                            }
+{ "REF:DIRECT:I:VALUE"            , "REF.DIRECT.I.VALUE"            , ""      , "6" , ""                            }
+{ "REF:DIRECT:V:VALUE"            , "REF.DIRECT.V.VALUE"            , ""      , "6" , ""                            }
 { "REF:PLEP:ACCELERATION"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
 { "REF:PLEP:EXP_FINAL"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
 { "REF:PLEP:EXP_TC"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
@@ -76,6 +90,10 @@ pattern
 { "REF:PPPL:RATE2"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
 { "REF:PPPL:RATE4"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
 { "REF:PPPL:REF4"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
+{ "REF:CUBEXP:REF"                , "REF.CUBEXP.REF"                , ""      , "6" , ""                            }
+{ "REF:CUBEXP:RATE"               , "REF.CUBEXP.RATE"               , ""      , "6" , ""                            }
+{ "REF:CUBEXP:TIME"               , "REF.CUBEXP.TIME"               , ""      , "6" , ""                            }
+{ "REF:PULSE:AMPLITUDE:VALUE"     , "REF.PULSE.AMPLITUDE.VALUE"     , ""      , "6" , ""                            }
 { "REF:RAMP:ACCELERATION"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
 { "REF:RAMP:DECELERATION"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
 { "REF:RAMP:FINAL"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
@@ -96,6 +114,9 @@ pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
 { "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
 { "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
+{ "REF:DIRECT:B:VALUE"            , "REF.DIRECT.B.VALUE"            , ""      , "6" , ""                            }
+{ "REF:DIRECT:I:VALUE"            , "REF.DIRECT.I.VALUE"            , ""      , "6" , ""                            }
+{ "REF:DIRECT:V:VALUE"            , "REF.DIRECT.V.VALUE"            , ""      , "6" , ""                            }
 { "REF:PLEP:ACCELERATION"       , "REF.PLEP.ACCELERATION"         , ""      , "3" , "PLEP parabolic acceleration/"}
 { "REF:PLEP:EXP_FINAL"          , "REF.PLEP.EXP_FINAL"            , ""      , "3" , "PLEP terminal value for expo"}
 { "REF:PLEP:EXP_TC"             , "REF.PLEP.EXP_TC"               , ""      , "3" , "PLEP exponential time consta"}
@@ -110,6 +131,10 @@ pattern
 { "REF:PPPL:RATE2"              , "REF.PPPL.RATE2"                , ""      , "3" , "Rate of change of start of s"}
 { "REF:PPPL:RATE4"              , "REF.PPPL.RATE4"                , ""      , "3" , "Rate of change of fourth (li"}
 { "REF:PPPL:REF4"               , "REF.PPPL.REF4"                 , ""      , "3" , "Reference at start of fourth"}
+{ "REF:CUBEXP:REF"                , "REF.CUBEXP.REF"                , ""      , "6" , ""                            }
+{ "REF:CUBEXP:RATE"               , "REF.CUBEXP.RATE"               , ""      , "6" , ""                            }
+{ "REF:CUBEXP:TIME"               , "REF.CUBEXP.TIME"               , ""      , "6" , ""                            }
+{ "REF:PULSE:AMPLITUDE:VALUE"     , "REF.PULSE.AMPLITUDE.VALUE"     , ""      , "6" , ""                            }
 { "REF:RAMP:ACCELERATION"       , "REF.RAMP.ACCELERATION"         , ""      , "3" , "RAMP parabolic acceleration" }
 { "REF:RAMP:DECELERATION"       , "REF.RAMP.DECELERATION"         , ""      , "3" , "RAMP parabolic deceleration" }
 { "REF:RAMP:FINAL"              , "REF.RAMP.FINAL"                , ""      , "3" , "Final RAMP reference"        }
@@ -147,8 +172,10 @@ file "fgccmd_table_arr.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , PREC, DESC                          }
-{ "REF:TABLE:FUNCTION:TIME"       , "REF.TABLE.FUNCTION"            , "1024"      , "3" , "TIME: Table reference functi"}
-{ "REF:TABLE:FUNCTION:REF"        , "REF.TABLE.FUNCTION"            , "1024"      , "3" , "REF: Table reference functio"}
+{ "REF:TABLE:FUNCTION:TIME"       , "REF.TABLE.FUNCTION"            , "1024"      , "6" , "Time series"                 }
+{ "REF:TABLE:FUNCTION:REF"        , "REF.TABLE.FUNCTION"            , "1024"      , "6" , "Reference series"            }
+{ "REF:TABLE:FUNC:VALUE:TIME"     , "REF.TABLE.FUNC.VALUE"          , "1024"      , "6" , "Time series"                 }
+{ "REF:TABLE:FUNC:VALUE:REF"      , "REF.TABLE.FUNC.VALUE"          , "1024"      , "6" , "Reference series"            }
 }
 
 file "fgccmd_table_get.template"
@@ -156,6 +183,7 @@ file "fgccmd_table_get.template"
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                          }
 { "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
+{ "REF:TABLE:FUNC:VALUE"          , "REF.TABLE.FUNC.VALUE"          , "1024"      , "65536"     , "REF:TABLE:FUNC:VALUE:TIME"     , "REF:TABLE:FUNC:VALUE:REF"      , ""                            }
 }
 
 file "fgccmd_table_set.template"
@@ -163,6 +191,7 @@ file "fgccmd_table_set.template"
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                          }
 { "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
+{ "REF:TABLE:FUNC:VALUE"          , "REF.TABLE.FUNC.VALUE"          , "1024"      , "65536"     , "REF:TABLE:FUNC:VALUE:TIME"     , "REF:TABLE:FUNC:VALUE:REF"      , ""                            }
 }
 
 # End of file: ../../sw/kt/fgcepics/fgccmdSup/Db/fgccmd_class_63.substitutions

@@ -20,64 +20,76 @@ void Class62::create_class_params(asynPortDriver * drv)
     int dev_tag = get_tag();
     char name_buffer[NAME_BUFFER_LEN];
 
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_FAULTS");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[0]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_WARNINGS");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[1]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_LATCHED");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[2]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_UNLATCHED");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[3]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "STATE_PLL");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[4]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "STATE_OP");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[5]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "STATE_VS");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[6]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "STATE_PC");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[7]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_ADC_A");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[8]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_ADC_B");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[9]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_ADC_C");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[10]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_ADC_D");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[11]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "ST_DCCT_A");
-    drv->createParam(name_buffer, asynParamOctet  , &param_id[12]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "I_EARTH_PCNT");
-    drv->createParam(name_buffer, asynParamInt32  , &param_id[13]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "I_ERR_MA");
-    drv->createParam(name_buffer, asynParamInt32  , &param_id[14]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "I_REF");
-    drv->createParam(name_buffer, asynParamFloat64, &param_id[15]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "I_MEAS");
-    drv->createParam(name_buffer, asynParamFloat64, &param_id[16]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "V_MEAS");
-    drv->createParam(name_buffer, asynParamFloat64, &param_id[17]);
-    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, "V_CAPA");
-    drv->createParam(name_buffer, asynParamFloat64, &param_id[18]);
+#define CREATE_PARAM(id, type, name) do { \
+    snprintf(name_buffer, NAME_BUFFER_LEN, "%d_%s", dev_tag, (name)); \
+    drv->createParam(name_buffer, (type), (id)); \
+    } while(0)
 
-    drv->setStringParam( param_id[0] , "");
-    drv->setStringParam( param_id[1] , "");
-    drv->setStringParam( param_id[2] , "");
-    drv->setStringParam( param_id[3] , "");
-    drv->setStringParam( param_id[4] , "");
-    drv->setStringParam( param_id[5] , "");
-    drv->setStringParam( param_id[6] , "");
-    drv->setStringParam( param_id[7] , "");
-    drv->setStringParam( param_id[8] , "");
-    drv->setStringParam( param_id[9] , "");
-    drv->setStringParam( param_id[10], "");
-    drv->setStringParam( param_id[11], "");
-    drv->setStringParam( param_id[12], "");
-    drv->setIntegerParam(param_id[13], 0);
-    drv->setIntegerParam(param_id[14], 0);
-    drv->setDoubleParam( param_id[15], 0);
-    drv->setDoubleParam( param_id[16], 0);
-    drv->setDoubleParam( param_id[17], 0);
-    drv->setDoubleParam( param_id[18], 0);
+    CREATE_PARAM(&param_id[0  ], asynParamOctet        , "ST_FAULTS__STR");
+    CREATE_PARAM(&param_id[1  ], asynParamUInt32Digital, "ST_FAULTS__RAW");
+    CREATE_PARAM(&param_id[2  ], asynParamOctet        , "ST_WARNINGS__STR");
+    CREATE_PARAM(&param_id[3  ], asynParamUInt32Digital, "ST_WARNINGS__RAW");
+    CREATE_PARAM(&param_id[4  ], asynParamOctet        , "ST_LATCHED__STR");
+    CREATE_PARAM(&param_id[5  ], asynParamUInt32Digital, "ST_LATCHED__RAW");
+    CREATE_PARAM(&param_id[6  ], asynParamOctet        , "ST_UNLATCHED__STR");
+    CREATE_PARAM(&param_id[7  ], asynParamUInt32Digital, "ST_UNLATCHED__RAW");
+    CREATE_PARAM(&param_id[8  ], asynParamOctet        , "STATE_PLL__STR");
+    CREATE_PARAM(&param_id[9  ], asynParamUInt32Digital, "STATE_PLL__RAW");
+    CREATE_PARAM(&param_id[10 ], asynParamOctet        , "STATE_OP__STR");
+    CREATE_PARAM(&param_id[11 ], asynParamUInt32Digital, "STATE_OP__RAW");
+    CREATE_PARAM(&param_id[12 ], asynParamOctet        , "STATE_VS__STR");
+    CREATE_PARAM(&param_id[13 ], asynParamUInt32Digital, "STATE_VS__RAW");
+    CREATE_PARAM(&param_id[14 ], asynParamOctet        , "STATE_PC__STR");
+    CREATE_PARAM(&param_id[15 ], asynParamUInt32Digital, "STATE_PC__RAW");
+    CREATE_PARAM(&param_id[16 ], asynParamOctet        , "ST_ADC_A__STR");
+    CREATE_PARAM(&param_id[17 ], asynParamUInt32Digital, "ST_ADC_A__RAW");
+    CREATE_PARAM(&param_id[18 ], asynParamOctet        , "ST_ADC_B__STR");
+    CREATE_PARAM(&param_id[19 ], asynParamUInt32Digital, "ST_ADC_B__RAW");
+    CREATE_PARAM(&param_id[20 ], asynParamOctet        , "ST_ADC_C__STR");
+    CREATE_PARAM(&param_id[21 ], asynParamUInt32Digital, "ST_ADC_C__RAW");
+    CREATE_PARAM(&param_id[22 ], asynParamOctet        , "ST_ADC_D__STR");
+    CREATE_PARAM(&param_id[23 ], asynParamUInt32Digital, "ST_ADC_D__RAW");
+    CREATE_PARAM(&param_id[24 ], asynParamOctet        , "ST_DCCT_A__STR");
+    CREATE_PARAM(&param_id[25 ], asynParamUInt32Digital, "ST_DCCT_A__RAW");
+    CREATE_PARAM(&param_id[26 ], asynParamInt32        , "I_EARTH_PCNT__INT");
+    CREATE_PARAM(&param_id[27 ], asynParamInt32        , "I_ERR_MA__INT");
+    CREATE_PARAM(&param_id[28 ], asynParamFloat64      , "I_REF__FLOAT");
+    CREATE_PARAM(&param_id[29 ], asynParamFloat64      , "I_MEAS__FLOAT");
+    CREATE_PARAM(&param_id[30 ], asynParamFloat64      , "V_MEAS__FLOAT");
+    CREATE_PARAM(&param_id[31 ], asynParamFloat64      , "V_CAPA__FLOAT");
+
+    drv->setStringParam(      param_id[0  ], "");
+    drv->setUIntDigitalParam( param_id[1  ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[2  ], "");
+    drv->setUIntDigitalParam( param_id[3  ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[4  ], "");
+    drv->setUIntDigitalParam( param_id[5  ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[6  ], "");
+    drv->setUIntDigitalParam( param_id[7  ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[8  ], "");
+    drv->setUIntDigitalParam( param_id[9  ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[10 ], "");
+    drv->setUIntDigitalParam( param_id[11 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[12 ], "");
+    drv->setUIntDigitalParam( param_id[13 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[14 ], "");
+    drv->setUIntDigitalParam( param_id[15 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[16 ], "");
+    drv->setUIntDigitalParam( param_id[17 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[18 ], "");
+    drv->setUIntDigitalParam( param_id[19 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[20 ], "");
+    drv->setUIntDigitalParam( param_id[21 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[22 ], "");
+    drv->setUIntDigitalParam( param_id[23 ], 0, 0xFFFF);
+    drv->setStringParam(      param_id[24 ], "");
+    drv->setUIntDigitalParam( param_id[25 ], 0, 0xFFFF);
+    drv->setIntegerParam(     param_id[26 ], 0);
+    drv->setIntegerParam(     param_id[27 ], 0);
+    drv->setDoubleParam(      param_id[28 ], 0);
+    drv->setDoubleParam(      param_id[29 ], 0);
+    drv->setDoubleParam(      param_id[30 ], 0);
+    drv->setDoubleParam(      param_id[31 ], 0);
 };
 
 
@@ -115,11 +127,26 @@ void Class62::update_class_params(asynPortDriver * drv, Pub_data & pub_data)
     std::string st_adc_d_str     = conv_fgc_flags(stats.st_adc_d              , sym_names_62_adc_status);
     std::string st_dcct_a_str    = conv_fgc_flags(stats.st_dcct_a             , sym_names_62_dcct);
 
+    int32_t st_faults_raw    = ntohs(stats.st_faults);
+    int32_t st_warnings_raw  = ntohs(stats.st_warnings);
+    int32_t st_latched_raw   = ntohs(stats.st_latched);
+    int32_t st_unlatched_raw = ntohs(stats.st_unlatched);
+    int32_t st_adc_a_raw     = stats.st_adc_a;
+    int32_t st_adc_b_raw     = stats.st_adc_b;
+    int32_t st_adc_c_raw     = stats.st_adc_c;
+    int32_t st_adc_d_raw     = stats.st_adc_d;
+    int32_t st_dcct_a_raw    = stats.st_dcct_a;
+
     // Enum symbol parsing
     std::string state_pll_str    = conv_fgc_enum(stats.state_pll , sym_names_62_pll);
     std::string state_op_str     = conv_fgc_enum(stats.state_op  , sym_names_62_op);
     std::string state_vs_str     = conv_fgc_enum(stats.state_vs  , sym_names_62_vs);
     std::string state_pc_str     = conv_fgc_enum(stats.state_pc  , sym_names_62_pc);
+
+    int32_t state_pll_raw    = stats.state_pll;
+    int32_t state_op_raw     = stats.state_op;
+    int32_t state_vs_raw     = stats.state_vs;
+    int32_t state_pc_raw     = stats.state_pc;
 
     // Remaining values parsing, casted int32_t or float
     int32_t i_earth_pcnt_int = stats.i_earth_pcnt;
@@ -129,25 +156,38 @@ void Class62::update_class_params(asynPortDriver * drv, Pub_data & pub_data)
     float   v_meas_float     = ntohf(stats.v_meas);
     float   v_capa_float     = ntohf(stats.v_capa);
 
-    drv->setStringParam( param_id[0] , st_faults_str);
-    drv->setStringParam( param_id[1] , st_warnings_str);
-    drv->setStringParam( param_id[2] , st_latched_str);
-    drv->setStringParam( param_id[3] , st_unlatched_str);
-    drv->setStringParam( param_id[4] , state_pll_str);
-    drv->setStringParam( param_id[5] , state_op_str);
-    drv->setStringParam( param_id[6] , state_vs_str);
-    drv->setStringParam( param_id[7] , state_pc_str);
-    drv->setStringParam( param_id[8] , st_adc_a_str);
-    drv->setStringParam( param_id[9] , st_adc_b_str);
-    drv->setStringParam( param_id[10], st_adc_c_str);
-    drv->setStringParam( param_id[11], st_adc_d_str);
-    drv->setStringParam( param_id[12], st_dcct_a_str);
-    drv->setIntegerParam(param_id[13], i_earth_pcnt_int);
-    drv->setIntegerParam(param_id[14], i_err_ma_int);
-    drv->setDoubleParam( param_id[15], i_ref_float);
-    drv->setDoubleParam( param_id[16], i_meas_float);
-    drv->setDoubleParam( param_id[17], v_meas_float);
-    drv->setDoubleParam( param_id[18], v_capa_float);
+    drv->setStringParam(      param_id[0  ], st_faults_str);
+    drv->setUIntDigitalParam( param_id[1  ], st_faults_raw, 0xFFFF);
+    drv->setStringParam(      param_id[2  ], st_warnings_str);
+    drv->setUIntDigitalParam( param_id[3  ], st_warnings_raw, 0xFFFF);
+    drv->setStringParam(      param_id[4  ], st_latched_str);
+    drv->setUIntDigitalParam( param_id[5  ], st_latched_raw, 0xFFFF);
+    drv->setStringParam(      param_id[6  ], st_unlatched_str);
+    drv->setUIntDigitalParam( param_id[7  ], st_unlatched_raw, 0xFFFF);
+    drv->setStringParam(      param_id[8  ], state_pll_str);
+    drv->setUIntDigitalParam( param_id[9  ], state_pll_raw, 0xFFFF);
+    drv->setStringParam(      param_id[10 ], state_op_str);
+    drv->setUIntDigitalParam( param_id[11 ], state_op_raw, 0xFFFF);
+    drv->setStringParam(      param_id[12 ], state_vs_str);
+    drv->setUIntDigitalParam( param_id[13 ], state_vs_raw, 0xFFFF);
+    drv->setStringParam(      param_id[14 ], state_pc_str);
+    drv->setUIntDigitalParam( param_id[15 ], state_pc_raw, 0xFFFF);
+    drv->setStringParam(      param_id[16 ], st_adc_a_str);
+    drv->setUIntDigitalParam( param_id[17 ], st_adc_a_raw, 0xFFFF);
+    drv->setStringParam(      param_id[18 ], st_adc_b_str);
+    drv->setUIntDigitalParam( param_id[19 ], st_adc_b_raw, 0xFFFF);
+    drv->setStringParam(      param_id[20 ], st_adc_c_str);
+    drv->setUIntDigitalParam( param_id[21 ], st_adc_c_raw, 0xFFFF);
+    drv->setStringParam(      param_id[22 ], st_adc_d_str);
+    drv->setUIntDigitalParam( param_id[23 ], st_adc_d_raw, 0xFFFF);
+    drv->setStringParam(      param_id[24 ], st_dcct_a_str);
+    drv->setUIntDigitalParam( param_id[25 ], st_dcct_a_raw, 0xFFFF);
+    drv->setIntegerParam(     param_id[26 ], i_earth_pcnt_int);
+    drv->setIntegerParam(     param_id[27 ], i_err_ma_int);
+    drv->setDoubleParam(      param_id[28 ], i_ref_float);
+    drv->setDoubleParam(      param_id[29 ], i_meas_float);
+    drv->setDoubleParam(      param_id[30 ], v_meas_float);
+    drv->setDoubleParam(      param_id[31 ], v_capa_float);
 
     // Update parameter values
     // Note: In order to trigger the callbacks execution, an actual change in
