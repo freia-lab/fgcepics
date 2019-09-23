@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>Display</name>
+  <name>test_published</name>
   <macros>
     <P>MAG</P>
   </macros>
   <width>1200</width>
-  <height>800</height>
+  <height>940</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <text>$(DEV)</text>
@@ -645,211 +645,6 @@ $(pv_desc)</tooltip>
       <width>80</width>
     </widget>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <text>Controls</text>
-    <x>20</x>
-    <y>400</y>
-    <height>30</height>
-    <font>
-      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color name="HEADER-TEXT" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <vertical_alignment>2</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <macros>
-      <L>$(S)</L>
-      <S>PC_SIMPLIFIED</S>
-      <T>MODE</T>
-    </macros>
-    <x>30</x>
-    <y>430</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_3</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_2</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_2</name>
-    <macros>
-      <L>$(S) $(T)</L>
-      <S>SELECT</S>
-      <T>DCCT</T>
-    </macros>
-    <x>30</x>
-    <y>450</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_4</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_1</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_3</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_3</name>
-    <macros>
-      <L>$(S)</L>
-      <S>FUNC:REG_MODE</S>
-      <T>REF</T>
-    </macros>
-    <x>30</x>
-    <y>470</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_5</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_2</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_4</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_4</name>
-    <macros>
-      <L>$(S)</L>
-      <S>FUNC:TYPE</S>
-      <T>REF</T>
-    </macros>
-    <x>30</x>
-    <y>490</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_6</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_3</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_5</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_5</name>
-    <macros>
-      <L>$(S)</L>
-      <S>TEST:EXP_DECAY</S>
-      <T>REF</T>
-    </macros>
-    <x>30</x>
-    <y>510</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_7</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_4</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_6</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_6</name>
-    <macros>
-      <L>$(S)</L>
-      <S>TEST:WINDOW</S>
-      <T>REF</T>
-    </macros>
-    <x>30</x>
-    <y>530</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_8</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_5</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_7</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-    </widget>
-  </widget>
   <widget type="group" version="2.0.0">
     <name>Group_34</name>
     <macros>
@@ -950,234 +745,6 @@ $(pv_desc)</tooltip>
       <width>80</width>
     </widget>
   </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_7</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>BCV:VALUE</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>430</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_9</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_6</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_8</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_8</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>CCV:VALUE</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>450</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_10</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_7</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_9</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_9</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:ACCELERATION</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>490</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_11</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_8</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_10</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_10</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:EXP_FINAL</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>510</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_35</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_9</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_11</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_11</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:EXP_TC</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>530</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_36</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_10</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_35</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_35</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:FINAL</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>550</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_37</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_11</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_36</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_37</name>
     <pv_name>$(P)-$(DEV):CODE:VERSION:MAINPROG:G</pv_name>
@@ -1192,757 +759,6 @@ $(pv_desc)</tooltip>
     <x>560</x>
     <y>20</y>
     <width>140</width>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_36</name>
-    <macros>
-      <L>$(S)</L>
-      <S>TEST:NUM_PERIODS</S>
-      <T>REF</T>
-    </macros>
-    <x>30</x>
-    <y>550</y>
-    <width>340</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_42</name>
-      <text>$(L)</text>
-      <width>120</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_12</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>130</x>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_41</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>240</x>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_37</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:LINEAR_RATE</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>590</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_43</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_13</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_42</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_41</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PLEP:INITIAL</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>570</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_44</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_14</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_43</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_42</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:INITIAL</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>430</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_45</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_15</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_44</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_43</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:DURATION4</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>450</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_46</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_16</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_45</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_44</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:REF4</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>470</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_47</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_17</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_46</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_45</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:ACCELERATION1</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>490</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_48</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_18</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_47</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_46</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:ACCELERATION2</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>510</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_49</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_19</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_48</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_47</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:ACCELERATION3</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>530</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_50</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_20</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_49</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_48</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:RATE2</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>550</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_51</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_21</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_50</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_49</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>PPPL:RATE4</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>570</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_52</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_22</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_51</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_50</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>RAMP:INITIAL</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>590</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_53</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_23</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_52</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_51</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>RAMP:FINAL</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>610</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_54</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_24</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_53</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_52</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>RAMP:LINEAR_RATE</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>630</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_55</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_25</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_54</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_53</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>RAMP:ACCELERATION</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>650</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_56</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_26</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_55</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_54</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>RAMP:DECELERATION</S>
-      <T>REF</T>
-    </macros>
-    <x>720</x>
-    <y>670</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_57</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_27</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_56</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_55</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>TRIM:INITIAL</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>610</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_58</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_28</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_57</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_56</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>TRIM:DURATION</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>650</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_59</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_29</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_58</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_57</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>TRIM:FINAL</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>630</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_60</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_30</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_59</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_58</name>
-    <macros>
-      <L>REF:$(S)</L>
-      <S>VCV:VALUE</S>
-      <T>REF</T>
-    </macros>
-    <x>400</x>
-    <y>470</y>
-    <width>310</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_61</name>
-      <text>$(L)</text>
-      <width>180</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_31</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-      <x>180</x>
-      <width>60</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_60</name>
-      <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-      <x>250</x>
-      <width>60</width>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name).PROC</pv_name>
-          <value>1</value>
-          <description>Write PV</description>
-        </action>
-      </actions>
-    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group_59</name>
@@ -1974,7 +790,7 @@ $(pv_desc)</tooltip>
     <name>Label_63</name>
     <text>Tables</text>
     <x>20</x>
-    <y>680</y>
+    <y>810</y>
     <height>30</height>
     <font>
       <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
@@ -1994,7 +810,7 @@ $(pv_desc)</tooltip>
       <S>G:READ</S>
     </macros>
     <x>30</x>
-    <y>710</y>
+    <y>840</y>
     <width>880</width>
     <height>20</height>
     <style>3</style>
@@ -2020,7 +836,7 @@ $(pv_desc)</tooltip>
       <S>REF</S>
     </macros>
     <x>30</x>
-    <y>730</y>
+    <y>860</y>
     <width>880</width>
     <height>20</height>
     <style>3</style>
@@ -2044,7 +860,7 @@ $(pv_desc)</tooltip>
       <S>TIME</S>
     </macros>
     <x>30</x>
-    <y>750</y>
+    <y>880</y>
     <width>880</width>
     <height>20</height>
     <style>3</style>
@@ -2068,7 +884,7 @@ $(pv_desc)</tooltip>
       <S>S:WRITE</S>
     </macros>
     <x>30</x>
-    <y>770</y>
+    <y>900</y>
     <width>880</width>
     <height>20</height>
     <style>3</style>
@@ -2116,7 +932,7 @@ $(pv_desc)</tooltip>
     <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:G</pv_name>
     <text>Get Table</text>
     <x>930</x>
-    <y>720</y>
+    <y>850</y>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -2131,7 +947,7 @@ $(pv_desc)</tooltip>
     <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:S</pv_name>
     <text>Load Table</text>
     <x>930</x>
-    <y>760</y>
+    <y>890</y>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="xyplot" version="2.0.0">
@@ -2212,5 +1028,3709 @@ $(pv_desc)</tooltip>
     <pv_name>$(P)-$(DEV):Ctrl:cmdUpdate.SCAN</pv_name>
     <x>800</x>
     <y>360</y>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>Controls</name>
+        <children>
+          <widget type="group" version="2.0.0">
+            <name>Group</name>
+            <x>8</x>
+            <width>1010</width>
+            <height>350</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="group" version="2.0.0">
+              <name>Group_36</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:NUM_PERIODS</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>150</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_42</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_12</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_41</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_37</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:LINEAR_RATE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>190</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_43</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_13</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_42</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_41</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:INITIAL</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>170</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_44</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_14</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_43</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_42</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:INITIAL</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>30</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_45</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_15</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_44</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_43</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:DURATION4</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>50</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_46</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_16</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_45</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_44</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:REF4</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>70</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_47</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_17</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_46</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_45</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:ACCELERATION1</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>90</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_48</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_18</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_47</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_46</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:ACCELERATION2</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>110</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_49</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_19</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_48</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_47</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:ACCELERATION3</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>130</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_50</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_20</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_49</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_48</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:RATE2</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>150</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_51</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_21</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_50</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_49</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PPPL:RATE4</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>170</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_52</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_22</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_51</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_50</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>RAMP:INITIAL</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>190</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_53</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_23</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_52</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_51</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>RAMP:FINAL</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>210</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_54</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_24</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_53</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_52</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>RAMP:LINEAR_RATE</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>230</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_55</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_25</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_54</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_53</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>RAMP:ACCELERATION</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>250</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_56</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_26</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_55</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_54</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>RAMP:DECELERATION</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>270</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_57</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_27</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_56</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_55</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>TRIM:INITIAL</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>210</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_58</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_28</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_57</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_56</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>TRIM:DURATION</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>250</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_59</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_29</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_58</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_57</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>TRIM:FINAL</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>230</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_60</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_30</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_59</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_58</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>VCV:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>70</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_61</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_31</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_60</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_63</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PULSE:AMPLITUDE:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>270</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_64</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_35</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_62</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_64</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:AMPLITUDE</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>170</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_70</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_36</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_64</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_65</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:INITIAL</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>190</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_71</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_37</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_65</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_66</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:PERIOD</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>210</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_72</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_38</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_66</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_67</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>CUBEXP:REF</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>310</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_73</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_39</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_67</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_68</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>CUBEXP:TIME</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>330</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_74</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_40</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_68</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_69</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>CUBEXP:RATE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>290</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_75</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_41</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_69</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_70</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>DIRECT:B:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>290</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_76</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_42</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_70</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_71</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>DIRECT:I:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>310</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_77</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_43</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_71</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_72</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>DIRECT:V:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>700</x>
+              <y>330</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_78</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_44</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_72</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_2</name>
+              <text>Controls</text>
+              <height>30</height>
+              <font>
+                <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+                </font>
+              </font>
+              <foreground_color>
+                <color name="HEADER-TEXT" red="0" green="0" blue="0">
+                </color>
+              </foreground_color>
+              <vertical_alignment>2</vertical_alignment>
+              <wrap_words>false</wrap_words>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group</name>
+              <macros>
+                <L>$(S)</L>
+                <S>PC_SIMPLIFIED</S>
+                <T>MODE</T>
+              </macros>
+              <x>10</x>
+              <y>30</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_3</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_2</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_2</name>
+              <macros>
+                <L>$(S) $(T)</L>
+                <S>SELECT</S>
+                <T>DCCT</T>
+              </macros>
+              <x>10</x>
+              <y>50</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_4</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_1</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_3</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_3</name>
+              <macros>
+                <L>$(S)</L>
+                <S>FUNC:REG_MODE</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>70</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_5</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_2</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_4</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_4</name>
+              <macros>
+                <L>$(S)</L>
+                <S>FUNC:TYPE</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>90</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_6</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_3</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_5</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_5</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:EXP_DECAY</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>110</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_7</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_4</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_6</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_6</name>
+              <macros>
+                <L>$(S)</L>
+                <S>TEST:WINDOW</S>
+                <T>REF</T>
+              </macros>
+              <x>10</x>
+              <y>130</y>
+              <width>340</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_8</name>
+                <text>$(L)</text>
+                <width>120</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_5</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>130</x>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_7</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>240</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_7</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>BCV:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>30</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_9</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_6</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_8</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_8</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>CCV:VALUE</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>50</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_10</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_7</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_9</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_9</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:ACCELERATION</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>90</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_11</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_8</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_10</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_10</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:EXP_FINAL</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>110</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_35</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_9</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_11</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_11</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:EXP_TC</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>130</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_36</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_10</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_35</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_35</name>
+              <macros>
+                <L>REF:$(S)</L>
+                <S>PLEP:FINAL</S>
+                <T>REF</T>
+              </macros>
+              <x>380</x>
+              <y>150</y>
+              <width>310</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="label" version="2.0.0">
+                <name>Label_37</name>
+                <text>$(L)</text>
+                <width>180</width>
+              </widget>
+              <widget type="textentry" version="3.0.0">
+                <name>Text Entry_11</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
+                <x>180</x>
+                <width>60</width>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_36</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <x>250</x>
+                <width>60</width>
+                <actions>
+                  <action type="write_pv">
+                    <pv_name>$(pv_name).PROC</pv_name>
+                    <value>1</value>
+                    <description>Write PV</description>
+                  </action>
+                </actions>
+              </widget>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Broadcasted Data</name>
+        <children>
+          <widget type="group" version="2.0.0">
+            <name>Group_73</name>
+            <macros>
+              <L>DATA_STATUS</L>
+              <S>DATA_STATUS:CLASS_VALID</S>
+            </macros>
+            <x>18</x>
+            <y>10</y>
+            <width>260</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_73</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>160</x>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>120</x>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_79</name>
+              <text>$(L)</text>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_74</name>
+            <macros>
+              <L>DATA_STATUS</L>
+              <S>DATA_STATUS:DATA_VALID</S>
+            </macros>
+            <x>18</x>
+            <y>30</y>
+            <width>260</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_74</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>160</x>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_1</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>120</x>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_80</name>
+              <text>$(L)</text>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_75</name>
+            <macros>
+              <L>DATA_STATUS</L>
+              <S>DATA_STATUS:DEVICE_IN_DB</S>
+            </macros>
+            <x>18</x>
+            <y>50</y>
+            <width>260</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_75</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>160</x>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_2</name>
+              <pv_name>$(P)-$(DEV):$(S)</pv_name>
+              <x>120</x>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_81</name>
+              <text>$(L)</text>
+            </widget>
+          </widget>
+          <widget type="tabs" version="2.0.0">
+            <name>Tabs_adc_stat</name>
+            <tabs>
+              <tab>
+                <name>A</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group</name>
+                    <macros>
+                      <X>A</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>100</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_77</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_ACTIVE</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_77</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_4</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_83</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_78</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_FAILED</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_78</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_5</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_84</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_79</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):IN_USE</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_79</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_6</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_85</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_80</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+                      </macros>
+                      <y>62</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_80</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_7</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_86</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_81</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):V_MEAS_OK</S>
+                      </macros>
+                      <y>80</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_81</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_8</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_87</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+              <tab>
+                <name>B</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group_76</name>
+                    <macros>
+                      <X>B</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>100</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_82</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_ACTIVE</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_82</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_9</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_88</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_83</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_FAILED</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_83</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_10</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_89</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_84</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):IN_USE</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_84</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_11</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_90</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_85</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+                      </macros>
+                      <y>62</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_85</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_12</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_91</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_86</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):V_MEAS_OK</S>
+                      </macros>
+                      <y>80</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_86</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_13</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_92</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+              <tab>
+                <name>C</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group_87</name>
+                    <macros>
+                      <X>C</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>100</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_88</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_ACTIVE</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_87</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_14</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_93</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_89</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_FAILED</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_88</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_15</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_94</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_90</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):IN_USE</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_89</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_16</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_95</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_91</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+                      </macros>
+                      <y>62</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_90</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_17</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_96</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_92</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):V_MEAS_OK</S>
+                      </macros>
+                      <y>80</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_91</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_18</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_97</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+              <tab>
+                <name>D</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group_93</name>
+                    <macros>
+                      <X>D</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>100</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_94</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_ACTIVE</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_92</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_19</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_98</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_95</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):CAL_FAILED</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_93</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_20</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_99</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_96</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):IN_USE</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_94</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_21</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_100</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_97</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+                      </macros>
+                      <y>62</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_95</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_22</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_101</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_98</name>
+                      <macros>
+                        <L>ST_ADC_$(X)</L>
+                        <S>ST_ADC_$(X):V_MEAS_OK</S>
+                      </macros>
+                      <y>80</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_96</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_23</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_102</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+            </tabs>
+            <x>18</x>
+            <y>80</y>
+            <width>275</width>
+            <height>150</height>
+          </widget>
+          <widget type="tabs" version="2.0.0">
+            <name>Tabs_dcct_stat</name>
+            <tabs>
+              <tab>
+                <name>A</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group_127</name>
+                    <macros>
+                      <X>A</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>67</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_128</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):CAL_FLT</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_133</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_60</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_139</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_129</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):FAULT</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_134</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_61</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_140</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_130</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):MEAS_OK</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_135</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_62</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_141</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+              <tab>
+                <name>B</name>
+                <children>
+                  <widget type="group" version="2.0.0">
+                    <name>Group</name>
+                    <macros>
+                      <X>B</X>
+                    </macros>
+                    <x>5</x>
+                    <y>5</y>
+                    <width>260</width>
+                    <height>67</height>
+                    <style>3</style>
+                    <transparent>true</transparent>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_77</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):CAL_FLT</S>
+                      </macros>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_77</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_4</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_83</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_78</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):FAULT</S>
+                      </macros>
+                      <y>22</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_78</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_5</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_84</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                    <widget type="group" version="2.0.0">
+                      <name>Group_79</name>
+                      <macros>
+                        <L>ST_DCCT_$(X)</L>
+                        <S>ST_DCCT_$(X):MEAS_OK</S>
+                      </macros>
+                      <y>42</y>
+                      <width>260</width>
+                      <height>20</height>
+                      <style>3</style>
+                      <transparent>true</transparent>
+                      <widget type="textupdate" version="2.0.0">
+                        <name>Text Update_79</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>160</x>
+                      </widget>
+                      <widget type="led" version="2.0.0">
+                        <name>LED_6</name>
+                        <pv_name>$(P)-$(DEV):$(S)</pv_name>
+                        <x>120</x>
+                      </widget>
+                      <widget type="label" version="2.0.0">
+                        <name>Label_85</name>
+                        <text>$(L)</text>
+                      </widget>
+                    </widget>
+                  </widget>
+                </children>
+              </tab>
+            </tabs>
+            <x>18</x>
+            <y>230</y>
+            <width>275</width>
+            <height>122</height>
+            <active_tab>1</active_tab>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group</name>
+            <macros>
+              <S>FAST_ABORT</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>10</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_3</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_76</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_100</name>
+            <macros>
+              <S>I_RMS_LIM</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>90</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_25</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_98</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_101</name>
+            <macros>
+              <S>FGC_STATE</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>50</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_26</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_99</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_102</name>
+            <macros>
+              <S>I_MEAS</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>70</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_27</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_100</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_103</name>
+            <macros>
+              <S>REG_ERROR</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>170</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_28</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_101</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_104</name>
+            <macros>
+              <S>SLAVE</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>190</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_29</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_102</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_105</name>
+            <macros>
+              <S>VS_EXTINTLOCK</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>210</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_30</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_103</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_106</name>
+            <macros>
+              <S>VS_FAULT</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>230</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_31</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_104</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_107</name>
+            <macros>
+              <S>VS_RUN_TO</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>250</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_32</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_105</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_108</name>
+            <macros>
+              <S>LIMITS</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>110</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_33</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_106</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_109</name>
+            <macros>
+              <S>NO_PC_PERMIT</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>130</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_34</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_107</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_110</name>
+            <macros>
+              <S>POL_SWITCH</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>150</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_35</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_108</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_111</name>
+            <macros>
+              <S>V_ERROR</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>290</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_36</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_109</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_112</name>
+            <macros>
+              <S>VS_STATE</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>270</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_37</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_110</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_99</name>
+            <macros>
+              <S>FGC_HW</S>
+              <T>ST_FAULTS</T>
+            </macros>
+            <x>328</x>
+            <y>30</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_24</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_97</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_113</name>
+            <macros>
+              <S>DAC_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>10</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_38</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_111</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_114</name>
+            <macros>
+              <S>DALLAS_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>30</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_39</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_112</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_115</name>
+            <macros>
+              <S>DCCT_PSU_FAIL</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>50</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_40</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_113</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_116</name>
+            <macros>
+              <S>DIMS_EXP_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>70</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_41</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_114</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_117</name>
+            <macros>
+              <S>DIM_SYNC_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>90</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_42</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_115</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_118</name>
+            <macros>
+              <S>DIM_TRIG_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>110</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_43</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_116</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_119</name>
+            <macros>
+              <S>DSP_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>130</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_44</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_117</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_120</name>
+            <macros>
+              <S>FGC_PSU_FAIL</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>150</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_45</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_118</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_121</name>
+            <macros>
+              <S>ID_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>170</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_46</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_119</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_122</name>
+            <macros>
+              <S>SCIVS_EXP_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>190</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_47</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_120</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_123</name>
+            <macros>
+              <S>SPIVS_FLT</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>210</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_48</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_121</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_124</name>
+            <macros>
+              <S>VDC_FAIL</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>230</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_49</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_122</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_125</name>
+            <macros>
+              <S>VS_COMMS</S>
+              <T>ST_LATCHED</T>
+            </macros>
+            <x>488</x>
+            <y>250</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_50</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_123</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_147</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>10</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_71</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_144</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_148</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>30</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_72</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_145</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_149</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>50</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_73</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_146</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_150</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>70</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_74</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_147</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_151</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>90</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_75</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_148</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_152</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>110</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_76</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_149</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_153</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>130</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_77</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_150</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_154</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>150</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_78</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_151</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_155</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>170</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_79</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_152</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_156</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>190</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_80</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_153</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_157</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>210</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_81</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_154</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_158</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>230</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_82</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_155</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_159</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>250</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_83</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_156</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_160</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>270</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_84</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_157</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Group_161</name>
+            <macros>
+              <S>CONFIG</S>
+              <T>ST_WARNINGS</T>
+            </macros>
+            <x>868</x>
+            <y>290</y>
+            <width>140</width>
+            <height>20</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="led" version="2.0.0">
+              <name>LED_85</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_158</name>
+              <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              <x>40</x>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>st_unlatched</name>
+            <x>648</x>
+            <y>10</y>
+            <width>140</width>
+            <height>300</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="group" version="2.0.0">
+              <name>Group_132</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_53</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_126</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_133</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>20</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_54</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_127</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_134</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>40</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_55</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_128</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_135</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>60</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_56</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_129</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_136</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>80</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_57</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_130</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_137</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>100</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_58</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_131</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_138</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>120</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_59</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_132</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_139</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>140</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_63</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_136</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_140</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>160</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_64</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_137</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_141</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>180</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_65</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_138</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_142</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>200</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_66</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_139</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_143</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>220</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_67</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_140</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_144</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>240</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_68</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_141</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_145</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>260</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_69</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_142</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+            <widget type="group" version="2.0.0">
+              <name>Group_146</name>
+              <macros>
+                <S>FIELDBUS_WRN</S>
+                <T>ST_UNLATCHED</T>
+              </macros>
+              <y>280</y>
+              <width>140</width>
+              <height>20</height>
+              <style>3</style>
+              <transparent>true</transparent>
+              <widget type="led" version="2.0.0">
+                <name>LED_70</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+              </widget>
+              <widget type="textupdate" version="2.0.0">
+                <name>Text Update_143</name>
+                <pv_name>$(P)-$(DEV):$(T):$(S)</pv_name>
+                <x>40</x>
+              </widget>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>20</x>
+    <y>400</y>
+    <width>1030</width>
+    <height>400</height>
+    <active_tab>1</active_tab>
   </widget>
 </display>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>FGC_Test</name>
-  <width>1210</width>
-  <height>1000</height>
+  <width>1360</width>
+  <height>1050</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -54,6 +54,6 @@
     </tabs>
     <y>80</y>
     <width>1350</width>
-    <height>900</height>
+    <height>950</height>
   </widget>
 </display>
