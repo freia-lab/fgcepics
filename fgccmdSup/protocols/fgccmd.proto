@@ -52,6 +52,12 @@ get_long {
 # Set properties
 ###################################################
 
+set_null {
+    # Do not get initial value, setting would trigger FGC action!
+    out "! S \$1:\$2";
+    in "$ .\n";
+}
+
 set_string {
     @init {
         out "! G \$1:\$2";

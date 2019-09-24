@@ -14,12 +14,23 @@
 # SET records: ':S' will be appended to record name
 # GET records: ':G' will be appended to record name
 
+######## Null properties (set only; value ignored; no ':S' suffix) ########
+
+file "fgccmd_null_set.template"
+{
+pattern
+{ RECORD                          , PROP                            , DESC                          }
+{ "DEVICE:RESET"                  , "DEVICE.RESET"                  , ""                            }
+{ "VS:RESET"                      , "VS.RESET"                      , ""                            }
+}
+
 ######## Long string properties (decoded bitmask) ########
 
 file "fgccmd_w_string_get.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM    , DESC                          }
+{ "DIAG:FAULTS"                   , "DIAG.FAULTS"                   , "256"   , ""                            }
 }
 
 file "fgccmd_w_string_set.template"
@@ -35,6 +46,7 @@ file "fgccmd_string_get.template"
 pattern
 { RECORD                          , PROP                            , DESC                          }
 { "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC"                       , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
 { "REF:FUNC:TYPE"                 , "REF.FUNC.TYPE"                 , ""                            }
 { "REF:TEST:EXP_DECAY"            , "REF.TEST.EXP_DECAY"            , ""                            }
@@ -47,6 +59,7 @@ file "fgccmd_string_set.template"
 pattern
 { RECORD                          , PROP                            , DESC                          }
 { "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC"                       , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
 { "REF:FUNC:TYPE"                 , "REF.FUNC.TYPE"                 , ""                            }
 { "REF:TEST:EXP_DECAY"            , "REF.TEST.EXP_DECAY"            , ""                            }
@@ -69,6 +82,7 @@ pattern
 { "MEAS:TABLE:FUNC:VALUE"         , "MEAS.TABLE.FUNC.VALUE"         , ""      , "6" , ""                            }
 { "MEAS:TABLE:FUNC2:VALUE"        , "MEAS.TABLE.FUNC2.VALUE"        , ""      , "6" , ""                            }
 { "MEAS:TABLE:FUNCLIST:VALUE"     , "MEAS.TABLE.FUNCLIST.VALUE"     , ""      , "6" , ""                            }
+{ "REF:ABORT"                     , "REF.ABORT"                     , ""      , "6" , ""                            }
 { "REF:DIRECT:B:VALUE"            , "REF.DIRECT.B.VALUE"            , ""      , "6" , ""                            }
 { "REF:DIRECT:I:VALUE"            , "REF.DIRECT.I.VALUE"            , ""      , "6" , ""                            }
 { "REF:DIRECT:V:VALUE"            , "REF.DIRECT.V.VALUE"            , ""      , "6" , ""                            }
@@ -95,6 +109,7 @@ pattern
 { "REF:RAMP:FINAL"                , "REF.RAMP.FINAL"                , ""      , "6" , ""                            }
 { "REF:RAMP:INITIAL"              , "REF.RAMP.INITIAL"              , ""      , "6" , ""                            }
 { "REF:RAMP:LINEAR_RATE"          , "REF.RAMP.LINEAR_RATE"          , ""      , "6" , ""                            }
+{ "REF:RUN"                       , "REF.RUN"                       , ""      , "6" , ""                            }
 { "REF:TEST:AMPLITUDE"            , "REF.TEST.AMPLITUDE"            , ""      , "6" , ""                            }
 { "REF:TEST:INITIAL"              , "REF.TEST.INITIAL"              , ""      , "6" , ""                            }
 { "REF:TEST:PERIOD"               , "REF.TEST.PERIOD"               , ""      , "6" , ""                            }
@@ -107,6 +122,7 @@ file "fgccmd_real_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
+{ "REF:ABORT"                     , "REF.ABORT"                     , ""      , "6" , ""                            }
 { "REF:DIRECT:B:VALUE"            , "REF.DIRECT.B.VALUE"            , ""      , "6" , ""                            }
 { "REF:DIRECT:I:VALUE"            , "REF.DIRECT.I.VALUE"            , ""      , "6" , ""                            }
 { "REF:DIRECT:V:VALUE"            , "REF.DIRECT.V.VALUE"            , ""      , "6" , ""                            }
@@ -133,6 +149,7 @@ pattern
 { "REF:RAMP:FINAL"                , "REF.RAMP.FINAL"                , ""      , "6" , ""                            }
 { "REF:RAMP:INITIAL"              , "REF.RAMP.INITIAL"              , ""      , "6" , ""                            }
 { "REF:RAMP:LINEAR_RATE"          , "REF.RAMP.LINEAR_RATE"          , ""      , "6" , ""                            }
+{ "REF:RUN"                       , "REF.RUN"                       , ""      , "6" , ""                            }
 { "REF:TEST:AMPLITUDE"            , "REF.TEST.AMPLITUDE"            , ""      , "6" , ""                            }
 { "REF:TEST:INITIAL"              , "REF.TEST.INITIAL"              , ""      , "6" , ""                            }
 { "REF:TEST:PERIOD"               , "REF.TEST.PERIOD"               , ""      , "6" , ""                            }
@@ -148,6 +165,7 @@ file "fgccmd_long_get.template"
 pattern
 { RECORD                          , PROP                            , EGU     , DESC                          }
 { "CODE:VERSION:MAINPROG"         , "CODE.VERSION.MAINPROG"         , ""      , ""                            }
+{ "LOAD:SELECT"                   , "LOAD.SELECT"                   , ""      , ""                            }
 { "REF:TEST:NUM_PERIODS"          , "REF.TEST.NUM_PERIODS"          , ""      , ""                            }
 }
 
@@ -155,6 +173,7 @@ file "fgccmd_long_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , DESC                          }
+{ "LOAD:SELECT"                   , "LOAD.SELECT"                   , ""      , ""                            }
 { "REF:TEST:NUM_PERIODS"          , "REF.TEST.NUM_PERIODS"          , ""      , ""                            }
 }
 

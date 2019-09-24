@@ -498,6 +498,7 @@
 #define SUB_63_MODE_RT_EXT_REF                   2
 #define SUB_63_MODE_RT_GATEWAY                   1
 #define SUB_63_MODE_RT_INTER_FGC                 3
+#define SUB_63_NUM_DIMS_BRANCH                   16
 #define SUB_63_NUM_MEM_PARTITIONS                1
 #define SUB_63_NUM_MSG_QUEUES                    1
 #define SUB_63_NUM_SEMAPHORES                    13

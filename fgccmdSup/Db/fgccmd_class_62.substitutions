@@ -14,12 +14,23 @@
 # SET records: ':S' will be appended to record name
 # GET records: ':G' will be appended to record name
 
+######## Null properties (set only; value ignored; no ':S' suffix) ########
+
+file "fgccmd_null_set.template"
+{
+pattern
+{ RECORD                          , PROP                            , DESC                          }
+{ "DEVICE:RESET"                  , "DEVICE.RESET"                  , ""                            }
+{ "VS:RESET"                      , "VS.RESET"                      , ""                            }
+}
+
 ######## Long string properties (decoded bitmask) ########
 
 file "fgccmd_w_string_get.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM    , DESC                          }
+{ "DIAG:FAULTS"                   , "DIAG.FAULTS"                   , "256"   , ""                            }
 }
 
 file "fgccmd_w_string_set.template"
@@ -35,6 +46,7 @@ file "fgccmd_string_get.template"
 pattern
 { RECORD                          , PROP                            , DESC                          }
 { "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC"                       , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
 { "STATE:PC_SIMPLIFIED"           , "STATE.PC_SIMPLIFIED"           , ""                            }
 }
@@ -44,6 +56,7 @@ file "fgccmd_string_set.template"
 pattern
 { RECORD                          , PROP                            , DESC                          }
 { "DCCT:SELECT"                   , "DCCT.SELECT"                   , ""                            }
+{ "MODE:PC"                       , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"            , "MODE.PC_SIMPLIFIED"            , ""                            }
 }
 

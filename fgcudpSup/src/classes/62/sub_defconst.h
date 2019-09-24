@@ -309,6 +309,7 @@
 #define SUB_62_MODE_OP_NORMAL                    1
 #define SUB_62_MODE_OP_SIMULATION                2
 #define SUB_62_MODE_OP_TEST                      4
+#define SUB_62_NUM_DIMS_BRANCH                   16
 #define SUB_62_NUM_MEM_PARTITIONS                1
 #define SUB_62_NUM_MSG_QUEUES                    1
 #define SUB_62_NUM_SEMAPHORES                    13
