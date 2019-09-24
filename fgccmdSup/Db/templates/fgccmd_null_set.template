@@ -1,0 +1,8 @@
+record(stringout, "$(HOST)$(DEV)$(RECORD)")
+{
+    field(DESC, "$(DESC)")
+    field(DTYP, "stream")
+    field(VAL,  "")
+    field(OUT,  "@fgccmd.proto set_null($(FGC),$(PROP)) $(PORT)")
+}
+
