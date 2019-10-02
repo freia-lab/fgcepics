@@ -1755,44 +1755,6 @@ $(pv_desc)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
-              <name>Group_58</name>
-              <macros>
-                <L>REF:$(S)</L>
-                <S>VCV:VALUE</S>
-                <T>REF</T>
-              </macros>
-              <x>380</x>
-              <y>70</y>
-              <width>310</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>Label_61</name>
-                <text>$(L)</text>
-                <width>180</width>
-              </widget>
-              <widget type="textentry" version="3.0.0">
-                <name>Text Entry_31</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
-                <width>60</width>
-              </widget>
-              <widget type="textupdate" version="2.0.0">
-                <name>Text Update_60</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
-                <actions>
-                  <action type="write_pv">
-                    <pv_name>$(pv_name).PROC</pv_name>
-                    <value>1</value>
-                    <description>Write PV</description>
-                  </action>
-                </actions>
-              </widget>
-            </widget>
-            <widget type="group" version="2.0.0">
               <name>Group_63</name>
               <macros>
                 <L>REF:$(S)</L>
@@ -2038,8 +2000,8 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:B:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
-              <y>290</y>
+              <x>380</x>
+              <y>30</y>
               <width>310</width>
               <height>20</height>
               <style>3</style>
@@ -2076,8 +2038,8 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:I:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
-              <y>310</y>
+              <x>380</x>
+              <y>50</y>
               <width>310</width>
               <height>20</height>
               <style>3</style>
@@ -2114,8 +2076,8 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:V:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
-              <y>330</y>
+              <x>380</x>
+              <y>70</y>
               <width>310</width>
               <height>20</height>
               <style>3</style>
@@ -2235,9 +2197,9 @@ $(pv_desc)</tooltip>
             <widget type="group" version="2.0.0">
               <name>Group_3</name>
               <macros>
-                <L>$(S)</L>
-                <S>FUNC:REG_MODE</S>
-                <T>REF</T>
+                <L>$(T):$(S)</L>
+                <S>MODE</S>
+                <T>REG</T>
               </macros>
               <x>10</x>
               <y>70</y>
@@ -2346,82 +2308,6 @@ $(pv_desc)</tooltip>
                 <name>Text Update_7</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
                 <x>240</x>
-              </widget>
-            </widget>
-            <widget type="group" version="2.0.0">
-              <name>Group_7</name>
-              <macros>
-                <L>REF:$(S)</L>
-                <S>BCV:VALUE</S>
-                <T>REF</T>
-              </macros>
-              <x>380</x>
-              <y>30</y>
-              <width>310</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>Label_9</name>
-                <text>$(L)</text>
-                <width>180</width>
-              </widget>
-              <widget type="textentry" version="3.0.0">
-                <name>Text Entry_6</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
-                <width>60</width>
-              </widget>
-              <widget type="textupdate" version="2.0.0">
-                <name>Text Update_8</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
-                <actions>
-                  <action type="write_pv">
-                    <pv_name>$(pv_name).PROC</pv_name>
-                    <value>1</value>
-                    <description>Write PV</description>
-                  </action>
-                </actions>
-              </widget>
-            </widget>
-            <widget type="group" version="2.0.0">
-              <name>Group_8</name>
-              <macros>
-                <L>REF:$(S)</L>
-                <S>CCV:VALUE</S>
-                <T>REF</T>
-              </macros>
-              <x>380</x>
-              <y>50</y>
-              <width>310</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>Label_10</name>
-                <text>$(L)</text>
-                <width>180</width>
-              </widget>
-              <widget type="textentry" version="3.0.0">
-                <name>Text Entry_7</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
-                <width>60</width>
-              </widget>
-              <widget type="textupdate" version="2.0.0">
-                <name>Text Update_9</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
-                <actions>
-                  <action type="write_pv">
-                    <pv_name>$(pv_name).PROC</pv_name>
-                    <value>1</value>
-                    <description>Write PV</description>
-                  </action>
-                </actions>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">

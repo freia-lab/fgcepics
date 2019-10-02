@@ -48,7 +48,7 @@ pattern
 { "DCCT:SELECT"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
 { "MODE:PC"                     , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
-{ "REF:FUNC:REG_MODE"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
+{ "REG:MODE"           		, "REG.MODE"             	  , "Reference function mode"     }
 { "REF:FUNC:TYPE"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
 { "REF:TEST:EXP_DECAY"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
 { "REF:TEST:WINDOW"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
@@ -62,7 +62,7 @@ pattern
 { "DCCT:SELECT"                 , "DCCT.SELECT"                   , "DCCT signal selector"        }
 { "MODE:PC"                     , "MODE.PC"                       , ""                            }
 { "MODE:PC_SIMPLIFIED"          , "MODE.PC_SIMPLIFIED"            , "Simplified power converter m"}
-{ "REF:FUNC:REG_MODE"           , "REF.FUNC.REG_MODE"             , "Reference function mode"     }
+{ "REG:MODE"           		, "REG.MODE"             	  , "Reference function mode"     }
 { "REF:FUNC:TYPE"               , "REF.FUNC.TYPE"                 , "Reference function type"     }
 { "REF:TEST:EXP_DECAY"          , "REF.TEST.EXP_DECAY"            , "Exponential decay control"   }
 { "REF:TEST:WINDOW"             , "REF.TEST.WINDOW"               , "Cosine window control"       }
@@ -78,8 +78,6 @@ pattern
 { "LIMITS:OP:I:POS"             , "LIMITS.OP.I.POS"               , ""      , "3" , "Operational maximum positive"}
 { "LIMITS:OP:V:NEG"             , "LIMITS.OP.V.NEG"               , ""      , "3" , "Readback of maximum negative"}
 { "LIMITS:OP:V:POS"             , "LIMITS.OP.V.POS"               , ""      , "3" , "Readback of maximum positive"}
-{ "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
-{ "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
 { "MEAS:PULSE:VALUE"              , "MEAS.PULSE.VALUE"              , ""      , "6" , ""                            }
 { "MEAS:CUBEXP:VALUE"             , "MEAS.CUBEXP.VALUE"             , ""      , "6" , ""                            }
 { "MEAS:CUBEXP2:VALUE"            , "MEAS.CUBEXP2.VALUE"            , ""      , "6" , ""                            }
@@ -120,15 +118,12 @@ pattern
 { "REF:TRIM:DURATION"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
 { "REF:TRIM:FINAL"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
 { "REF:TRIM:INITIAL"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
-{ "REF:VCV:VALUE"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
 }
 
 file "fgccmd_real_set.template"
 {
 pattern
 { RECORD                          , PROP                            , EGU     , PREC, DESC                          }
-{ "REF:BCV:VALUE"               , "REF.BCV.VALUE"                 , ""      , "3" , "Field control value"         }
-{ "REF:CCV:VALUE"               , "REF.CCV.VALUE"                 , ""      , "3" , "Current control value"       }
 { "REF:ABORT"                     , "REF.ABORT"                     , ""      , "6" , ""                            }
 { "REF:DIRECT:B:VALUE"            , "REF.DIRECT.B.VALUE"            , ""      , "6" , ""                            }
 { "REF:DIRECT:I:VALUE"            , "REF.DIRECT.I.VALUE"            , ""      , "6" , ""                            }
@@ -163,7 +158,6 @@ pattern
 { "REF:TRIM:DURATION"           , "REF.TRIM.DURATION"             , ""      , "3" , "Trim duration (s)"           }
 { "REF:TRIM:FINAL"              , "REF.TRIM.FINAL"                , ""      , "3" , "Final trim reference"        }
 { "REF:TRIM:INITIAL"            , "REF.TRIM.INITIAL"              , ""      , "3" , "Initial TRIM reference"      }
-{ "REF:VCV:VALUE"               , "REF.VCV.VALUE"                 , ""      , "3" , "Voltage control value"       }
 }
 
 ######## Long type properties ########
