@@ -17,14 +17,14 @@
 file "fgccmd_w_string_get.template"
 {
 pattern
-{ RECORD          , PROP        , NELM , DESC }
-{ "STATUS:FAULTS" , "FGC.FAULTS", 256  , ""   }
+{ RECORD          , PROP        , NELM , DESC                     }
+{ "STATUS:FAULTS" , "FGC.FAULTS", 256  , "Device faults (alarms)" }
 }
 
 file "fgccmd_w_string_set.template"
 {
 pattern
-{ RECORD          , PROP        , NELM , DESC }
+{ RECORD          , PROP        , NELM , DESC                     }
 }
 
 ######## String properties (decoded enum) ########
@@ -32,15 +32,15 @@ pattern
 file "fgccmd_string_get.template"
 {
 pattern
-{ RECORD     , PROP       , DESC }
-{ "TEST:CHAR", "TEST.CHAR", ""   }
+{ RECORD     , PROP       , DESC                 }
+{ "TEST:CHAR", "TEST.CHAR", "Test CHAR property" }
 }
 
 file "fgccmd_string_set.template"
 {
 pattern
-{ RECORD     , PROP       , DESC }
-{ "TEST:CHAR", "TEST.CHAR", ""   }
+{ RECORD     , PROP       , DESC                 }
+{ "TEST:CHAR", "TEST.CHAR", "Test CHAR property" }
 }
 
 ######## Real type properties ########
@@ -48,15 +48,15 @@ pattern
 file "fgccmd_real_get.template"
 {
 pattern
-{ RECORD         , PROP         , EGU , PREC , DESC }
-{ "TEST:FLOAT"   , "TEST.FLOAT" , ""  , "6"  , ""   }
+{ RECORD         , PROP         , EGU , PREC , DESC                  }
+{ "TEST:FLOAT"   , "TEST.FLOAT" , ""  , "3"  , "Test FLOAT property" }
 }
 
 file "fgccmd_real_set.template"
 {
 pattern
-{ RECORD         , PROP         , EGU , PREC , DESC }
-{ "TEST:FLOAT"   , "TEST.FLOAT" , ""  , "6"  , ""   }
+{ RECORD         , PROP         , EGU , PREC , DESC                  }
+{ "TEST:FLOAT"   , "TEST.FLOAT" , ""  , "3"  , "Test FLOAT property" }
 }
 
 ######## Long type properties ########
@@ -64,25 +64,25 @@ pattern
 file "fgccmd_long_get.template"
 {
 pattern
-{ RECORD          , PROP          , EGU     , DESC                          }
-{ "TEST:INT16S"   , "TEST.INT16S" , ""      , ""                            }
-{ "TEST:INT16U"   , "TEST.INT16U" , ""      , ""                            }
-{ "TEST:INT32S"   , "TEST.INT32S" , ""      , ""                            }
-{ "TEST:INT32U"   , "TEST.INT32U" , ""      , ""                            }
-{ "TEST:INT8S"    , "TEST.INT8S"  , ""      , ""                            }
-{ "TEST:INT8U"    , "TEST.INT8U"  , ""      , ""                            }
+{ RECORD          , PROP          , EGU     , DESC                   }
+{ "TEST:INT16S"   , "TEST.INT16S" , ""      , "Test INT16S property" }
+{ "TEST:INT16U"   , "TEST.INT16U" , ""      , "Test INT16U property" }
+{ "TEST:INT32S"   , "TEST.INT32S" , ""      , "Test INT32S property" }
+{ "TEST:INT32U"   , "TEST.INT32U" , ""      , "Test INT32U property" }
+{ "TEST:INT8S"    , "TEST.INT8S"  , ""      , "Test INT8S property"  }
+{ "TEST:INT8U"    , "TEST.INT8U"  , ""      , "Test INT8U property"  }
 }
 
 file "fgccmd_long_set.template"
 {
 pattern
-{ RECORD          , PROP          , EGU     , DESC                          }
-{ "TEST:INT16S"   , "TEST.INT16S" , ""      , ""                            }
-{ "TEST:INT16U"   , "TEST.INT16U" , ""      , ""                            }
-{ "TEST:INT32S"   , "TEST.INT32S" , ""      , ""                            }
-{ "TEST:INT32U"   , "TEST.INT32U" , ""      , ""                            }
-{ "TEST:INT8S"    , "TEST.INT8S"  , ""      , ""                            }
-{ "TEST:INT8U"    , "TEST.INT8U"  , ""      , ""                            }
+{ RECORD          , PROP          , EGU     , DESC                   }
+{ "TEST:INT16S"   , "TEST.INT16S" , ""      , "Test INT16S property" }
+{ "TEST:INT16U"   , "TEST.INT16U" , ""      , "Test INT16U property" }
+{ "TEST:INT32S"   , "TEST.INT32S" , ""      , "Test INT32S property" }
+{ "TEST:INT32U"   , "TEST.INT32U" , ""      , "Test INT32U property" }
+{ "TEST:INT8S"    , "TEST.INT8S"  , ""      , "Test INT8S property"  }
+{ "TEST:INT8U"    , "TEST.INT8U"  , ""      , "Test INT8U property"  }
 }
 
 
