@@ -189,7 +189,6 @@ file "fgccmd_table_get.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                                      }
-{ "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
 { "REF:TABLE:FUNC:VALUE"          , "REF.TABLE.FUNC.VALUE"          , "1024"      , "65536"     , "REF:TABLE:FUNC:VALUE:TIME"     , "REF:TABLE:FUNC:VALUE:REF"      , "Table reference function (A, V or G)"    }
 }
 
@@ -197,7 +196,6 @@ file "fgccmd_table_set.template"
 {
 pattern
 { RECORD                          , PROP                            , NELM_DOUBLE , NELM_CHAR   , TIME_ARRAY                      , REF_ARRAY                       , DESC                                      }
-{ "REF:TABLE:FUNCTION"          , "REF.TABLE.FUNCTION"            , "1024"      , "65536"     , "REF:TABLE:FUNCTION:TIME"       , "REF:TABLE:FUNCTION:REF"        , "Table reference function (A,"}
 { "REF:TABLE:FUNC:VALUE"          , "REF.TABLE.FUNC.VALUE"          , "1024"      , "65536"     , "REF:TABLE:FUNC:VALUE:TIME"     , "REF:TABLE:FUNC:VALUE:REF"      , "Table reference function (A, V or G)"    }
 }
 

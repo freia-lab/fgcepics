@@ -521,31 +521,6 @@ $(pv_desc)</tooltip>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Group_29</name>
-    <macros>
-      <L>$(S)</L>
-      <S>RUNLOG_BYTE</S>
-      <T>PUB</T>
-    </macros>
-    <x>550</x>
-    <y>150</y>
-    <width>240</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_29</name>
-      <text>$(L)</text>
-      <width>150</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_29</name>
-      <pv_name>$(P)-$(DEV):$(S)</pv_name>
-      <x>160</x>
-      <width>80</width>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
     <name>Group_30</name>
     <macros>
       <L>$(S)</L>
@@ -806,7 +781,7 @@ $(pv_desc)</tooltip>
   <widget type="group" version="2.0.0">
     <name>Group_60</name>
     <macros>
-      <L>FUNCTION:$(S)</L>
+      <L>FUNC:$(S)</L>
       <S>G:READ</S>
     </macros>
     <x>30</x>
@@ -822,7 +797,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_63</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:$(S)</pv_name>
       <x>150</x>
       <width>730</width>
       <format>6</format>
@@ -832,7 +807,7 @@ $(pv_desc)</tooltip>
   <widget type="group" version="2.0.0">
     <name>Group_61</name>
     <macros>
-      <L>FUNCTION:$(S)</L>
+      <L>FUNC:$(S)</L>
       <S>REF</S>
     </macros>
     <x>30</x>
@@ -848,7 +823,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_33</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:$(S)</pv_name>
       <x>150</x>
       <width>730</width>
     </widget>
@@ -856,7 +831,7 @@ $(pv_desc)</tooltip>
   <widget type="group" version="2.0.0">
     <name>Group_62</name>
     <macros>
-      <L>FUNCTION:$(S)</L>
+      <L>FUNC:$(S)</L>
       <S>TIME</S>
     </macros>
     <x>30</x>
@@ -872,7 +847,7 @@ $(pv_desc)</tooltip>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_34</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:$(S)</pv_name>
       <x>150</x>
       <width>730</width>
     </widget>
@@ -880,7 +855,7 @@ $(pv_desc)</tooltip>
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <macros>
-      <L>FUNCTION:$(S)</L>
+      <L>FUNC:$(S)</L>
       <S>S:WRITE</S>
     </macros>
     <x>30</x>
@@ -891,7 +866,7 @@ $(pv_desc)</tooltip>
     <transparent>true</transparent>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_32</name>
-      <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:$(S)</pv_name>
+      <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:$(S)</pv_name>
       <x>150</x>
       <width>730</width>
       <format>6</format>
@@ -929,7 +904,7 @@ $(pv_desc)</tooltip>
         <description>Write PV</description>
       </action>
     </actions>
-    <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:G</pv_name>
+    <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:G</pv_name>
     <text>Get Table</text>
     <x>930</x>
     <y>850</y>
@@ -944,7 +919,7 @@ $(pv_desc)</tooltip>
         <description>Write PV</description>
       </action>
     </actions>
-    <pv_name>$(P)-$(DEV):REF:TABLE:FUNCTION:S</pv_name>
+    <pv_name>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:S</pv_name>
     <text>Load Table</text>
     <x>930</x>
     <y>890</y>
@@ -969,6 +944,7 @@ $(pv_desc)</tooltip>
         <font name="Default" family="Source Sans Pro" style="REGULAR" size="16.0">
         </font>
       </scale_font>
+      <visible>true</visible>
     </x_axis>
     <y_axes>
       <y_axis>
@@ -992,8 +968,8 @@ $(pv_desc)</tooltip>
     <traces>
       <trace>
         <name>$(traces[0].y_pv)</name>
-        <x_pv>$(P)-$(DEV):REF:TABLE:FUNCTION:TIME</x_pv>
-        <y_pv>$(P)-$(DEV):REF:TABLE:FUNCTION:REF</y_pv>
+        <x_pv>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:TIME</x_pv>
+        <y_pv>$(P)-$(DEV):REF:TABLE:FUNC:VALUE:REF</y_pv>
         <err_pv></err_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
@@ -1004,6 +980,7 @@ $(pv_desc)</tooltip>
         <line_width>1</line_width>
         <point_type>0</point_type>
         <point_size>10</point_size>
+        <visible>true</visible>
       </trace>
     </traces>
   </widget>
@@ -1063,11 +1040,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_12</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_41</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -1077,9 +1057,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:LINEAR_RATE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>190</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1091,14 +1071,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_13</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_42</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1115,9 +1096,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:INITIAL</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>170</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1129,14 +1110,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_14</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_43</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1153,9 +1135,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:INITIAL</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>30</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1167,14 +1149,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_15</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_44</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1191,9 +1174,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:DURATION4</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>50</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1205,14 +1188,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_16</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_45</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1229,9 +1213,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:REF4</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>70</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1243,14 +1227,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_17</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_46</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1267,9 +1252,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:ACCELERATION1</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>90</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1281,14 +1266,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_18</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_47</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1305,9 +1291,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:ACCELERATION2</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>110</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1319,14 +1305,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_19</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_48</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1343,9 +1330,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:ACCELERATION3</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>130</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1357,14 +1344,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_20</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_49</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1381,9 +1369,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:RATE2</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>150</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1395,14 +1383,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_21</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_50</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1419,9 +1408,9 @@ $(pv_desc)</tooltip>
                 <S>PPPL:RATE4</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>170</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1433,14 +1422,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_22</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_51</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1457,9 +1447,9 @@ $(pv_desc)</tooltip>
                 <S>RAMP:INITIAL</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>190</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1471,14 +1461,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_23</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_52</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1495,9 +1486,9 @@ $(pv_desc)</tooltip>
                 <S>RAMP:FINAL</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>210</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1509,14 +1500,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_24</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_53</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1533,9 +1525,9 @@ $(pv_desc)</tooltip>
                 <S>RAMP:LINEAR_RATE</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>230</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1547,14 +1539,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_25</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_54</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1571,9 +1564,9 @@ $(pv_desc)</tooltip>
                 <S>RAMP:ACCELERATION</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>250</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1585,14 +1578,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_26</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_55</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1609,9 +1603,9 @@ $(pv_desc)</tooltip>
                 <S>RAMP:DECELERATION</S>
                 <T>REF</T>
               </macros>
-              <x>700</x>
+              <x>760</x>
               <y>270</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1623,14 +1617,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_27</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_56</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1647,9 +1642,9 @@ $(pv_desc)</tooltip>
                 <S>TRIM:INITIAL</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>210</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1661,14 +1656,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_28</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_57</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1685,9 +1681,9 @@ $(pv_desc)</tooltip>
                 <S>TRIM:DURATION</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>250</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1699,14 +1695,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_29</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_58</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1723,9 +1720,9 @@ $(pv_desc)</tooltip>
                 <S>TRIM:FINAL</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>230</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1737,14 +1734,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_30</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_59</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1761,28 +1759,29 @@ $(pv_desc)</tooltip>
                 <S>PULSE:AMPLITUDE:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>270</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
               <widget type="label" version="2.0.0">
                 <name>Label_64</name>
                 <text>$(L)</text>
-                <width>180</width>
+                <width>200</width>
               </widget>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_35</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_62</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1814,11 +1813,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_36</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_64</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -1843,11 +1845,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_37</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_65</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -1872,11 +1877,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_38</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_66</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -1886,9 +1894,9 @@ $(pv_desc)</tooltip>
                 <S>CUBEXP:REF</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>310</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1900,14 +1908,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_39</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_67</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1924,9 +1933,9 @@ $(pv_desc)</tooltip>
                 <S>CUBEXP:TIME</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>330</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1938,14 +1947,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_40</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_68</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -1962,9 +1972,9 @@ $(pv_desc)</tooltip>
                 <S>CUBEXP:RATE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>290</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -1976,14 +1986,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_41</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_69</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2000,9 +2011,9 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:B:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>30</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2014,14 +2025,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_42</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_70</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2038,9 +2050,9 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:I:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>50</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2052,14 +2064,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_43</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_71</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2076,9 +2089,9 @@ $(pv_desc)</tooltip>
                 <S>DIRECT:V:VALUE</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>70</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2090,14 +2103,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_44</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_72</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2144,11 +2158,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_2</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2180,11 +2197,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_1</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_3</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2216,11 +2236,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_2</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_4</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2245,11 +2268,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_3</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_5</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2274,11 +2300,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_4</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_6</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2303,11 +2332,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_5</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_7</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2317,9 +2349,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:ACCELERATION</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>90</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2331,14 +2363,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_8</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_10</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2355,9 +2388,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:EXP_FINAL</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>110</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2369,14 +2402,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_9</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_11</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2393,9 +2427,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:EXP_TC</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>130</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2407,14 +2441,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_10</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_35</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2431,9 +2466,9 @@ $(pv_desc)</tooltip>
                 <S>PLEP:FINAL</S>
                 <T>REF</T>
               </macros>
-              <x>380</x>
+              <x>360</x>
               <y>150</y>
-              <width>310</width>
+              <width>390</width>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
@@ -2445,14 +2480,15 @@ $(pv_desc)</tooltip>
               <widget type="textentry" version="3.0.0">
                 <name>Text Entry_11</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>180</x>
+                <x>200</x>
                 <width>60</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_36</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>250</x>
-                <width>60</width>
+                <x>270</x>
+                <width>110</width>
                 <actions>
                   <action type="write_pv">
                     <pv_name>$(pv_name).PROC</pv_name>
@@ -2484,11 +2520,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_45</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_126</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2513,11 +2552,14 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_46</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_127</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2538,15 +2580,11 @@ $(pv_desc)</tooltip>
                 <text>$(L)</text>
                 <width>120</width>
               </widget>
-              <widget type="textentry" version="3.0.0">
-                <name>Text Entry_47</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
-                <x>130</x>
-              </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_128</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>130</x>
+                <width>210</width>
               </widget>
             </widget>
             <widget type="group" version="2.0.0">
@@ -2571,44 +2609,15 @@ $(pv_desc)</tooltip>
                 <name>Text Entry_48</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):S</pv_name>
                 <x>130</x>
+                <width>80</width>
+                <show_units>false</show_units>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_129</name>
                 <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
-                <x>240</x>
+                <x>220</x>
+                <width>120</width>
               </widget>
-            </widget>
-            <widget type="action_button" version="3.0.0">
-              <name>Action Button_3</name>
-              <actions>
-                <action type="write_pv">
-                  <pv_name>$(pv_name).PROC</pv_name>
-                  <value>1</value>
-                  <description>Write PV</description>
-                </action>
-              </actions>
-              <pv_name>$(P)-$(DEV):DEVICE:RESET</pv_name>
-              <text>DEVICE RESET</text>
-              <x>1030</x>
-              <y>30</y>
-              <width>120</width>
-              <tooltip>$(actions)</tooltip>
-            </widget>
-            <widget type="action_button" version="3.0.0">
-              <name>Action Button_4</name>
-              <actions>
-                <action type="write_pv">
-                  <pv_name>$(pv_name).PROC</pv_name>
-                  <value>1</value>
-                  <description>Write PV</description>
-                </action>
-              </actions>
-              <pv_name>$(P)-$(DEV):VS:RESET</pv_name>
-              <text>VS RESET</text>
-              <x>1030</x>
-              <y>70</y>
-              <width>120</width>
-              <tooltip>$(actions)</tooltip>
             </widget>
           </widget>
         </children>
@@ -5340,5 +5349,37 @@ $(pv_desc)</tooltip>
       <format>6</format>
       <interactive>true</interactive>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name).PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)-$(DEV):DEVICE:RESET</pv_name>
+    <text>DEVICE RESET</text>
+    <x>1070</x>
+    <y>810</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name).PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)-$(DEV):VS:RESET</pv_name>
+    <text>VS RESET</text>
+    <x>1070</x>
+    <y>850</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

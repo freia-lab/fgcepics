@@ -12,12 +12,12 @@ import epics
 ######## Configure property names - CAN BE EDITED ########
 
 # Triggers
-TRIGGER_GET = "REF:TABLE:FUNCTION:G" 
-TRIGGER_SET = "REF:TABLE:FUNCTION:S"
+TRIGGER_GET = "REF:TABLE:FUNC:VALUE:G" 
+TRIGGER_SET = "REF:TABLE:FUNC:VALUE:S"
 
 # Arrays
-ARRAY_TIM = "REF:TABLE:FUNCTION:TIME"
-ARRAY_REF = "REF:TABLE:FUNCTION:REF"
+ARRAY_TIM = "REF:TABLE:FUNC:VALUE:TIME"
+ARRAY_REF = "REF:TABLE:FUNC:VALUE:REF"
 
 ###########################################################
 
