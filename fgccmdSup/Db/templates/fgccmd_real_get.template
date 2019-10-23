@@ -9,3 +9,48 @@ record(ai, "$(HOST)$(DEV)$(RECORD):G")
     field(INP,  "@fgccmd.proto get_real($(FGC),$(PROP)) $(PORT)")
 }
 
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitI")
+{
+    field(VAL, "A")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitV")
+{
+    field(VAL, "V")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitB")
+{
+    field(VAL, "G")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitIrate")
+{
+    field(VAL, "A/s")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitVrate")
+{
+    field(VAL, "V/s")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitBrate")
+{
+    field(VAL, "G/s")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitIacc")
+{
+    field(VAL, "A/s²")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitVacc")
+{
+    field(VAL, "V/s²")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}
+record(stringout, "$(HOST)$(DEV)$(RECORD):G_unitBacc")
+{
+    field(VAL, "G/s²")
+    field(OUT,  "$(HOST)$(DEV)$(RECORD):G.EGU NPP")
+}

@@ -93,7 +93,7 @@ pattern
 { "REF:PPPL:ACCELERATION1"        , "REF.PPPL.ACCELERATION1"        , "[A|V|G]/s^2" , "3" , "Accel. during 1st (parabolic) segment"   }
 { "REF:PPPL:ACCELERATION2"        , "REF.PPPL.ACCELERATION2"        , "[A|V|G]/s^2" , "3" , "Accel. during 2nd (parabolic) segment"   }
 { "REF:PPPL:ACCELERATION3"        , "REF.PPPL.ACCELERATION3"        , "[A|V|G]/s^2" , "3" , "Accel. during 3rd (parabolic) segment"   }
-{ "REF:PPPL:DURATION4"            , "REF.PPPL.DURATION4"            , "A|V|G"       , "4" , "Duration of fourth (linear) segment (s)" }
+{ "REF:PPPL:DURATION4"            , "REF.PPPL.DURATION4"            , "s"       ,     "4" , "Duration of fourth (linear) segment (s)" }
 { "REF:PPPL:INITIAL"              , "REF.PPPL.INITIAL"              , "A|V|G"       , "3" , "Initial PPPL reference"                  }
 { "REF:PPPL:RATE2"                , "REF.PPPL.RATE2"                , "[A|V|G]/s"   , "3" , "Start rate of 2nd (parabolic) segment"   }
 { "REF:PPPL:RATE4"                , "REF.PPPL.RATE4"                , "[A|V|G]/s"   , "3" , "Rate of 4th (linear) segment"            }
@@ -133,7 +133,7 @@ pattern
 { "REF:PPPL:ACCELERATION1"        , "REF.PPPL.ACCELERATION1"        , "[A|V|G]/s^2" , "3" , "Accel. during 1st (parabolic) segment"   }
 { "REF:PPPL:ACCELERATION2"        , "REF.PPPL.ACCELERATION2"        , "[A|V|G]/s^2" , "3" , "Accel. during 2nd (parabolic) segment"   }
 { "REF:PPPL:ACCELERATION3"        , "REF.PPPL.ACCELERATION3"        , "[A|V|G]/s^2" , "3" , "Accel. during 3rd (parabolic) segment"   }
-{ "REF:PPPL:DURATION4"            , "REF.PPPL.DURATION4"            , "A|V|G"       , "4" , "Duration of fourth (linear) segment (s)" }
+{ "REF:PPPL:DURATION4"            , "REF.PPPL.DURATION4"            , "s"           , "4" , "Duration of fourth (linear) segment (s)" }
 { "REF:PPPL:INITIAL"              , "REF.PPPL.INITIAL"              , "A|V|G"       , "3" , "Initial PPPL reference"                  }
 { "REF:PPPL:RATE2"                , "REF.PPPL.RATE2"                , "[A|V|G]/s"   , "3" , "Start rate of 2nd (parabolic) segment"   }
 { "REF:PPPL:RATE4"                , "REF.PPPL.RATE4"                , "[A|V|G]/s"   , "3" , "Rate of 4th (linear) segment"            }
