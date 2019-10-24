@@ -2599,7 +2599,7 @@ $(pv_desc)</tooltip>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_127</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):T</pv_name>
                 <x>200</x>
                 <width>140</width>
               </widget>
@@ -2639,7 +2639,7 @@ $(pv_desc)</tooltip>
               </widget>
               <widget type="textupdate" version="2.0.0">
                 <name>Text Update_128</name>
-                <pv_name>$(P)-$(DEV):$(T):$(S):G</pv_name>
+                <pv_name>$(P)-$(DEV):$(T):$(S):T</pv_name>
                 <x>200</x>
                 <width>140</width>
               </widget>
@@ -5888,7 +5888,6 @@ $(pv_desc)</tooltip>
     <y>400</y>
     <width>1170</width>
     <height>400</height>
-    <active_tab>2</active_tab>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group_134</name>

@@ -366,3 +366,16 @@ record (bo, "$(HOST)$(DEV)REF:TABLE:GET:CMD") {
 record (bo, "$(HOST)$(DEV)REF:TABLE:LOAD:CMD") {
     field(FLNK, "$(HOST)$(DEV)REF:TABLE:FUNC:VALUE:S")
 }
+
+# Other convenience records
+
+record(stringin, "$(HOST)$(DEV)REF:RUN:T") {
+  field(DTYP, "Soft Timestamp")
+  field(TSEL, "$(HOST)$(DEV)REF:RUN:G.TIME")
+  field(INP, "@%b %d %H:%M:%S UTC")
+}
+record(stringin, "$(HOST)$(DEV)REF:ABORT:T") {
+  field(DTYP, "Soft Timestamp")
+  field(TSEL, "$(HOST)$(DEV)REF:ABORT:G.TIME")
+  field(INP, "@%b %d %H:%M:%S UTC")
+}
