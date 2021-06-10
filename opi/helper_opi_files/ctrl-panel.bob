@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>ctrl-panel</name>
+  <widget type="group" version="2.0.0">
+    <name>Settings</name>
+    <width>732</width>
+    <height>432</height>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <class>TITLE</class>
+      <text>$(L)</text>
+      <x use_class="true">0</x>
+      <y use_class="true">0</y>
+      <width>150</width>
+      <height use_class="true">50</height>
+      <font use_class="true">
+        <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="HEADER-TEXT" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <horizontal_alignment use_class="true">0</horizontal_alignment>
+      <vertical_alignment use_class="true">1</vertical_alignment>
+      <wrap_words use_class="true">false</wrap_words>
+    </widget>
+    <widget type="meter" version="3.0.0">
+      <name>Meter</name>
+      <pv_name>$(P)$(D):I_MEAS</pv_name>
+      <x>440</x>
+      <y>10</y>
+      <width>250</width>
+      <limits_from_pv>false</limits_from_pv>
+      <maximum>2000.0</maximum>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(D):STATE_PC:_STR</pv_name>
+      <x>540</x>
+      <y>260</y>
+      <width>140</width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P)$(D):ST_WARNINGS:SIMULATION</pv_name>
+      <x>130</x>
+      <width>270</width>
+      <height>50</height>
+      <off_color>
+        <color name="LED-YELLOW-OFF" red="110" green="108" blue="90">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="LED-YELLOW-ON" red="255" green="235" blue="17">
+        </color>
+      </on_color>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_30</name>
+      <macros>
+        <L>$(S)</L>
+        <S>I_MEAS</S>
+        <T>PUB</T>
+      </macros>
+      <x>440</x>
+      <y>150</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_30</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_30</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_31</name>
+      <macros>
+        <L>$(S)</L>
+        <S>I_REF</S>
+        <T>PUB</T>
+      </macros>
+      <x>440</x>
+      <y>170</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_31</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_31</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_32</name>
+      <macros>
+        <L>$(S)</L>
+        <S>V_MEAS</S>
+        <T>PUB</T>
+      </macros>
+      <x>440</x>
+      <y>190</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_32</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_32</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_33</name>
+      <macros>
+        <L>$(S)</L>
+        <S>V_REF</S>
+        <T>PUB</T>
+      </macros>
+      <x>440</x>
+      <y>210</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_33</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_33</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>PC State:</text>
+      <x>440</x>
+      <y>260</y>
+      <width>90</width>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>310</y>
+      <width>120</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>OFF</value>
+            <description>Off</description>
+          </action>
+        </actions>
+        <pv_name>$(P)$(D):MODE:PC:SEL</pv_name>
+        <y>10</y>
+        <width>120</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="multi_state_led" version="2.0.0">
+        <name>LED (Multi State)_1</name>
+        <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+        <width>120</width>
+        <height>10</height>
+        <square>true</square>
+        <states>
+          <state>
+            <value>1</value>
+            <label></label>
+            <color>
+              <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+              </color>
+            </color>
+          </state>
+        </states>
+        <fallback_label></fallback_label>
+        <fallback_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </fallback_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>130</x>
+      <y>310</y>
+      <width>120</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_1</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>ON_STANDBY</value>
+            <description>Standby</description>
+          </action>
+        </actions>
+        <pv_name>$(P)$(D):MODE:PC:SEL</pv_name>
+        <y>10</y>
+        <width>120</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="multi_state_led" version="2.0.0">
+        <name>LED (Multi State)</name>
+        <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+        <width>120</width>
+        <height>10</height>
+        <square>true</square>
+        <states>
+          <state>
+            <value>7</value>
+            <label></label>
+            <color>
+              <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+              </color>
+            </color>
+          </state>
+        </states>
+        <fallback_label></fallback_label>
+        <fallback_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </fallback_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>260</x>
+      <y>310</y>
+      <width>120</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_2</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>IDLE</value>
+            <description>Idle</description>
+          </action>
+        </actions>
+        <pv_name>$(P)$(D):MODE:PC:SEL</pv_name>
+        <y>10</y>
+        <width>120</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="multi_state_led" version="2.0.0">
+        <name>LED (Multi State)_2</name>
+        <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+        <width>120</width>
+        <height>10</height>
+        <square>true</square>
+        <states>
+          <state>
+            <value>8</value>
+            <label></label>
+            <color>
+              <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+              </color>
+            </color>
+          </state>
+        </states>
+        <fallback_label></fallback_label>
+        <fallback_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </fallback_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_83</name>
+      <macros>
+        <MODE>NONE</MODE>
+      </macros>
+      <x>420</x>
+      <y>310</y>
+      <width>120</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_11</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>$(MODE)</value>
+            <description>$(MODE) Mode</description>
+          </action>
+        </actions>
+        <pv_name>$(P)$(D):REF:FUNC:TYPE:S</pv_name>
+        <y>10</y>
+        <width>120</width>
+        <tooltip>Set $(actions)
+Possible only when PC state is Idle</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_5</name>
+        <width>120</width>
+        <height>10</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color red="50" green="50" blue="50" alpha="178">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </background_color>
+        <rules>
+          <rule name="PLEP Mode" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pvStr0==&quot;$(MODE)&quot;">
+              <value>
+                <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(P)$(D):REF:FUNC:TYPE:G</pv_name>
+          </rule>
+        </rules>
+      </widget>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_15</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Write PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(D):REF:ABORT:S</pv_name>
+      <text>ABORT</text>
+      <y>360</y>
+      <width>250</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>60</y>
+      <width>410</width>
+      <height>230</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="tabs" version="2.0.0">
+        <name>Tabs</name>
+        <tabs>
+          <tab>
+            <name>RAMP</name>
+            <children>
+              <widget type="group" version="2.0.0">
+                <name>Group_74</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>RAMP:INITIAL</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>12</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_80</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_46</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                    </rule>
+                  </rules>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_74</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_75</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>RAMP:FINAL</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>32</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_81</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_47</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                    </rule>
+                  </rules>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_75</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_76</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>RAMP:LINEAR_RATE</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>52</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_82</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_48</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                    </rule>
+                  </rules>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_76</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_77</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>RAMP:ACCELERATION</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>72</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_83</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_49</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                    </rule>
+                  </rules>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_77</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_78</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>RAMP:DECELERATION</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>92</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_84</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_50</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                    </rule>
+                  </rules>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_78</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_79</name>
+                <x>8</x>
+                <y>140</y>
+                <width>90</width>
+                <height>40</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="action_button" version="3.0.0">
+                  <name>Action Button_7</name>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name)</pv_name>
+                      <value>RAMP</value>
+                      <description>RAMP Mode</description>
+                    </action>
+                  </actions>
+                  <pv_name>$(P)$(D):REF:FUNC:TYPE:S</pv_name>
+                  <y>10</y>
+                  <width>90</width>
+                  <tooltip>Set $(actions)
+Possible only when PC state is Idle</tooltip>
+                  <border_alarm_sensitive>false</border_alarm_sensitive>
+                </widget>
+                <widget type="rectangle" version="2.0.0">
+                  <name>Rectangle</name>
+                  <width>90</width>
+                  <height>10</height>
+                  <line_width>1</line_width>
+                  <line_color>
+                    <color red="50" green="50" blue="50" alpha="178">
+                    </color>
+                  </line_color>
+                  <background_color>
+                    <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+                    </color>
+                  </background_color>
+                  <rules>
+                    <rule name="PLEP Mode" prop_id="background_color" out_exp="false">
+                      <exp bool_exp="pvStr0==&quot;RAMP&quot;">
+                        <value>
+                          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+                          </color>
+                        </value>
+                      </exp>
+                      <pv_name>$(P)$(D):REF:FUNC:TYPE:G</pv_name>
+                    </rule>
+                  </rules>
+                </widget>
+              </widget>
+            </children>
+          </tab>
+          <tab>
+            <name>PLEP</name>
+            <children>
+              <widget type="group" version="2.0.0">
+                <name>Group_37</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:LINEAR_RATE</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>112</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_43</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_13</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_42</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_41</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:INITIAL</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>92</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_44</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_14</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_43</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_70</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:ACCELERATION</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>12</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_76</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_42</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_70</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_71</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:EXP_FINAL</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>32</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_77</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_43</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_71</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_72</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:EXP_TC</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>52</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_78</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_44</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_72</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_73</name>
+                <macros>
+                  <L>REF:$(S)</L>
+                  <S>PLEP:FINAL</S>
+                  <T>REF</T>
+                </macros>
+                <x>8</x>
+                <y>72</y>
+                <width>390</width>
+                <height>20</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="label" version="2.0.0">
+                  <name>Label_79</name>
+                  <text>$(L)</text>
+                  <width>180</width>
+                </widget>
+                <widget type="textentry" version="3.0.0">
+                  <name>Text Entry_45</name>
+                  <pv_name>$(P)$(D):$(T):$(S):S</pv_name>
+                  <x>200</x>
+                  <width>60</width>
+                  <show_units>false</show_units>
+                </widget>
+                <widget type="textupdate" version="2.0.0">
+                  <name>Text Update_73</name>
+                  <pv_name>$(P)$(D):$(T):$(S):G</pv_name>
+                  <x>270</x>
+                  <width>110</width>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name).PROC</pv_name>
+                      <value>1</value>
+                      <description>Write PV</description>
+                    </action>
+                  </actions>
+                </widget>
+              </widget>
+              <widget type="group" version="2.0.0">
+                <name>Group_80</name>
+                <x>8</x>
+                <y>140</y>
+                <width>90</width>
+                <height>40</height>
+                <style>3</style>
+                <transparent>true</transparent>
+                <widget type="action_button" version="3.0.0">
+                  <name>Action Button_8</name>
+                  <actions>
+                    <action type="write_pv">
+                      <pv_name>$(pv_name)</pv_name>
+                      <value>PLEP</value>
+                      <description>PLEP Mode</description>
+                    </action>
+                  </actions>
+                  <pv_name>$(P)$(D):REF:FUNC:TYPE:SEL</pv_name>
+                  <y>10</y>
+                  <width>90</width>
+                  <tooltip>Set $(actions)
+Possible only when PC state is Idle</tooltip>
+                  <border_alarm_sensitive>false</border_alarm_sensitive>
+                </widget>
+                <widget type="rectangle" version="2.0.0">
+                  <name>Rectangle_1</name>
+                  <width>90</width>
+                  <height>10</height>
+                  <line_width>1</line_width>
+                  <line_color>
+                    <color red="50" green="50" blue="50" alpha="178">
+                    </color>
+                  </line_color>
+                  <background_color>
+                    <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+                    </color>
+                  </background_color>
+                  <rules>
+                    <rule name="PLEP Mode" prop_id="background_color" out_exp="false">
+                      <exp bool_exp="pvStr0==&quot;PLEP&quot;">
+                        <value>
+                          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+                          </color>
+                        </value>
+                      </exp>
+                      <pv_name>$(P)$(D):REF:FUNC:TYPE:G</pv_name>
+                    </rule>
+                  </rules>
+                </widget>
+              </widget>
+            </children>
+          </tab>
+        </tabs>
+        <width>410</width>
+        <height>230</height>
+        <active_tab>-1</active_tab>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group</name>
+        <x>110</x>
+        <y>180</y>
+        <width>280</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="multi_state_led" version="2.0.0">
+          <name>LED (Multi State)_3</name>
+          <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+          <width>60</width>
+          <height>40</height>
+          <square>true</square>
+          <states>
+            <state>
+              <value>10</value>
+              <label>ARMED</label>
+              <color>
+                <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+                </color>
+              </color>
+            </state>
+          </states>
+          <fallback_label></fallback_label>
+          <fallback_color>
+            <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+            </color>
+          </fallback_color>
+        </widget>
+        <widget type="group" version="2.0.0">
+          <name>Group_85</name>
+          <x>70</x>
+          <width>60</width>
+          <height>40</height>
+          <style>3</style>
+          <transparent>true</transparent>
+          <widget type="action_button" version="3.0.0">
+            <name>Action Button_13</name>
+            <actions>
+              <action type="write_pv">
+                <pv_name>$(pv_name)</pv_name>
+                <value>0</value>
+                <description>Write PV</description>
+              </action>
+            </actions>
+            <pv_name>$(P)$(D):REF:RUN:S</pv_name>
+            <text>RUN</text>
+            <y>10</y>
+            <width>60</width>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="multi_state_led" version="2.0.0">
+            <name>LED (Multi State)_6</name>
+            <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+            <width>60</width>
+            <height>10</height>
+            <square>true</square>
+            <states>
+              <state>
+                <value>11</value>
+                <label></label>
+                <color>
+                  <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+                  </color>
+                </color>
+              </state>
+            </states>
+            <fallback_label></fallback_label>
+            <fallback_color>
+              <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+              </color>
+            </fallback_color>
+          </widget>
+        </widget>
+        <widget type="combo" version="2.0.0">
+          <name>Combo Box_8</name>
+          <pv_name>$(P)$(D):LOAD:SELECT:SEL</pv_name>
+          <x>150</x>
+          <width>130</width>
+          <height>20</height>
+          <actions>
+            <action type="write_pv">
+              <pv_name>$(pv_name)</pv_name>
+              <value>0</value>
+              <description>Write PV</description>
+            </action>
+          </actions>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_1</name>
+          <pv_name>$(P)$(D):LOAD:SELECT</pv_name>
+          <x>150</x>
+          <y>20</y>
+          <width>130</width>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+</display>

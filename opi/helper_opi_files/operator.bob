@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>FGC-operator</name>
+  <width>1790</width>
+  <height>930</height>
+  <widget type="databrowser" version="2.0.0">
+    <name>Data Browser</name>
+    <file>../plots/Currents.plt</file>
+    <x>750</x>
+    <y>610</y>
+    <width>1020</width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <D>RCH1</D>
+      <L>$(D)</L>
+    </macros>
+    <file>ctrl-panel.bob</file>
+    <width>740</width>
+    <height>440</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <D>RCH2</D>
+      <L>$(D)</L>
+    </macros>
+    <file>ctrl-panel.bob</file>
+    <y>440</y>
+    <width>740</width>
+    <height>440</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_13</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(P)RCH1:REF:RUN:S</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>$(P)RCH2:REF:RUN:S</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Run Bpth PCs</text>
+    <x>290</x>
+    <y>880</y>
+    <width>110</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_15</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(P)RCH1:REF:ABORT:S</pv_name>
+        <value>0</value>
+        <description>Write PV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>$(P)RCH2:REF:ABORT:S</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>ABORT Both PCs</text>
+    <x>20</x>
+    <y>880</y>
+    <width>250</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>
