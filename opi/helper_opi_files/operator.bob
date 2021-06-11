@@ -2,13 +2,14 @@
 <display version="2.0.0">
   <name>FGC-operator</name>
   <width>1790</width>
-  <height>930</height>
+  <height>950</height>
   <widget type="databrowser" version="2.0.0">
     <name>Data Browser</name>
     <file>../plots/Currents.plt</file>
     <x>750</x>
-    <y>610</y>
+    <y>640</y>
     <width>1020</width>
+    <show_toolbar>true</show_toolbar>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
@@ -70,5 +71,12 @@
     <y>880</y>
     <width>250</width>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <file>status-panel.bob</file>
+    <x>740</x>
+    <width>1030</width>
+    <height>630</height>
   </widget>
 </display>

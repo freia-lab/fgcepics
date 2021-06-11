@@ -2,10 +2,11 @@
 <databrowser>
   <title></title>
   <show_toolbar>true</show_toolbar>
+  <grid>true</grid>
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-1 hours</start>
+  <start>-30 minutes</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,10 +35,10 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-4.9000000000000006E-14</min>
-      <max>5.330000000000001E-13</max>
-      <grid>false</grid>
-      <autoscale>false</autoscale>
+      <min>-0.027000000000000024</min>
+      <max>8.267000000000001</max>
+      <grid>true</grid>
+      <autoscale>true</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>

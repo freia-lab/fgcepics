@@ -10,12 +10,14 @@
         <description>Write PV</description>
       </action>
     </actions>
-    <pv_name>$(P)-$(DEV):DEVICE:RESET</pv_name>
+    <pv_name>$(P)$(D):DEVICE:RESET</pv_name>
     <text>DEVICE RESET</text>
     <x>120</x>
     <y>430</y>
     <width>120</width>
-    <tooltip>$(actions)</tooltip>
+    <tooltip>Reset the FGC</tooltip>
+    <show_confirm_dialog>true</show_confirm_dialog>
+    <confirm_message>Are your sure you want to Reset the FGC?</confirm_message>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_4</name>
@@ -26,12 +28,13 @@
         <description>Write PV</description>
       </action>
     </actions>
-    <pv_name>$(P)-$(DEV):VS:RESET</pv_name>
+    <pv_name>$(P)$(D):VS:RESET</pv_name>
     <text>VS RESET</text>
     <x>120</x>
     <y>470</y>
     <width>120</width>
     <tooltip>$(actions)</tooltip>
+    <show_confirm_dialog>true</show_confirm_dialog>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group_36</name>
@@ -669,7 +672,7 @@
     <name>Tabs_adc_stat</name>
     <tabs>
       <tab>
-        <name>A</name>
+        <name>ADC_A</name>
         <children>
           <widget type="group" version="2.0.0">
             <name>Group</name>
@@ -815,7 +818,7 @@
         </children>
       </tab>
       <tab>
-        <name>B</name>
+        <name>ADC_BB</name>
         <children>
           <widget type="group" version="2.0.0">
             <name>Group_76</name>
@@ -961,7 +964,7 @@
         </children>
       </tab>
       <tab>
-        <name>C</name>
+        <name>ADC_C</name>
         <children>
           <widget type="group" version="2.0.0">
             <name>Group_87</name>
@@ -1107,7 +1110,7 @@
         </children>
       </tab>
       <tab>
-        <name>D</name>
+        <name>ADC_D</name>
         <children>
           <widget type="group" version="2.0.0">
             <name>Group_93</name>
@@ -1253,9 +1256,9 @@
         </children>
       </tab>
     </tabs>
-    <x>520</x>
+    <x>510</x>
     <y>150</y>
-    <width>275</width>
+    <width>330</width>
     <height>150</height>
   </widget>
   <widget type="tabs" version="2.0.0">

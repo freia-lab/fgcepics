@@ -379,3 +379,18 @@ record(stringin, "$(HOST)$(DEV)REF:ABORT:T") {
   field(TSEL, "$(HOST)$(DEV)REF:ABORT:G.TIME")
   field(INP, "@%b %d %H:%M:%S UTC")
 }
+
+record (acalcout, "$(HOST)$(DEV)Warnings") {
+  field (SCAN, "1 second")
+  field (INAA, "$(HOST)$(DEV)ST_FAULTS:_STR")
+  field (INBB, "$(HOST)$(DEV)ST_WARNINGS:_STR")
+  field (INCC, "")
+  field (CALC, "BB=CC?0:1")
+}
+record (acalcout, "$(HOST)$(DEV)Faults") {
+  field (SCAN, "1 second")
+  field (INAA, "$(HOST)$(DEV)ST_FAULTS:_STR")
+  field (INBB, "$(HOST)$(DEV)ST_WARNINGS:_STR")
+  field (INCC, "")
+  field (CALC, "AA=CC?0:1")
+}
