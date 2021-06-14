@@ -39,7 +39,7 @@
       </tab>
       <tab>
         <name>Engineer</name>
-        <file></file>
+        <file>helper_opi_files/engineer.bob</file>
         <macros>
         </macros>
         <group_name></group_name>
