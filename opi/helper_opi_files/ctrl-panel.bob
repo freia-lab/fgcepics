@@ -27,14 +27,6 @@
       <vertical_alignment use_class="true">1</vertical_alignment>
       <wrap_words use_class="true">false</wrap_words>
     </widget>
-    <widget type="meter" version="3.0.0">
-      <name>Meter</name>
-      <pv_name>$(P)$(D):I_MEAS</pv_name>
-      <x>439</x>
-      <width>250</width>
-      <limits_from_pv>false</limits_from_pv>
-      <maximum>2000.0</maximum>
-    </widget>
     <widget type="led" version="2.0.0">
       <name>LED</name>
       <pv_name>$(P)$(D):ST_WARNINGS:SIMULATION</pv_name>
@@ -63,106 +55,6 @@
           <pv_name>$(pv_name)</pv_name>
         </rule>
       </rules>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_30</name>
-      <macros>
-        <L>$(S)</L>
-        <S>I_MEAS</S>
-        <T>PUB</T>
-      </macros>
-      <x>439</x>
-      <y>129</y>
-      <width>240</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_30</name>
-        <text>$(L)</text>
-        <width>150</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_30</name>
-        <pv_name>$(P)$(D):$(S)</pv_name>
-        <x>160</x>
-        <width>80</width>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_31</name>
-      <macros>
-        <L>$(S)</L>
-        <S>I_REF</S>
-        <T>PUB</T>
-      </macros>
-      <x>439</x>
-      <y>149</y>
-      <width>240</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_31</name>
-        <text>$(L)</text>
-        <width>150</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_31</name>
-        <pv_name>$(P)$(D):$(S)</pv_name>
-        <x>160</x>
-        <width>80</width>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_32</name>
-      <macros>
-        <L>$(S)</L>
-        <S>V_MEAS</S>
-        <T>PUB</T>
-      </macros>
-      <x>439</x>
-      <y>169</y>
-      <width>240</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_32</name>
-        <text>$(L)</text>
-        <width>150</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_32</name>
-        <pv_name>$(P)$(D):$(S)</pv_name>
-        <x>160</x>
-        <width>80</width>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_33</name>
-      <macros>
-        <L>$(S)</L>
-        <S>V_REF</S>
-        <T>PUB</T>
-      </macros>
-      <x>439</x>
-      <y>189</y>
-      <width>240</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_33</name>
-        <text>$(L)</text>
-        <width>150</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_33</name>
-        <pv_name>$(P)$(D):$(S)</pv_name>
-        <x>160</x>
-        <width>80</width>
-      </widget>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group</name>
@@ -405,6 +297,10 @@ Possible only when PC state is Idle</tooltip>
                   <show_units>false</show_units>
                   <rules>
                     <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
                     </rule>
                   </rules>
                 </widget>
@@ -448,6 +344,10 @@ Possible only when PC state is Idle</tooltip>
                   <show_units>false</show_units>
                   <rules>
                     <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
                     </rule>
                   </rules>
                 </widget>
@@ -491,6 +391,10 @@ Possible only when PC state is Idle</tooltip>
                   <show_units>false</show_units>
                   <rules>
                     <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
                     </rule>
                   </rules>
                 </widget>
@@ -534,6 +438,10 @@ Possible only when PC state is Idle</tooltip>
                   <show_units>false</show_units>
                   <rules>
                     <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
                     </rule>
                   </rules>
                 </widget>
@@ -577,6 +485,10 @@ Possible only when PC state is Idle</tooltip>
                   <show_units>false</show_units>
                   <rules>
                     <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
                     </rule>
                   </rules>
                 </widget>
@@ -673,6 +585,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_42</name>
@@ -712,6 +632,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_43</name>
@@ -751,6 +679,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_70</name>
@@ -790,6 +726,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_71</name>
@@ -829,6 +773,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_72</name>
@@ -868,6 +820,14 @@ Possible only when PC state is Idle</tooltip>
                   <x>200</x>
                   <width>60</width>
                   <show_units>false</show_units>
+                  <rules>
+                    <rule name="Active" prop_id="enabled" out_exp="false">
+                      <exp bool_exp="pvInt0 != 8">
+                        <value>false</value>
+                      </exp>
+                      <pv_name>$(P)$(D):STATE_PC:0</pv_name>
+                    </rule>
+                  </rules>
                 </widget>
                 <widget type="textupdate" version="2.0.0">
                   <name>Text Update_73</name>
@@ -938,6 +898,7 @@ Possible only when PC state is Idle</tooltip>
         </tabs>
         <width>410</width>
         <height>230</height>
+        <active_tab>1</active_tab>
       </widget>
       <widget type="group" version="2.0.0">
         <name>Group</name>
@@ -1083,7 +1044,7 @@ Possible only when PC state is Idle</tooltip>
         <T>LIMITS</T>
       </macros>
       <x>439</x>
-      <y>219</y>
+      <y>229</y>
       <width>240</width>
       <height>20</height>
       <style>3</style>
@@ -1108,7 +1069,7 @@ Possible only when PC state is Idle</tooltip>
         <T>LIMITS</T>
       </macros>
       <x>439</x>
-      <y>239</y>
+      <y>249</y>
       <width>240</width>
       <height>20</height>
       <style>3</style>
@@ -1201,8 +1162,8 @@ Possible only when PC state is Idle</tooltip>
       <name>Action Button_16</name>
       <actions>
         <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>0</value>
+          <pv_name>$(pv_name).PROC</pv_name>
+          <value>1</value>
           <description>Write PV</description>
         </action>
       </actions>
@@ -1212,6 +1173,140 @@ Possible only when PC state is Idle</tooltip>
       <y>349</y>
       <width>119</width>
       <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_26</name>
+      <macros>
+        <L>$(S)</L>
+        <S>I_DIFF_MA</S>
+        <T>PUB</T>
+      </macros>
+      <x>439</x>
+      <y>200</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_26</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_26</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_30</name>
+      <macros>
+        <L>$(S)</L>
+        <S>I_MEAS</S>
+        <T>PUB</T>
+      </macros>
+      <x>439</x>
+      <y>119</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_30</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_30</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_31</name>
+      <macros>
+        <L>$(S)</L>
+        <S>I_REF</S>
+        <T>PUB</T>
+      </macros>
+      <x>439</x>
+      <y>139</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_31</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_31</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_32</name>
+      <macros>
+        <L>$(S)</L>
+        <S>V_MEAS</S>
+        <T>PUB</T>
+      </macros>
+      <x>439</x>
+      <y>159</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_32</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_32</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_33</name>
+      <macros>
+        <L>$(S)</L>
+        <S>V_REF</S>
+        <T>PUB</T>
+      </macros>
+      <x>439</x>
+      <y>179</y>
+      <width>240</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_33</name>
+        <text>$(L)</text>
+        <width>150</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_33</name>
+        <pv_name>$(P)$(D):$(S)</pv_name>
+        <x>160</x>
+        <width>80</width>
+      </widget>
+    </widget>
+    <widget type="meter" version="3.0.0">
+      <name>Meter</name>
+      <pv_name>$(P)$(D):I_MEAS</pv_name>
+      <x>439</x>
+      <width>250</width>
+      <height>110</height>
+      <limits_from_pv>false</limits_from_pv>
+      <maximum>2000.0</maximum>
     </widget>
   </widget>
 </display>

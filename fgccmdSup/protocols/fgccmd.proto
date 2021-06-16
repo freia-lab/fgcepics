@@ -58,6 +58,12 @@ set_null {
     in "$ .\n";
 }
 
+LOG_RESET {
+    out "! S \$1:LOG RESET";
+    in "$ .\n";
+#    in "%*#s";
+}
+
 set_string {
     @init {
         out "! G \$1:\$2";
