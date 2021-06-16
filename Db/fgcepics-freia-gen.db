@@ -1,3 +1,14 @@
+####
+#  Missing command
+record(stringout, "$(HOST)$(DEV)LOG:RESET")
+{
+    field(DESC, "Reset log (postmortem)")
+    field(DTYP, "stream")
+    field(VAL,  "")
+    field(OUT,  "@fgccmd.proto set_null($(FGC),LOG.RESET) $(PORT)")
+}
+
+
 record (fanout, "$(HOST,undefined)$(DEV,undefined)Ctrl:cmdUpdate") 
 {
     field(DESC, "Update all *:G records")

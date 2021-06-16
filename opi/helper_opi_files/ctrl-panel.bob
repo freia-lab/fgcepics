@@ -31,7 +31,6 @@
       <name>Meter</name>
       <pv_name>$(P)$(D):I_MEAS</pv_name>
       <x>439</x>
-      <y>-1</y>
       <width>250</width>
       <limits_from_pv>false</limits_from_pv>
       <maximum>2000.0</maximum>
@@ -56,6 +55,14 @@
       </font>
       <square>true</square>
       <labels_from_pv>true</labels_from_pv>
+      <rules>
+        <rule name="Visibility" prop_id="visible" out_exp="false">
+          <exp bool_exp="pvInt0 == 0">
+            <value>false</value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group_30</name>
@@ -356,7 +363,7 @@ Possible only when PC state is Idle</tooltip>
       <pv_name>$(P)$(D):REF:ABORT:S</pv_name>
       <text>ABORT</text>
       <y>350</y>
-      <width>250</width>
+      <width>119</width>
       <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="group" version="2.0.0">
@@ -1189,6 +1196,22 @@ Possible only when PC state is Idle</tooltip>
         <width>140</width>
         <format>6</format>
       </widget>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_16</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Write PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(D):LOG:RESET</pv_name>
+      <text>LOG RESET</text>
+      <x>129</x>
+      <y>349</y>
+      <width>119</width>
+      <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
 </display>

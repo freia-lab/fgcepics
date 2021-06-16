@@ -35,8 +35,9 @@ You will loose the connection to the device!</confirm_message>
     <x>170</x>
     <y>340</y>
     <width>120</width>
-    <tooltip>$(actions)</tooltip>
+    <tooltip>Reset the Voltage Source</tooltip>
     <show_confirm_dialog>true</show_confirm_dialog>
+    <confirm_message>Are your sure you want to reset the Voltage Source?</confirm_message>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group_36</name>
