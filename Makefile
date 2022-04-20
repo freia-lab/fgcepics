@@ -1,14 +1,19 @@
-# Makefile for Asyn fgcudp support
-#
-# Created by jlhenriq on Fri Mar  8 14:50:54 2019
-# Based on the Asyn devGpib template
+# Copyright (C) 2022  FREIA Laboratory
 
-TOP = .
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+TOP := $(CURDIR)
 include $(TOP)/configure/CONFIG
-
-DIRS := configure
-DIRS += $(wildcard *[Ss]up)
-DIRS += $(wildcard *[Aa]pp)
-DIRS += $(wildcard ioc[Bb]oot)
-
-include $(TOP)/configure/RULES_TOP
+include $(TOP)/configure/RULES

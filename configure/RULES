@@ -1,6 +1,4 @@
-# RULES
+include $(REQUIRE_CONFIG)/RULES_SITEMODS
 
-include $(CONFIG)/RULES
-
-# Library should be rebuilt because LIBOBJS may have changed.
-$(LIBNAME): ../Makefile
+include $(TOP)/configure/module/RULES_MODULE
+-include $(TOP)/configure/module/RULES_DKMS_L
