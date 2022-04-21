@@ -26,6 +26,12 @@ common 1.0.0
 
 ## Installation
 
+Before building one MUST copy all *.db, *.template and *.substitution files from fgc*Sup directories and below to
+fgcepics/Db directory.
+```sh
+$ find fgcepics/fgc*Sup/ \( -name "*.template" -or -name "*.substitutions" -or -name "*.db" \) -exec cp {} fgcepics/Db \;
+```
+
 ```sh
 $ make init patch build
 $ make install

@@ -57,17 +57,18 @@ APPSRC := $(APP)
 
 SOURCES += $(APP)/fgccmdSup/src/asubroutine.c
 DBDS += $(wildcard $(APP)/fgccmdSup/src/*.dbd)
-TEMPLATES += $(wildcard $(APPDB)/fgccmdSup/templates/*.templates)
 
 SOURCES += $(APP)/fgcudpSup/src/devfgcudp.cpp
 SOURCES += $(APP)/fgcudpSup/src/common/class_base_params.cpp
 SOURCES += $(APP)/fgcudpSup/src/common/param_utils.cpp
+SOURCES += $(APP)/fgcudpSup/src/classes/class_63_params.cpp
+SOURCES += $(APP)/fgcudpSup/src/classes/class_62_params.cpp
 HEADERS += $(wildcard $(APP)/fgcudpSup/src/common/inc/*.h)
 DBDS += $(wildcard $(APP)/fgcudpSup/src/*.dbd)
 
 TEMPLATES += $(wildcard $(APPDB)/*.db)
 TEMPLATES += $(wildcard $(APP)/fgccmdSup/protocols/*.proto)
-TEMPLATES += $(wildcard $(APPDB)/*.template)
+#TEMPLATES += $(wildcard $(APPDB)/*.template)
 
 SCRIPTS += $(wildcard ../iocsh/*.iocsh)
 
@@ -77,9 +78,7 @@ SCRIPTS += $(wildcard ../iocsh/*.iocsh)
 #     SUBS = $(wildcard $(APPDB)/*.substitutions)
 #     TMPS = $(wildcard $(APPDB)/*.template)
 
-SUBS = $(wildcard $(APP)/fgccmdSup/Db/*.substitutions)
-
-CCFLAGS += -std=c99
+SUBS = $(wildcard $(APPDB)/*.substitutions)
 
 USR_DBFLAGS += -I . -I ..
 USR_DBFLAGS += -I $(EPICS_BASE)/db

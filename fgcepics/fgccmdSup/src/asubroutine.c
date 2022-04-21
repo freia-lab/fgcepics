@@ -68,9 +68,10 @@ static long time_val_write(aSubRecord * prec)
     int write_offset  = 0;
     int available_len = prec->nova;
     char* out_buffer  = prec->vala;
+    long i;
 
     // Read two arrays, merge and print values
-    for(long i = 0; i < prec->nea; i++)
+    for(i = 0; i < prec->nea; i++)
     {
         int num_read = snprintf(&out_buffer[write_offset], available_len, "%f|%f,", in_a[i], in_b[i]);
         if(num_read > available_len)

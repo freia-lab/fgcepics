@@ -1,0 +1,8 @@
+record(waveform, "$(HOST)$(DEV)$(RECORD)")
+{   
+    field(DESC, "$(DESC)")
+    field(FTVL, "DOUBLE")
+    field(PREC, "$(PREC)")
+    field(NELM, "$(NELM_DOUBLE)")
+}
+

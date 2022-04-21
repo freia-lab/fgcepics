@@ -20,7 +20,7 @@
 
 #include <map>
 #include <set>
-#include <string>
+#include <string.h>
 #include <errno.h>
 
 
