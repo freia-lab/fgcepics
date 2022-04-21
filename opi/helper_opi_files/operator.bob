@@ -46,7 +46,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <text>Run Bpth PCs</text>
+    <text>Run Both PCs</text>
     <x>290</x>
     <y>880</y>
     <width>110</width>

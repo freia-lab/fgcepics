@@ -31,6 +31,7 @@
         <name>RCH1</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
+          <ASYN_PORT>1</ASYN_PORT>
           <DEV>RCH1</DEV>
         </macros>
         <group_name></group_name>
@@ -39,6 +40,7 @@
         <name>RCH2</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
+          <ASYN_PORT>2</ASYN_PORT>
           <DEV>RCH2</DEV>
         </macros>
         <group_name></group_name>
@@ -47,6 +49,7 @@
         <name>SPARE (test)</name>
         <file>helper_opi_files/test_published.bob</file>
         <macros>
+          <ASYN_PORT>3</ASYN_PORT>
           <DEV>SPARE</DEV>
         </macros>
         <group_name></group_name>

@@ -978,6 +978,7 @@ $(pv_desc)</tooltip>
           </color>
         </color>
         <line_width>1</line_width>
+        <line_style>0</line_style>
         <point_type>0</point_type>
         <point_size>10</point_size>
         <visible>true</visible>
@@ -5946,6 +5947,31 @@ $(pv_desc)</tooltip>
     <text>VS RESET</text>
     <x>1070</x>
     <y>850</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>fgc_port_$(ASYN_PORT)</value>
+        <description>Select port</description>
+      </action>
+      <action type="open_display">
+        <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
+        <macros>
+          <P>ioc01-fgc</P>
+          <R>:asynRec</R>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <pv_name>ioc01-fgc:asynRec.PORT</pv_name>
+    <text>asynRec</text>
+    <x>1070</x>
+    <y>890</y>
     <width>120</width>
     <tooltip>$(actions)</tooltip>
   </widget>
