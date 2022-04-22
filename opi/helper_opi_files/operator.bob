@@ -79,4 +79,23 @@
     <width>1030</width>
     <height>630</height>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MAG-RCH1:Ctrl:cmdUpdate.PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>MAG-RCH2:Ctrl:cmdUpdate.PROC</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Update All</text>
+    <x>620</x>
+    <y>880</y>
+    <tooltip>$(pv_name)</tooltip>
+  </widget>
 </display>
