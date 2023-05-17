@@ -1406,6 +1406,12 @@ You will loose the connection to the device!</confirm_message>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_77</name>
+            <pv_name>$(P)$(D):$(S)</pv_name>
+            <x>160</x>
+            <width>130</width>
+          </widget>
               <widget type="led" version="2.0.0">
                 <name>LED_4</name>
                 <pv_name>$(P)$(D):$(S)</pv_name>
@@ -1427,6 +1433,12 @@ You will loose the connection to the device!</confirm_message>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_77</name>
+            <pv_name>$(P)$(D):$(S)</pv_name>
+            <x>160</x>
+            <width>130</width>
+          </widget>
               <widget type="led" version="2.0.0">
                 <name>LED_5</name>
                 <pv_name>$(P)$(D):$(S)</pv_name>
@@ -1448,6 +1460,12 @@ You will loose the connection to the device!</confirm_message>
               <height>20</height>
               <style>3</style>
               <transparent>true</transparent>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_77</name>
+            <pv_name>$(P)$(D):$(S)</pv_name>
+            <x>160</x>
+            <width>130</width>
+          </widget>
               <widget type="led" version="2.0.0">
                 <name>LED_6</name>
                 <pv_name>$(P)$(D):$(S)</pv_name>
@@ -1458,27 +1476,6 @@ You will loose the connection to the device!</confirm_message>
                 <text>$(L)</text>
               </widget>
             </widget>
-          </widget>
-          <widget type="textupdate" version="2.0.0">
-            <name>Text Update_77</name>
-            <pv_name>$(P)$(D):$(S)</pv_name>
-            <x>165</x>
-            <y>5</y>
-            <width>130</width>
-          </widget>
-          <widget type="textupdate" version="2.0.0">
-            <name>Text Update_78</name>
-            <pv_name>$(P)$(D):$(S)</pv_name>
-            <x>165</x>
-            <y>25</y>
-            <width>130</width>
-          </widget>
-          <widget type="textupdate" version="2.0.0">
-            <name>Text Update_79</name>
-            <pv_name>$(P)$(D):$(S)</pv_name>
-            <x>165</x>
-            <y>45</y>
-            <width>130</width>
           </widget>
         </children>
       </tab>

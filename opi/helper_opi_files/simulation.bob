@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-05-17 18:15:28 by konrad-->
+<display version="2.0.0">
+  <name>FGC-simulation</name>
+  <macros>
+    <P>MAG-</P>
+  </macros>
+  <width>1790</width>
+  <height>950</height>
+  <widget type="databrowser" version="2.0.0">
+    <name>Data Browser</name>
+    <file>../plots/Current.plt</file>
+    <x>850</x>
+    <y>640</y>
+    <width>920</width>
+    <show_toolbar>true</show_toolbar>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <D>SPARE</D>
+      <L>$(D)</L>
+    </macros>
+    <file>ctrl-panel-smpl.bob</file>
+    <width>740</width>
+    <height>440</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MAG-RCH1:Ctrl:cmdUpdate.PROC</pv_name>
+        <value>1</value>
+        <description>Write PV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>MAG-RCH2:Ctrl:cmdUpdate.PROC</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Update All</text>
+    <x>620</x>
+    <y>880</y>
+    <tooltip>$(pv_name)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <D>SPARE</D>
+    </macros>
+    <x>10</x>
+    <y>480</y>
+    <width>821</width>
+    <height>462</height>
+    <style>2</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>$(D)</text>
+      <x>10</x>
+      <y>10</y>
+      <width>159</width>
+      <height>50</height>
+      <font>
+        <font name="HEADER" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_1</name>
+      <file>engineer-1fgc.bob</file>
+      <x>10</x>
+      <y>70</y>
+      <width>800</width>
+      <height>390</height>
+    </widget>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <D>SPARE</D>
+    </macros>
+    <file>startUp-ctrl-panel.bob</file>
+    <x>850</x>
+    <y>10</y>
+    <width>829</width>
+    <height>580</height>
+  </widget>
+</display>

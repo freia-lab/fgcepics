@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-05-17 18:16:58 by konrad-->
+<display version="2.0.0">
+  <name>mask and delay</name>
+  <width>600</width>
+  <height>30</height>
+  <widget type="checkbox" version="2.0.0">
+    <name>Check Box</name>
+    <pv_name>$(PREFIX):SeqMask.B$(N)</pv_name>
+    <bit>-1</bit>
+    <label>Step $(N)</label>
+    <width>110</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(PREFIX):Seq.DLY$(N)</pv_name>
+    <x>150</x>
+    <y>5</y>
+    <width>50</width>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(PREFIX):Seq.LNK$(N)</pv_name>
+    <x>330</x>
+    <y>5</y>
+    <width>170</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Command: </text>
+    <x>240</x>
+    <y>5</y>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PREFIX):Seq.DOL$(N)</pv_name>
+    <x>520</x>
+    <y>5</y>
+    <width>70</width>
+  </widget>
+</display>
