@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-05-16 15:27:23 by konrad-->
 <display version="2.0.0">
   <name>FGC</name>
   <macros>
@@ -34,6 +35,7 @@
         <name>Operator</name>
         <file>helper_opi_files/operator.bob</file>
         <macros>
+          <SMPL>-smpl</SMPL>
         </macros>
         <group_name></group_name>
       </tab>
@@ -41,6 +43,14 @@
         <name>Engineer</name>
         <file>helper_opi_files/engineer.bob</file>
         <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Operator (adv)</name>
+        <file>helper_opi_files/operator.bob</file>
+        <macros>
+          <SMPL></SMPL>
         </macros>
         <group_name></group_name>
       </tab>

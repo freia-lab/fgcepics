@@ -1,0 +1,3755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-05-17 12:21:19 by konrad-->
+<display version="2.0.0">
+  <name>status_panel_smpl</name>
+  <width>1020</width>
+  <height>640</height>
+  <widget type="group" version="2.0.0">
+    <name>  RCH1  </name>
+    <y>415</y>
+    <width>524</width>
+    <height>214</height>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>  ADC Status                A       B      C       D  </name>
+      <macros>
+        <D>RCH1</D>
+      </macros>
+      <width>302</width>
+      <height>172</height>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>Group_77</name>
+        <macros>
+          <L>CAL_ACTIVE</L>
+          <S>ST_ADC_$(X):CAL_ACTIVE</S>
+        </macros>
+        <y>10</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_4</name>
+          <pv_name>$(P)$(D):ST_ADC_A:CAL_ACTIVE</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_83</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_9</name>
+          <pv_name>$(P)$(D):ST_ADC_B:CAL_ACTIVE</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_10</name>
+          <pv_name>$(P)$(D):ST_ADC_C:CAL_ACTIVE</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_11</name>
+          <pv_name>$(P)$(D):ST_ADC_D:CAL_ACTIVE</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_78</name>
+        <macros>
+          <L>CAL_FAILED</L>
+          <S>ST_ADC_$(X):CAL_FAILED</S>
+        </macros>
+        <y>35</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_5</name>
+          <pv_name>$(P)$(D):ST_ADC_A:CAL_FAILED</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_84</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_12</name>
+          <pv_name>$(P)$(D):ST_ADC_B:CAL_FAILED</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_13</name>
+          <pv_name>$(P)$(D):ST_ADC_C:CAL_FAILED</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_15</name>
+          <pv_name>$(P)$(D):ST_ADC_D:CAL_FAILED</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_79</name>
+        <macros>
+          <L>IN_USE</L>
+          <S>ST_ADC_$(X):IN_USE</S>
+        </macros>
+        <y>60</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_6</name>
+          <pv_name>$(P)$(D):ST_ADC_A:IN_USE</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_85</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_16</name>
+          <pv_name>$(P)$(D):ST_ADC_B:IN_USE</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_17</name>
+          <pv_name>$(P)$(D):ST_ADC_C:IN_USE</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_18</name>
+          <pv_name>$(P)$(D):ST_ADC_D:IN_USE</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_80</name>
+        <macros>
+          <L>SIGNAL_STUCK</L>
+          <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+        </macros>
+        <y>85</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_7</name>
+          <pv_name>$(P)$(D):ST_ADC_A:SIGNAL_STUCK</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_86</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_19</name>
+          <pv_name>$(P)$(D):ST_ADC_B:SIGNAL_STUCK</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_20</name>
+          <pv_name>$(P)$(D):ST_ADC_C:SIGNAL_STUCK</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_21</name>
+          <pv_name>$(P)$(D):ST_ADC_D:SIGNAL_STUCK</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_81</name>
+        <macros>
+          <L>V_MEAS_OK</L>
+          <S>ST_ADC_$(X):V_MEAS_OK</S>
+        </macros>
+        <y>110</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_8</name>
+          <pv_name>$(P)$(D):ST_ADC_A:V_MEAS_OK</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_87</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_22</name>
+          <pv_name>$(P)$(D):ST_ADC_B:V_MEAS_OK</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_23</name>
+          <pv_name>$(P)$(D):ST_ADC_C:V_MEAS_OK</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_24</name>
+          <pv_name>$(P)$(D):ST_ADC_D:V_MEAS_OK</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>  DCCT            A      B   </name>
+      <macros>
+        <D>RCH1</D>
+      </macros>
+      <x>300</x>
+      <y>50</y>
+      <width>182</width>
+      <height>122</height>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>CAL_FLT</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):CAL_FLT</S>
+        </macros>
+        <y>10</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_60</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:CAL_FLT</pv_name>
+          <x>80</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_139</name>
+          <text>CAL_FLT</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_63</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:CAL_FLT</pv_name>
+          <x>110</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_130</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):MEAS_OK</S>
+        </macros>
+        <y>60</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_62</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:MEAS_OK</pv_name>
+          <x>80</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_141</name>
+          <text>MEAS_OK</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_65</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:MEAS_OK</pv_name>
+          <x>110</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_129</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):FAULT</S>
+        </macros>
+        <y>35</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_61</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:FAULT</pv_name>
+          <x>80</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_140</name>
+          <text>FAULT</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_64</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:FAULT</pv_name>
+          <x>110</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  RCH2  </name>
+    <x>499</x>
+    <y>415</y>
+    <width>524</width>
+    <height>214</height>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>  ADC Status                A       B      C       D  </name>
+      <macros>
+        <D>RCH2</D>
+      </macros>
+      <width>302</width>
+      <height>172</height>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>Group_82</name>
+        <macros>
+          <L>CAL_ACTIVE</L>
+          <S>ST_ADC_$(X):CAL_ACTIVE</S>
+        </macros>
+        <y>10</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_14</name>
+          <pv_name>$(P)$(D):ST_ADC_A:CAL_ACTIVE</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_88</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_25</name>
+          <pv_name>$(P)$(D):ST_ADC_B:CAL_ACTIVE</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_26</name>
+          <pv_name>$(P)$(D):ST_ADC_C:CAL_ACTIVE</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_27</name>
+          <pv_name>$(P)$(D):ST_ADC_D:CAL_ACTIVE</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_83</name>
+        <macros>
+          <L>CAL_FAILED</L>
+          <S>ST_ADC_$(X):CAL_FAILED</S>
+        </macros>
+        <y>35</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_28</name>
+          <pv_name>$(P)$(D):ST_ADC_A:CAL_FAILED</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_89</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_29</name>
+          <pv_name>$(P)$(D):ST_ADC_B:CAL_FAILED</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_30</name>
+          <pv_name>$(P)$(D):ST_ADC_C:CAL_FAILED</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_31</name>
+          <pv_name>$(P)$(D):ST_ADC_D:CAL_FAILED</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_84</name>
+        <macros>
+          <L>IN_USE</L>
+          <S>ST_ADC_$(X):IN_USE</S>
+        </macros>
+        <y>60</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_32</name>
+          <pv_name>$(P)$(D):ST_ADC_A:IN_USE</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_90</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_33</name>
+          <pv_name>$(P)$(D):ST_ADC_B:IN_USE</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_34</name>
+          <pv_name>$(P)$(D):ST_ADC_C:IN_USE</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_35</name>
+          <pv_name>$(P)$(D):ST_ADC_D:IN_USE</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_85</name>
+        <macros>
+          <L>SIGNAL_STUCK</L>
+          <S>ST_ADC_$(X):SIGNAL_STUCK</S>
+        </macros>
+        <y>85</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_36</name>
+          <pv_name>$(P)$(D):ST_ADC_A:SIGNAL_STUCK</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_91</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_37</name>
+          <pv_name>$(P)$(D):ST_ADC_B:SIGNAL_STUCK</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_38</name>
+          <pv_name>$(P)$(D):ST_ADC_C:SIGNAL_STUCK</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_39</name>
+          <pv_name>$(P)$(D):ST_ADC_D:SIGNAL_STUCK</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_86</name>
+        <macros>
+          <L>V_MEAS_OK</L>
+          <S>ST_ADC_$(X):V_MEAS_OK</S>
+        </macros>
+        <y>110</y>
+        <width>260</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_40</name>
+          <pv_name>$(P)$(D):ST_ADC_A:V_MEAS_OK</pv_name>
+          <x>130</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_92</name>
+          <text>$(L)</text>
+          <width>120</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_41</name>
+          <pv_name>$(P)$(D):ST_ADC_B:V_MEAS_OK</pv_name>
+          <x>160</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_42</name>
+          <pv_name>$(P)$(D):ST_ADC_C:V_MEAS_OK</pv_name>
+          <x>190</x>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_43</name>
+          <pv_name>$(P)$(D):ST_ADC_D:V_MEAS_OK</pv_name>
+          <x>220</x>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>  DCCT            A      B   </name>
+      <macros>
+        <D>RCH2</D>
+      </macros>
+      <x>300</x>
+      <y>50</y>
+      <width>182</width>
+      <height>122</height>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>CAL_FLT_1</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):CAL_FLT</S>
+        </macros>
+        <y>10</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_66</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:CAL_FLT</pv_name>
+          <x>80</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_142</name>
+          <text>CAL_FLT</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_67</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:CAL_FLT</pv_name>
+          <x>110</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_131</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):MEAS_OK</S>
+        </macros>
+        <y>60</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_68</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:MEAS_OK</pv_name>
+          <x>80</x>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_143</name>
+          <text>MEAS_OK</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_69</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:MEAS_OK</pv_name>
+          <x>110</x>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_132</name>
+        <macros>
+          <L>ST_DCCT_$(X)</L>
+          <S>ST_DCCT_$(X):FAULT</S>
+        </macros>
+        <y>35</y>
+        <width>140</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_70</name>
+          <pv_name>$(P)$(D):ST_DCCT_A:FAULT</pv_name>
+          <x>80</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_144</name>
+          <text>FAULT</text>
+          <width>70</width>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_71</name>
+          <pv_name>$(P)$(D):ST_DCCT_B:FAULT</pv_name>
+          <x>110</x>
+          <on_color>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </on_color>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  Faults &amp; Warnings  </name>
+    <macros>
+      <D>RCH</D>
+    </macros>
+    <x>9</x>
+    <width>972</width>
+    <height>393</height>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <macros>
+        <T>ST_UNLATCHED</T>
+      </macros>
+      <x>479</x>
+      <width>212</width>
+      <height>353</height>
+      <style>2</style>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>Group_251</name>
+        <macros>
+          <S>FIELDBUS_WRN</S>
+        </macros>
+        <x>10</x>
+        <y>31</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_262</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_263</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_304</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_305</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_252</name>
+        <macros>
+          <S>I_MEAS_DIFF</S>
+        </macros>
+        <x>10</x>
+        <y>51</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_264</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_265</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_306</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_307</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_253</name>
+        <macros>
+          <S>LOG_PLEASE</S>
+        </macros>
+        <x>10</x>
+        <y>71</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_266</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_267</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_308</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_309</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_254</name>
+        <macros>
+          <S>LOW_CURRENT</S>
+        </macros>
+        <x>10</x>
+        <y>91</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_268</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_269</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_310</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_311</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_255</name>
+        <macros>
+          <S>NOMINAL_LOAD</S>
+        </macros>
+        <x>10</x>
+        <y>111</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_270</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_271</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_312</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_313</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_256</name>
+        <macros>
+          <S>PC_DISCH_RQ</S>
+        </macros>
+        <x>10</x>
+        <y>131</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_272</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_273</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_314</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_315</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_257</name>
+        <macros>
+          <S>PC_PERMIT</S>
+        </macros>
+        <x>10</x>
+        <y>151</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_274</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_275</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_316</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_317</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_258</name>
+        <macros>
+          <S>PC_REG_OK</S>
+        </macros>
+        <x>10</x>
+        <y>171</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_276</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_277</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_318</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_319</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_259</name>
+        <macros>
+          <S>POL_SWI_NEG</S>
+        </macros>
+        <x>10</x>
+        <y>191</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_278</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_279</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_320</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_321</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_260</name>
+        <macros>
+          <S>POL_SWI_POS</S>
+        </macros>
+        <x>10</x>
+        <y>211</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_280</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_281</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_322</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_323</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_261</name>
+        <macros>
+          <S>POST_MORTEM</S>
+        </macros>
+        <x>10</x>
+        <y>231</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_282</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_283</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_324</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_325</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_262</name>
+        <macros>
+          <S>PWR_FAILURE</S>
+        </macros>
+        <x>10</x>
+        <y>251</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_284</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_285</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_326</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_327</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_263</name>
+        <macros>
+          <S>REF_RT_ACTIVE</S>
+        </macros>
+        <x>10</x>
+        <y>271</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_286</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_287</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_328</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_329</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_264</name>
+        <macros>
+          <S>SYNC_PLEASE</S>
+        </macros>
+        <x>10</x>
+        <y>291</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_288</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_289</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_330</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_331</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_265</name>
+        <macros>
+          <S>SYNC_REGFGC3</S>
+        </macros>
+        <x>10</x>
+        <y>311</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_290</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_291</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_332</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_333</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_266</name>
+        <macros>
+          <S>VS_POWER_ON</S>
+        </macros>
+        <x>10</x>
+        <y>331</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_292</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_293</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_334</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_335</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_2</name>
+        <text>RCH1 RCH2</text>
+        <width>87</width>
+        <height>30</height>
+        <font>
+          <font name="SMALL-SANS-PLAIN" family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_6</name>
+        <text>Unlatched</text>
+        <x>100</x>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>239</x>
+      <width>212</width>
+      <height>293</height>
+      <style>2</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_1</name>
+        <text>RCH1 RCH2</text>
+        <width>87</width>
+        <height>30</height>
+        <font>
+          <font name="SMALL-SANS-PLAIN" family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_5</name>
+        <text>Latched</text>
+        <x>100</x>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_238</name>
+        <macros>
+          <S>DAC_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>31</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_236</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_237</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_278</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_279</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_239</name>
+        <macros>
+          <S>DALLAS_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>51</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_238</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_239</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_280</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_281</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_240</name>
+        <macros>
+          <S>DCCT_PSU_FAIL</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>71</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_240</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_241</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_282</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_283</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_241</name>
+        <macros>
+          <S>DIMS_EXP_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>91</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_242</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_243</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_284</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_285</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_242</name>
+        <macros>
+          <S>DIM_SYNC_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>111</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_244</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_245</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_286</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_287</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_243</name>
+        <macros>
+          <S>DIM_TRIG_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>131</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_246</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_247</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_288</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_289</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_244</name>
+        <macros>
+          <S>DSP_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>151</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_248</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_249</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_290</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_291</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_245</name>
+        <macros>
+          <S>FGC_PSU_FAIL</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>171</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_250</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_251</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_292</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_293</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_246</name>
+        <macros>
+          <S>ID_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>191</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_252</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_253</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_294</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_295</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_247</name>
+        <macros>
+          <S>SCIVS_EXP_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>211</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_254</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_255</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_296</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_297</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_248</name>
+        <macros>
+          <S>SPIVS_FLT</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>231</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_256</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_257</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_298</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_299</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_249</name>
+        <macros>
+          <S>VDC_FAIL</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>251</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_258</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_259</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_300</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_301</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_250</name>
+        <macros>
+          <S>VS_COMMS</S>
+          <T>ST_LATCHED</T>
+        </macros>
+        <x>10</x>
+        <y>271</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_260</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_261</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_302</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_303</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <width>212</width>
+      <height>333</height>
+      <style>2</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>RCH1 RCH2</text>
+        <width>87</width>
+        <height>30</height>
+        <font>
+          <font name="SMALL-SANS-PLAIN" family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_4</name>
+        <text>Faults</text>
+        <x>100</x>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_223</name>
+        <macros>
+          <S>FAST_ABORT</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>31</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_206</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_207</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_234</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_250</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_224</name>
+        <macros>
+          <S>FGC_HW</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>51</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_208</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_209</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_251</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_252</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_225</name>
+        <macros>
+          <S>FGC_STATE</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>71</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_210</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_211</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_253</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_254</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_226</name>
+        <macros>
+          <S>I_MEAS</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>91</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_212</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_213</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_255</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_256</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_227</name>
+        <macros>
+          <S>I_RMS_LIM</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>111</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_214</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_215</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_257</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_258</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_228</name>
+        <macros>
+          <S>LIMITS</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>131</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_216</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_217</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_259</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_260</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_229</name>
+        <macros>
+          <S>NO_PC_PERMIT</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>151</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_218</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_219</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_261</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_262</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_230</name>
+        <macros>
+          <S>POL_SWITCH</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>171</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_220</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_221</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_263</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_231</name>
+        <macros>
+          <S>REG_ERROR</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>191</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_222</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_223</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_264</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_265</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_232</name>
+        <macros>
+          <S>SLAVE</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>211</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_224</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_225</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_266</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_267</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_233</name>
+        <macros>
+          <S>VS_EXTINTLOCK</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>231</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_226</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_227</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_268</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_269</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_234</name>
+        <macros>
+          <S>VS_FAULT</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>251</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_228</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_229</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_270</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_271</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_235</name>
+        <macros>
+          <S>VS_RUN_TO</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>271</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_230</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_231</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_272</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_273</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_236</name>
+        <macros>
+          <S>VS_STATE</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>291</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_232</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_233</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_274</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_275</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_237</name>
+        <macros>
+          <S>V_ERROR</S>
+          <T>ST_FAULTS</T>
+        </macros>
+        <x>10</x>
+        <y>311</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_234</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_235</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_276</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_277</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>719</x>
+      <width>212</width>
+      <height>313</height>
+      <style>2</style>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>Group_160</name>
+        <macros>
+          <S>I_RMS_LIM</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>131</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_84</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_179</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_157</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_158</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_161</name>
+        <macros>
+          <S>REF_LIM</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>151</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_180</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_181</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_159</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_209</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_162</name>
+        <macros>
+          <S>REF_RATE_LIM</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>171</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_182</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_183</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_210</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_211</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_212</name>
+        <macros>
+          <S>REG_ERROR</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>191</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_184</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_185</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_212</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_213</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_213</name>
+        <macros>
+          <S>SIMULATION</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>211</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_186</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_187</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_214</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_215</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_214</name>
+        <macros>
+          <S>SUBCONVTR_FLT</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>231</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_188</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_189</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_216</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_217</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_215</name>
+        <macros>
+          <S>TEMPERATURE</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>251</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_190</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_191</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_218</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_219</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_216</name>
+        <macros>
+          <S>TIMING_EVT</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>271</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_192</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_193</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_220</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_221</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_217</name>
+        <macros>
+          <S>V_ERROR</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>291</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_194</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_195</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_222</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_223</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_218</name>
+        <macros>
+          <S>I_MEAS</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>111</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_196</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_197</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_224</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_225</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_219</name>
+        <macros>
+          <S>FGC_PSU</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>91</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_198</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_199</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_226</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_227</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_220</name>
+        <macros>
+          <S>FGC_HW</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>71</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_200</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_201</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_228</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_229</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_221</name>
+        <macros>
+          <S>EXT_SYNC_LOST</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>51</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_202</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_203</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_230</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_231</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group_222</name>
+        <macros>
+          <S>CONFIG</S>
+          <T>ST_WARNINGS</T>
+        </macros>
+        <x>10</x>
+        <y>31</y>
+        <width>200</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="led" version="2.0.0">
+          <name>LED_204</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_205</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>30</x>
+          <off_color>
+            <color name="LED-ORANGE-OFF" red="110" green="105" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-ORANGE-ON" red="255" green="175" blue="81">
+            </color>
+          </on_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_232</name>
+          <pv_name>$(P)$(D)1:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_233</name>
+          <pv_name>$(P)$(D)2:$(T):$(S)</pv_name>
+          <x>80</x>
+          <width>120</width>
+          <transparent>true</transparent>
+        </widget>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_3</name>
+        <text>RCH1 RCH2</text>
+        <width>87</width>
+        <height>30</height>
+        <font>
+          <font name="SMALL-SANS-PLAIN" family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_7</name>
+        <text>Warnings</text>
+        <x>91</x>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+</display>
