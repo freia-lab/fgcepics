@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-05-24 15:08:42 by konrad-->
 <display version="2.0.0">
   <name>Engineer</name>
-  <width>1200</width>
+  <width>1700</width>
   <height>970</height>
   <widget type="group" version="2.0.0">
     <name>Group</name>
@@ -64,5 +65,45 @@
       <width>800</width>
       <height>390</height>
     </widget>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <macros>
+      <SIG>FGCstartUp</SIG>
+    </macros>
+    <tabs>
+      <tab>
+        <name>RCH1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display_2</name>
+            <macros>
+              <D>RCH1</D>
+            </macros>
+            <file>startUp-ctrl-panel.bob</file>
+            <width>800</width>
+            <height>652</height>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>RCH2</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display_4</name>
+            <macros>
+              <D>RCH2</D>
+            </macros>
+            <file>startUp-ctrl-panel.bob</file>
+            <width>800</width>
+            <height>610</height>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>860</x>
+    <y>150</y>
+    <width>840</width>
+    <height>660</height>
   </widget>
 </display>

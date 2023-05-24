@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-05-17 18:15:28 by konrad-->
+<!--Saved on 2023-05-24 15:09:08 by konrad-->
 <display version="2.0.0">
   <name>FGC-simulation</name>
   <macros>
@@ -80,11 +80,12 @@
     <name>Embedded Display_2</name>
     <macros>
       <D>SPARE</D>
+      <SIG>FGCstartUp</SIG>
     </macros>
     <file>startUp-ctrl-panel.bob</file>
     <x>850</x>
     <y>10</y>
-    <width>829</width>
-    <height>580</height>
+    <width>920</width>
+    <height>620</height>
   </widget>
 </display>

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-05-17 18:30:00 by konrad-->
+<!--Saved on 2023-05-24 15:17:35 by konrad-->
 <display version="2.0.0">
   <name>startUp-ctrl-panel</name>
+  <macros>
+    <PREFIX>$(P)$(D):$(S)</PREFIX>
+    <S>FGCstartUp</S>
+  </macros>
+  <width>810</width>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -26,7 +31,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>FGC Start-up Setup</text>
-    <x>231</x>
+    <x>150</x>
     <width>360</width>
     <height>50</height>
     <font>
@@ -44,207 +49,296 @@
       </action>
     </actions>
     <pv_name>$(P)$(D):FGCstartUp:Seq</pv_name>
-    <x>550</x>
-    <y>20</y>
+    <x>470</x>
+    <y>10</y>
     <width>120</width>
     <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
-    <pv_name>$(P)$(D):SeqAbort</pv_name>
-    <x>700</x>
-    <y>20</y>
+    <pv_name>$(PREFIX):SeqAbort</pv_name>
+    <x>220</x>
+    <y>480</y>
+    <width>560</width>
+    <square>true</square>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <N>0</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>70</y>
-    <width>600</width>
-    <height>30</height>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(PREFIX):Seq-finishAct</pv_name>
+    <y>522</y>
+    <height>78</height>
+    <square>true</square>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_1</name>
-    <macros>
-      <N>1</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>100</y>
-    <width>600</width>
-    <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Waiting for current to rise</text>
+    <x>30</x>
+    <y>478</y>
+    <width>170</width>
+    <height>21</height>
+    <auto_size>true</auto_size>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_2</name>
-    <macros>
-      <N>2</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Finishing</text>
     <x>20</x>
-    <y>130</y>
-    <width>600</width>
-    <height>30</height>
+    <y>501</y>
+    <width>61</width>
+    <height>21</height>
+    <auto_size>true</auto_size>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_3</name>
-    <macros>
-      <N>3</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>160</y>
-    <width>600</width>
-    <height>30</height>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Reset Sequence</description>
+      </action>
+    </actions>
+    <pv_name>$(PREFIX):SeqAbort</pv_name>
+    <x>620</x>
+    <y>10</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_4</name>
-    <macros>
-      <N>4</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>190</y>
-    <width>600</width>
-    <height>30</height>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <y>50</y>
+    <width>800</width>
+    <height>424</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display</name>
+      <macros>
+        <N>0</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>19</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_1</name>
+      <macros>
+        <N>1</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>44</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_2</name>
+      <macros>
+        <N>2</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>69</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_3</name>
+      <macros>
+        <N>3</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>94</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_4</name>
+      <macros>
+        <N>4</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>119</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_5</name>
+      <macros>
+        <N>5</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>144</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <macros>
+        <N>6</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>169</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_7</name>
+      <macros>
+        <N>7</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>194</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_8</name>
+      <macros>
+        <N>8</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>219</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_9</name>
+      <macros>
+        <N>9</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>244</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_10</name>
+      <macros>
+        <N>A</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>269</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_11</name>
+      <macros>
+        <N>B</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>294</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_12</name>
+      <macros>
+        <N>C</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>319</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_13</name>
+      <macros>
+        <N>D</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>344</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_14</name>
+      <macros>
+        <N>E</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>369</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_15</name>
+      <macros>
+        <N>F</N>
+      </macros>
+      <file>seqCtrl.bob</file>
+      <x>30</x>
+      <y>394</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_4</name>
+      <pv_name>$(PREFIX):Seq-Act</pv_name>
+      <y>19</y>
+      <height>395</height>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Preparations</text>
+      <x>20</x>
+      <width>87</width>
+      <height>21</height>
+      <auto_size>true</auto_size>
+    </widget>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_5</name>
-    <macros>
-      <N>5</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>220</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_6</name>
-    <macros>
-      <N>6</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>250</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_7</name>
-    <macros>
-      <N>7</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>280</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_8</name>
-    <macros>
-      <N>8</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>310</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_9</name>
-    <macros>
-      <N>9</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>340</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_10</name>
-    <macros>
-      <N>A</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>370</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_11</name>
-    <macros>
-      <N>B</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>400</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_12</name>
-    <macros>
-      <N>C</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>430</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_13</name>
-    <macros>
-      <N>D</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>460</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_14</name>
-    <macros>
-      <N>E</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>490</y>
-    <width>600</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_15</name>
-    <macros>
-      <N>F</N>
-      <PREFIX>$(P)$(D)</PREFIX>
-    </macros>
-    <file>seqCtrl.bob</file>
-    <x>20</x>
-    <y>520</y>
-    <width>600</width>
-    <height>30</height>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>30</x>
+    <y>522</y>
+    <width>770</width>
+    <height>80</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_16</name>
+      <macros>
+        <N>0</N>
+      </macros>
+      <file>seq-finishCtrl.bob</file>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_17</name>
+      <macros>
+        <N>1</N>
+      </macros>
+      <file>seq-finishCtrl.bob</file>
+      <y>25</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_18</name>
+      <macros>
+        <N>2</N>
+      </macros>
+      <file>seq-finishCtrl.bob</file>
+      <y>50</y>
+      <width>770</width>
+      <height>30</height>
+    </widget>
   </widget>
 </display>

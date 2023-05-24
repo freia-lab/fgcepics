@@ -408,30 +408,31 @@ record (acalcout, "$(HOST)$(DEV)Faults") {
   field (CALC, "AA=CC?0:1")
 }
 
+
 ########################################
-FGC Start-up sequence
+# FGC Start-up sequence
 
 record(seq, "$(HOST)$(DEV)FGCstartUp:Seq") {
     field(DESC, "FGC Start-up sequence")
     field(SCAN, "Passive")
     field(SELM, "Mask")
     field(SHFT, "0")
-    field(DOL0, "1")
-    field(DOL1, "IDLE")
-    field(DOL2, "OFF")
-    field(DOL3, "V")
-    field(DOL4, "IDLE")
-    field(DOL5, "0")
-    field(DOL6, "1.3")
-    field(DOL7, "1")
-    field(DOL8, "0.2")
-    field(DOL9, "0.2")
-    field(DOLA, "RAMP")
-    field(DOLB, "0")
-    field(DOLC, "0")
-    field(DOLD, "I")
-    field(DOLE, "1")
-    field(DOLF, "0")
+    field(DO0, "1")
+    field(DO1, "2") # IDLE
+    field(DO2, "0") # OFF
+    field(DO3, "1") # V
+    field(DO4, "2") # IDLE
+    field(DO5, "0")
+    field(DO6, "1.3")
+    field(DO7, "0.01")
+    field(DO8, "0.2")
+    field(DO9, "0.2")
+    field(DOA, "1") # RAMP
+    field(DOB, "0")
+    field(DOC, "0")
+    field(DOD, "0") # I
+    field(DOE, "1")
+    field(DOF, "0")
     field(LNK0, "$(HOST)$(DEV)LOG:RESET PP")
     field(LNK1, "$(HOST)$(DEV)MODE:PC:SEL PP")
     field(LNK2, "$(HOST)$(DEV)MODE:PC:SEL PP")
@@ -442,31 +443,69 @@ record(seq, "$(HOST)$(DEV)FGCstartUp:Seq") {
     field(LNK7, "$(HOST)$(DEV)REF:RAMP:LINEAR_RATE:S PP")
     field(LNK8, "$(HOST)$(DEV)REF:RAMP:ACCELERATION:S PP")
     field(LNK9, "$(HOST)$(DEV)REF:RAMP:DECELERATION:S PP")
-    field(LNKA, "$(HOST)$(DEV)REF:FUNC:TYPE:S PP")
+    field(LNKA, "$(HOST)$(DEV)REF:FUNC:TYPE:SEL PP")
     field(LNKB, "$(HOST)$(DEV)REF:RUN:S PP")
     field(LNKC, "$(HOST)$(DEV)FGCstartUp:SeqAbort.DISA PP")
     field(LNKD, "$(HOST)$(DEV)REG:MODE:SEL PP")
     field(LNKE, "$(HOST)$(DEV)FGCstartUp:SeqAbort.DISA PP")
     field(LNKF, "$(HOST)$(DEV)REF:ABORT:S PP")
     field(SELL, "$(HOST)$(DEV)FGCstartUp:SeqMask")
-    field(PINI, "YES")
+    field(DLY1, "10")
+    field(DLY2, "5")
+    field(DLY3, "5")
+    field(DLY4, "1")
+    field(DLY5, "1")
+    field(DLY6, "1")
+    field(DLY7, "1")
+    field(DLY8, "1")
+    field(DLY9, "1")
+    field(DLYA, "2")
+    field(DLYB, "3")
+    field(DLYC, "0")
+    field(DLYD, "10")
+    field(DLYE, "10")
+    field(DLYF, "10")
     info (autosaveFields, "DLY1 DLY2 DLY3 DLY4 DLY5 DLY6 DLY7 DLY8 DLY9 DLYA  DLYB DLYC DLYD DLYE DLYF")
 }
 
+
 record(mbboDirect, "$(HOST)$(DEV)FGCstartUp:SeqMask") {
     field(DESC, "Visible screens mask")
+    field(VAL, "0x1FFC")
     field(PINI, "YES")
     info (autosaveFields, "VAL")
 }
 
 record (calcout, "$(HOST)$(DEV)FGCstartUp:SeqAbort") {
-    field(SCAN, "0.5 second")
+    field(SCAN, ".1 second")
     field(DISA, "1")
     field(INPA, "10")
     field(INPB, "$(HOST)$(DEV)I_MEAS")
     field(OOPT, "Transition To Zero")
-    field(CALC, "B>A?0:1)")
+    field(CALC, "B>A?0:1")
     field(DOPT, "Use CALC")
-    field(OUT, "$(HOST)$(DEV)REF:ABORT:S")
+    field(OUT, "$(HOST)$(DEV)FGCstartUp:Seq-finish.PROC")
 }
 
+
+record (seq, "$(HOST)$(DEV)FGCstartUp:Seq-finish") {
+    field(SELM, "All")
+    field(DO0, "1")
+    field(LNK0, "$(HOST)$(DEV)FGCstartUp:SeqAbort.DISA PP")
+    field(DO1, "0")
+    field(LNK1, "$(HOST)$(DEV)REF:ABORT:S PP")
+    field(DLY2, "5")
+    field(DO2, "0") # I
+    field(LNK2, "$(HOST)$(DEV)REG:MODE:SEL PP")
+    info (autosaveFields, "DLY1 DLY2 DLY3 DLY4 DLY5 DLY6 DLY7 DLY8 DLY9 DLYA  DLYB DLYC DLYD DLYE DLYF")
+}
+
+record(bi, "$(HOST)$(DEV)FGCstartUp:Seq-Act") {
+    field(SCAN, "1 second")
+    field(INP, "$(HOST)$(DEV)FGCstartUp:Seq.PACT")
+}
+
+record(bi, "$(HOST)$(DEV)FGCstartUp:Seq-finishAct") {
+    field(SCAN, "1 second")
+    field(INP, "$(HOST)$(DEV)FGCstartUp:Seq-finish.PACT")
+}

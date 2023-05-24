@@ -37,8 +37,13 @@ ifneq ($(strip $(ASYN_DEP_VERSION)),)
 endif
 
 REQUIRED += stream
-  ifneq ($(strip $(STREAM_DEP_VERSION)),)
+ifneq ($(strip $(STREAM_DEP_VERSION)),)
   stream_VERSION=$(STREAM_DEP_VERSION)
+endif
+
+REQUIRED += autosave
+ifneq ($(strip $(AUTOSAVE_DEP_VERSION)),)
+  autosave_VERSION=$(AUTOSAVE_DEP_VERSION)
 endif
 
 # Since this file (fgcepics.Makefile) is copied into
