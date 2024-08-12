@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 fgcepics/*.Makefile
+fgcepics/O.*
 cellMods/
 testMods*/
 *PVs.list

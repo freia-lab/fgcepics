@@ -17,34 +17,10 @@
 # The following lines are required
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
-include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
 # Most modules only need to be built for x86_64
 ARCH_FILTER += linux-x86_64
 
-# If your module has dependencies, you will generate want to include them like
-#
-#     REQUIRED += asyn
-#     ifneq ($(strip $(ASYN_DEP_VERSION)),)
-#       asyn_VERSION=$(ASYN_DEP_VERSION)
-#     endif
-#
-# with $(ASYN_DEP_VERSION) defined in `configure/CONFIG_MODULE`
-
-REQUIRED += asyn
-ifneq ($(strip $(ASYN_DEP_VERSION)),)
-  asyn_VERSION=$(ASYN_DEP_VERSION)
-endif
-
-REQUIRED += stream
-ifneq ($(strip $(STREAM_DEP_VERSION)),)
-  stream_VERSION=$(STREAM_DEP_VERSION)
-endif
-
-REQUIRED += autosave
-ifneq ($(strip $(AUTOSAVE_DEP_VERSION)),)
-  autosave_VERSION=$(AUTOSAVE_DEP_VERSION)
-endif
 
 # Since this file (fgcepics.Makefile) is copied into
 # the module directory at build-time, these paths have to be relative
